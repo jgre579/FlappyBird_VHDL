@@ -12,9 +12,9 @@
 # Altera or its authorized distributors.  Please refer to the ,,,,,,,,
 # applicable agreement for further details.,,,,,,,,
 ,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
+# Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition,,,,,,,,
+# File: E:\CS305Projects\output_files\miniproject_assignments.csv,,,,,,,,
+# Generated on: Mon Apr 06 19:54:50 2020,,,,,,,,
 ,,,,,,,,
 Status,From,To,Assignment Name,Value,Enabled,Entity,Comment,Tag
 Ok,,blue_out,Location,PIN_K21,Yes,,,
