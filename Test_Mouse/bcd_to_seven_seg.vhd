@@ -10,20 +10,20 @@ begin
 process(digit)
 begin 
 	case digit is 
-		when "0000" => LED_out <="0000001";
-		when "0001" => LED_out <="1001111";
-		when "0010" => LED_out <="0010010";
-		when "0011" => LED_out <="0000110";
-		when "0100" => LED_out <="1001100";
-		when "0101" => LED_out <="0100100";
-		when "0110" => LED_out <="0100000";
-		when "0111" => LED_out <="0001111";
+		when "0000" => LED_out <="1000000";
+		when "0001" => LED_out <="1111001";
+		when "0010" => LED_out <="0100100";
+		when "0011" => LED_out <="0110000";
+		when "0100" => LED_out <="0011001";
+		when "0101" => LED_out <="0010010";
+		when "0110" => LED_out <="0000010" ;
+		when "0111" => LED_out <="1111000";
 		when "1000" => LED_out <="0000000";
-		when "1001" => LED_out <="0000100";
+		when "1001" => LED_out <="0010000";
 		when others => LED_out <="1111111";
 	end case;
 end process;
 
-digit_out <= not LED_out;
+digit_out <= LED_out;
 
 end architecture;
