@@ -1,0 +1,149 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -5.401
+TNS   : -18.911
+
+Type  : Slow 1200mV 85C Model Setup 'VGA_SYNC:inst2|vert_sync_out'
+Slack : -1.803
+TNS   : -19.566
+
+Type  : Slow 1200mV 85C Model Setup 'MOUSE:inst|MOUSE_CLK_FILTER'
+Slack : -1.334
+TNS   : -39.874
+
+Type  : Slow 1200mV 85C Model Hold 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -0.182
+TNS   : -0.182
+
+Type  : Slow 1200mV 85C Model Hold 'MOUSE:inst|MOUSE_CLK_FILTER'
+Slack : -0.097
+TNS   : -0.097
+
+Type  : Slow 1200mV 85C Model Hold 'VGA_SYNC:inst2|vert_sync_out'
+Slack : 0.360
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'MOUSE:inst|MOUSE_CLK_FILTER'
+Slack : -0.029
+TNS   : -0.435
+
+Type  : Slow 1200mV 85C Model Removal 'MOUSE:inst|MOUSE_CLK_FILTER'
+Slack : -0.021
+TNS   : -0.021
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'MOUSE:inst|MOUSE_CLK_FILTER'
+Slack : -1.000
+TNS   : -35.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'VGA_SYNC:inst2|vert_sync_out'
+Slack : -1.000
+TNS   : -16.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : 9.825
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.754
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -4.615
+TNS   : -15.751
+
+Type  : Slow 1200mV 0C Model Setup 'VGA_SYNC:inst2|vert_sync_out'
+Slack : -1.539
+TNS   : -15.975
+
+Type  : Slow 1200mV 0C Model Setup 'MOUSE:inst|MOUSE_CLK_FILTER'
+Slack : -1.096
+TNS   : -32.488
+
+Type  : Slow 1200mV 0C Model Hold 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -0.287
+TNS   : -0.287
+
+Type  : Slow 1200mV 0C Model Hold 'MOUSE:inst|MOUSE_CLK_FILTER'
+Slack : 0.143
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'VGA_SYNC:inst2|vert_sync_out'
+Slack : 0.314
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'MOUSE:inst|MOUSE_CLK_FILTER'
+Slack : -0.101
+TNS   : -1.582
+
+Type  : Slow 1200mV 0C Model Removal 'MOUSE:inst|MOUSE_CLK_FILTER'
+Slack : 0.197
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'MOUSE:inst|MOUSE_CLK_FILTER'
+Slack : -1.000
+TNS   : -35.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'VGA_SYNC:inst2|vert_sync_out'
+Slack : -1.000
+TNS   : -16.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : 9.785
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.748
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -2.629
+TNS   : -9.371
+
+Type  : Fast 1200mV 0C Model Setup 'VGA_SYNC:inst2|vert_sync_out'
+Slack : -0.556
+TNS   : -3.949
+
+Type  : Fast 1200mV 0C Model Setup 'MOUSE:inst|MOUSE_CLK_FILTER'
+Slack : -0.297
+TNS   : -6.364
+
+Type  : Fast 1200mV 0C Model Hold 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -0.134
+TNS   : -0.134
+
+Type  : Fast 1200mV 0C Model Hold 'MOUSE:inst|MOUSE_CLK_FILTER'
+Slack : 0.028
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'VGA_SYNC:inst2|vert_sync_out'
+Slack : 0.188
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'MOUSE:inst|MOUSE_CLK_FILTER'
+Slack : 0.185
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'MOUSE:inst|MOUSE_CLK_FILTER'
+Slack : 0.080
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MOUSE:inst|MOUSE_CLK_FILTER'
+Slack : -1.000
+TNS   : -35.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'VGA_SYNC:inst2|vert_sync_out'
+Slack : -1.000
+TNS   : -16.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : 9.585
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inst4|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.782
+TNS   : 0.000
+
+------------------------------------------------------------

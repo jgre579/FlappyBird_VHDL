@@ -1,6 +1,0 @@
-<?xml version="1.0" ?>
-<LOG_ROOT>
-	<PROJECT NAME="Test_BouncyBall">
-		<CBX_INST_ENTRY INSTANCE_NAME="|Test_BouncyBall|clock_div_25MHz:inst|altpll:altpll_component" CBX_FILE_NAME="clock_div_25MHz_altpll.v"/>
-	</PROJECT>
-</LOG_ROOT>
