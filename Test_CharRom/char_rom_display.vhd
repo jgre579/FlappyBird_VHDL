@@ -16,38 +16,38 @@ architecture arc of char_rom_display is
 		process(clk)
 			begin
 							--training
-						if(row >= "0000010000" and row < "0000100000" and col >= "0110000000" and col < "0111100000") then 
+						if(row >= "0000010000" and row < "0000100000" and col >= "0110000000" and col < "1000000000") then 
 							if(col >= "0110000000" and col < "0110010000") then
-								address <= "000010"; --T
+								address <= "010100"; --T
 							end if;
 							
 							if(col >= "0110010000" and col < "0110100000") then
-								address <= "001001"; --R
+								address <= "010010"; --R
 							end if;
 							
 							if(col >= "0110100000" and col < "0110110000") then
-								address <= "010100"; --A
+								address <= "000001"; --A
 							end if;
 							
 							if(col >= "0110110000" and col < "0111000000") then
-								address <= "000011"; --I
+								address <= "001001"; --I
 							end if;
 							
 							if(col >= "0111000000" and col < "0111010000") then
-								address <= "001000"; --N
+								address <= "001110"; --N
 							end if;
 							
 							if(col >= "0111010000" and col < "0111100000") then
-								address <= "100001"; --I
+								address <= "001001"; --I
 							end if;
 							
-							--if(col >= "0111100000" and col < "0111110000") then
-								--address <= "001110"; --N
-							--end if;
+							if(col >= "0111100000" and col < "0111110000") then
+								address <= "001110"; --N
+							end if;
 							
-							--if(col >= "0111110000" and col < "1000000000") then
-								--address <= "000111"; --G
-							--end if;
+							if(col >= "0111110000" and col < "1000000000") then
+								address <= "000111"; --G
+							end if;
 							
 							font_row <= row(3 downto 1);
 							font_col <= col(3 downto 1);

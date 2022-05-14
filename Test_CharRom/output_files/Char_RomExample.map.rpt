@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Char_RomExample
-Sat May 14 18:31:21 2022
+Sat May 14 18:40:04 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -51,18 +51,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat May 14 18:31:21 2022           ;
+; Analysis & Synthesis Status        ; Successful - Sat May 14 18:40:04 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Char_RomExample                                 ;
 ; Top-level Entity Name              ; Char_RomExample                                 ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 105                                             ;
-;     Total combinational functions  ; 85                                              ;
+; Total logic elements               ; 107                                             ;
+;     Total combinational functions  ; 87                                              ;
 ;     Dedicated logic registers      ; 45                                              ;
 ; Total registers                    ; 45                                              ;
 ; Total pins                         ; 6                                               ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 4,096                                           ;
+; Total memory bits                  ; 2,048                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
 ; Total PLLs                         ; 1                                               ;
 +------------------------------------+-------------------------------------------------+
@@ -200,16 +200,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                ;
 +---------------------------------------------+--------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 105                                                                                  ;
+; Estimated Total logic elements              ; 107                                                                                  ;
 ;                                             ;                                                                                      ;
-; Total combinational functions               ; 85                                                                                   ;
+; Total combinational functions               ; 87                                                                                   ;
 ; Logic element usage by number of LUT inputs ;                                                                                      ;
-;     -- 4 input functions                    ; 41                                                                                   ;
-;     -- 3 input functions                    ; 18                                                                                   ;
-;     -- <=2 input functions                  ; 26                                                                                   ;
+;     -- 4 input functions                    ; 40                                                                                   ;
+;     -- 3 input functions                    ; 19                                                                                   ;
+;     -- <=2 input functions                  ; 28                                                                                   ;
 ;                                             ;                                                                                      ;
 ; Logic elements by mode                      ;                                                                                      ;
-;     -- normal mode                          ; 67                                                                                   ;
+;     -- normal mode                          ; 69                                                                                   ;
 ;     -- arithmetic mode                      ; 18                                                                                   ;
 ;                                             ;                                                                                      ;
 ; Total registers                             ; 45                                                                                   ;
@@ -217,15 +217,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- I/O registers                        ; 0                                                                                    ;
 ;                                             ;                                                                                      ;
 ; I/O pins                                    ; 6                                                                                    ;
-; Total memory bits                           ; 4096                                                                                 ;
+; Total memory bits                           ; 2048                                                                                 ;
 ; Embedded Multiplier 9-bit elements          ; 0                                                                                    ;
 ; Total PLLs                                  ; 1                                                                                    ;
 ;     -- PLLs                                 ; 1                                                                                    ;
 ;                                             ;                                                                                      ;
 ; Maximum fan-out node                        ; altpll0:inst2|altpll:altpll_component|altpll0_altpll:auto_generated|wire_pll1_clk[0] ;
 ; Maximum fan-out                             ; 54                                                                                   ;
-; Total fan-out                               ; 461                                                                                  ;
-; Average fan-out                             ; 3.05                                                                                 ;
+; Total fan-out                               ; 464                                                                                  ;
+; Average fan-out                             ; 3.03                                                                                 ;
 +---------------------------------------------+--------------------------------------------------------------------------------------+
 
 
@@ -234,15 +234,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                           ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------+--------------+
-; |Char_RomExample                          ; 85 (0)            ; 45 (0)       ; 4096        ; 0            ; 0       ; 0         ; 6    ; 0            ; |Char_RomExample                                                                              ; work         ;
+; |Char_RomExample                          ; 87 (0)            ; 45 (0)       ; 2048        ; 0            ; 0       ; 0         ; 6    ; 0            ; |Char_RomExample                                                                              ; work         ;
 ;    |VGA_SYNC:inst3|                       ; 57 (57)           ; 45 (45)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Char_RomExample|VGA_SYNC:inst3                                                               ; work         ;
 ;    |altpll0:inst2|                        ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Char_RomExample|altpll0:inst2                                                                ; work         ;
 ;       |altpll:altpll_component|           ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Char_RomExample|altpll0:inst2|altpll:altpll_component                                        ; work         ;
 ;          |altpll0_altpll:auto_generated|  ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Char_RomExample|altpll0:inst2|altpll:altpll_component|altpll0_altpll:auto_generated          ; work         ;
-;    |char_rom:inst|                        ; 4 (4)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Char_RomExample|char_rom:inst                                                                ; work         ;
-;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Char_RomExample|char_rom:inst|altsyncram:altsyncram_component                                ; work         ;
-;          |altsyncram_kt91:auto_generated| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Char_RomExample|char_rom:inst|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated ; work         ;
-;    |char_rom_display:inst1|               ; 24 (24)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Char_RomExample|char_rom_display:inst1                                                       ; work         ;
+;    |char_rom:inst|                        ; 4 (4)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Char_RomExample|char_rom:inst                                                                ; work         ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Char_RomExample|char_rom:inst|altsyncram:altsyncram_component                                ; work         ;
+;          |altsyncram_kt91:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Char_RomExample|char_rom:inst|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated ; work         ;
+;    |char_rom_display:inst1|               ; 26 (26)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Char_RomExample|char_rom_display:inst1                                                       ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -281,8 +281,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; char_rom_display:inst1|address[2]                   ; char_rom_display:inst1|address[5] ; yes                    ;
 ; char_rom_display:inst1|address[3]                   ; char_rom_display:inst1|address[5] ; yes                    ;
 ; char_rom_display:inst1|address[4]                   ; char_rom_display:inst1|address[5] ; yes                    ;
-; char_rom_display:inst1|address[5]                   ; char_rom_display:inst1|address[5] ; yes                    ;
-; Number of user-specified and inferred latches = 12  ;                                   ;                        ;
+; Number of user-specified and inferred latches = 11  ;                                   ;                        ;
 +-----------------------------------------------------+-----------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -321,7 +320,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
 ; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |Char_RomExample|VGA_SYNC:inst3|v_count[9]         ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Char_RomExample|char_rom_display:inst1|address[0] ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Char_RomExample|char_rom_display:inst1|address[0] ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Char_RomExample|char_rom_display:inst1|address[1] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
 
 
@@ -821,7 +821,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat May 14 18:31:14 2022
+    Info: Processing started: Sat May 14 18:39:57 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Char_RomExample -c Char_RomExample
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file char_rom_display.vhd
@@ -932,6 +932,8 @@ Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(28): sig
 Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(32): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(36): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(40): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(44): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(48): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(52): signal "row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(53): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10631): VHDL Process Statement warning at char_rom_display.vhd(16): inferring latch(es) for signal or variable "address", which holds its previous value in one or more paths through the process
@@ -949,33 +951,32 @@ Info (10041): Inferred latch for "address[2]" at char_rom_display.vhd(16)
 Info (10041): Inferred latch for "address[3]" at char_rom_display.vhd(16)
 Info (10041): Inferred latch for "address[4]" at char_rom_display.vhd(16)
 Info (10041): Inferred latch for "address[5]" at char_rom_display.vhd(16)
-Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
-    Info (13026): Duplicate LATCH primitive "char_rom_display:inst1|address[4]" merged with LATCH primitive "char_rom_display:inst1|address[2]"
 Warning (13012): Latch char_rom_display:inst1|address[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst3|pixel_column[9]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst3|pixel_column[8]
 Warning (13012): Latch char_rom_display:inst1|address[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst3|pixel_column[6]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst3|pixel_column[8]
 Warning (13012): Latch char_rom_display:inst1|address[2] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst3|pixel_column[9]
 Warning (13012): Latch char_rom_display:inst1|address[3] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst3|pixel_column[9]
-Warning (13012): Latch char_rom_display:inst1|address[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst3|pixel_column[7]
+Warning (13012): Latch char_rom_display:inst1|address[4] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst3|pixel_column[8]
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "blue_out" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "char_rom:inst|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated|ALTSYNCRAM"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 123 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 125 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 108 logic cells
+    Info (21061): Implemented 110 logic cells
     Info (21064): Implemented 8 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 26 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 28 warnings
     Info: Peak virtual memory: 4632 megabytes
-    Info: Processing ended: Sat May 14 18:31:21 2022
+    Info: Processing ended: Sat May 14 18:40:04 2022
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:05
 

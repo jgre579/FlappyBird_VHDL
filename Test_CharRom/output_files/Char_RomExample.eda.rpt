@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Char_RomExample
-Sat May 14 18:31:51 2022
+Sat May 14 18:40:38 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sat May 14 18:31:51 2022 ;
+; EDA Netlist Writer Status ; Successful - Sat May 14 18:40:38 2022 ;
 ; Revision Name             ; Char_RomExample                       ;
 ; Top-level Entity Name     ; Char_RomExample                       ;
 ; Family                    ; Cyclone III                           ;
@@ -88,7 +88,7 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat May 14 18:31:48 2022
+    Info: Processing started: Sat May 14 18:40:34 2022
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Char_RomExample -c Char_RomExample
 Info (204019): Generated file Char_RomExample_6_1200mv_85c_slow.vho in folder "/Documents/GitHub/305_MiniProject/Test_CharRom/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file Char_RomExample_6_1200mv_0c_slow.vho in folder "/Documents/GitHub/305_MiniProject/Test_CharRom/simulation/modelsim/" for EDA simulation tool
@@ -100,8 +100,8 @@ Info (204019): Generated file Char_RomExample_min_1200mv_0c_vhd_fast.sdo in fold
 Info (204019): Generated file Char_RomExample_vhd.sdo in folder "/Documents/GitHub/305_MiniProject/Test_CharRom/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4509 megabytes
-    Info: Processing ended: Sat May 14 18:31:51 2022
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Processing ended: Sat May 14 18:40:38 2022
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
 
 
