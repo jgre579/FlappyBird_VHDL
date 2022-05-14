@@ -1,23 +1,23 @@
 |Test_Mouse
-mouse_data <= MOUSE:inst2.mouse_data
+seg0_dec <= MOUSE:inst2.left_button
 clk => clock_div_25MHz:inst.inclk0
-mouse_clk <= MOUSE:inst2.mouse_clk
-led0 <= MOUSE:inst2.left_button
-led1 <= MOUSE:inst2.right_button
-seg0[0] <= <GND>
-seg0[1] <= <GND>
-seg0[2] <= <GND>
-seg0[3] <= <GND>
-seg0[4] <= <GND>
-seg0[5] <= <GND>
-seg0[6] <= <GND>
-seg1[0] <= <GND>
-seg1[1] <= <GND>
-seg1[2] <= <GND>
-seg1[3] <= <GND>
-seg1[4] <= <GND>
-seg1[5] <= <GND>
-seg1[6] <= <GND>
+mouse_data <> MOUSE:inst2.mouse_data
+mouse_clk <> MOUSE:inst2.mouse_clk
+seg1_dec <= MOUSE:inst2.right_button
+seg0[0] <= bcd_to_seven_seg:inst5.digit_out[0]
+seg0[1] <= bcd_to_seven_seg:inst5.digit_out[1]
+seg0[2] <= bcd_to_seven_seg:inst5.digit_out[2]
+seg0[3] <= bcd_to_seven_seg:inst5.digit_out[3]
+seg0[4] <= bcd_to_seven_seg:inst5.digit_out[4]
+seg0[5] <= bcd_to_seven_seg:inst5.digit_out[5]
+seg0[6] <= bcd_to_seven_seg:inst5.digit_out[6]
+seg1[0] <= bcd_to_seven_seg:inst4.digit_out[0]
+seg1[1] <= bcd_to_seven_seg:inst4.digit_out[1]
+seg1[2] <= bcd_to_seven_seg:inst4.digit_out[2]
+seg1[3] <= bcd_to_seven_seg:inst4.digit_out[3]
+seg1[4] <= bcd_to_seven_seg:inst4.digit_out[4]
+seg1[5] <= bcd_to_seven_seg:inst4.digit_out[5]
+seg1[6] <= bcd_to_seven_seg:inst4.digit_out[6]
 
 
 |Test_Mouse|MOUSE:inst2
@@ -257,7 +257,7 @@ inclk[1] => pll1.CLK1
 locked <= locked.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Test_Mouse|bcd_to_seven_seg:inst3
+|Test_Mouse|bcd_to_seven_seg:inst5
 digit[0] => Mux0.IN19
 digit[0] => Mux1.IN19
 digit[0] => Mux2.IN19
