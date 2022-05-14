@@ -145,7 +145,7 @@ BEGIN
 		clk0_multiply_by => 1,
 		clk0_phase_shift => "0",
 		compensate_clock => "CLK0",
-		inclk0_input_frequency => 10000,
+		inclk0_input_frequency => 20000,
 		intended_device_family => "Cyclone III",
 		lpm_hint => "CBX_MODULE_PREFIX=altpll0",
 		lpm_type => "altpll",
@@ -227,7 +227,7 @@ END SYN;
 -- Retrieval info: PRIVATE: DEVICE_SPEED_GRADE STRING "6"
 -- Retrieval info: PRIVATE: DIV_FACTOR0 NUMERIC "2"
 -- Retrieval info: PRIVATE: DUTY_CYCLE0 STRING "50.00000000"
--- Retrieval info: PRIVATE: EFF_OUTPUT_FREQ_VALUE0 STRING "50.000000"
+-- Retrieval info: PRIVATE: EFF_OUTPUT_FREQ_VALUE0 STRING "25.000000"
 -- Retrieval info: PRIVATE: EXPLICIT_SWITCHOVER_COUNTER STRING "0"
 -- Retrieval info: PRIVATE: EXT_FEEDBACK_RADIO STRING "0"
 -- Retrieval info: PRIVATE: GLOCKED_COUNTER_EDIT_CHANGED STRING "1"
@@ -235,7 +235,7 @@ END SYN;
 -- Retrieval info: PRIVATE: GLOCKED_MODE_CHECK STRING "0"
 -- Retrieval info: PRIVATE: GLOCK_COUNTER_EDIT NUMERIC "1048575"
 -- Retrieval info: PRIVATE: HAS_MANUAL_SWITCHOVER STRING "1"
--- Retrieval info: PRIVATE: INCLK0_FREQ_EDIT STRING "100.000"
+-- Retrieval info: PRIVATE: INCLK0_FREQ_EDIT STRING "50.000"
 -- Retrieval info: PRIVATE: INCLK0_FREQ_UNIT_COMBO STRING "MHz"
 -- Retrieval info: PRIVATE: INCLK1_FREQ_EDIT STRING "100.000"
 -- Retrieval info: PRIVATE: INCLK1_FREQ_EDIT_CHANGED STRING "1"
@@ -296,7 +296,7 @@ END SYN;
 -- Retrieval info: CONSTANT: CLK0_MULTIPLY_BY NUMERIC "1"
 -- Retrieval info: CONSTANT: CLK0_PHASE_SHIFT STRING "0"
 -- Retrieval info: CONSTANT: COMPENSATE_CLOCK STRING "CLK0"
--- Retrieval info: CONSTANT: INCLK0_INPUT_FREQUENCY NUMERIC "10000"
+-- Retrieval info: CONSTANT: INCLK0_INPUT_FREQUENCY NUMERIC "20000"
 -- Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "Cyclone III"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "altpll"
 -- Retrieval info: CONSTANT: OPERATION_MODE STRING "NORMAL"
@@ -359,7 +359,7 @@ END SYN;
 -- Retrieval info: GEN_FILE: TYPE_NORMAL altpll0.ppf TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL altpll0.inc FALSE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL altpll0.cmp TRUE
--- Retrieval info: GEN_FILE: TYPE_NORMAL altpll0.bsf TRUE FALSE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL altpll0.bsf TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL altpll0_inst.vhd FALSE
 -- Retrieval info: LIB_FILE: altera_mf
 -- Retrieval info: CBX_MODULE_PREFIX: ON
