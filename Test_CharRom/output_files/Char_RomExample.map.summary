@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat May 14 18:40:04 2022
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : Char_RomExample
+Top-level Entity Name : Char_RomExample
+Family : Cyclone III
+Total logic elements : 107
+    Total combinational functions : 87
+    Dedicated logic registers : 45
+Total registers : 45
+Total pins : 6
+Total virtual pins : 0
+Total memory bits : 2,048
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1

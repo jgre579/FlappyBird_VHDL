@@ -1,7 +1,7 @@
 |Flappy_Bird
 red_out <= VGA_SYNC:inst2.red_out
 clk => clock_div_25MHz:inst4.inclk0
-pb1 => bouncy_ball:inst3.pb1
+sw1 => bouncy_ball:inst3.pb1
 pb2 => bouncy_ball:inst3.pb2
 mouse_data <> MOUSE:inst.mouse_data
 mouse_clk <> MOUSE:inst.mouse_clk
@@ -174,8 +174,8 @@ locked <= locked.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Flappy_Bird|bouncy_ball:inst3
-pb1 => ~NO_FANOUT~
-pb2 => ~NO_FANOUT~
+pb1 => blue.DATAB
+pb2 => red.DATAIN
 clk => ~NO_FANOUT~
 vert_sync => bot~reg0.CLK
 vert_sync => top~reg0.CLK
@@ -244,9 +244,9 @@ pixel_column[8] => Add0.IN14
 pixel_column[8] => LessThan1.IN16
 pixel_column[9] => Add0.IN13
 pixel_column[9] => LessThan1.IN15
-red <= <VCC>
+red <= pb2.DB_MAX_OUTPUT_PORT_TYPE
 green <= ball_on.DB_MAX_OUTPUT_PORT_TYPE
-blue <= ball_on.DB_MAX_OUTPUT_PORT_TYPE
+blue <= blue.DB_MAX_OUTPUT_PORT_TYPE
 top <= top~reg0.DB_MAX_OUTPUT_PORT_TYPE
 bot <= bot~reg0.DB_MAX_OUTPUT_PORT_TYPE
 

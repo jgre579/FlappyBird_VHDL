@@ -36,9 +36,9 @@ ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' &
 --Green <= (not pb2) and (not ball_on);
 --Blue <=  not ball_on;
 
-	Red <=  '1';
+	Red <=  pb2;
 	Green <= '0' when ball_on = '1' else '1';
-	Blue <=  '0' when ball_on = '1' else '1';
+	Blue <=  pb1 when ball_on = '1' else '1';
 
 
 Move_Ball: process (vert_sync) 

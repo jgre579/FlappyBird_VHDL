@@ -70,8 +70,10 @@ BEGIN
 		address_a => rom_address,
 		q_a => rom_data
 	);
-
+	
+	
 	rom_address <= character_address & font_row;
+	
 	rom_mux_output <= rom_data (CONV_INTEGER(NOT font_col(2 DOWNTO 0)));
 
 END SYN;
