@@ -1,6 +1,6 @@
 Analysis & Synthesis report for Flappy_Bird
-Sat May 14 16:46:44 2022
-Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+Mon May 16 01:42:31 2022
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -13,16 +13,21 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis IP Cores Summary
-  9. State Machine - |Flappy_Bird|MOUSE:inst|mouse_state
- 10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Inverted Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Parameter Settings for User Entity Instance: clock_div_25MHz:inst4|altpll:altpll_component
- 15. altpll Parameter Settings by Entity Instance
- 16. Elapsed Time Per Partition
- 17. Analysis & Synthesis Messages
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. State Machine - |Flappy_Bird|MOUSE:inst|mouse_state
+ 11. User-Specified and Inferred Latches
+ 12. Registers Removed During Synthesis
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for char_rom:inst6|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated
+ 17. Parameter Settings for User Entity Instance: clock_div_25MHz:inst4|altpll:altpll_component
+ 18. Parameter Settings for User Entity Instance: char_rom:inst6|altsyncram:altsyncram_component
+ 19. altpll Parameter Settings by Entity Instance
+ 20. altsyncram Parameter Settings by Entity Instance
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
 
 
 
@@ -45,24 +50,24 @@ applicable agreement for further details.
 
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
-+------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat May 14 16:46:44 2022       ;
-; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
-; Revision Name                      ; Flappy_Bird                                 ;
-; Top-level Entity Name              ; Flappy_Bird                                 ;
-; Family                             ; Cyclone III                                 ;
-; Total logic elements               ; 226                                         ;
-;     Total combinational functions  ; 179                                         ;
-;     Dedicated logic registers      ; 127                                         ;
-; Total registers                    ; 127                                         ;
-; Total pins                         ; 12                                          ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 1                                           ;
-+------------------------------------+---------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon May 16 01:42:31 2022           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; Flappy_Bird                                     ;
+; Top-level Entity Name              ; Flappy_Bird                                     ;
+; Family                             ; Cyclone III                                     ;
+; Total logic elements               ; 352                                             ;
+;     Total combinational functions  ; 288                                             ;
+;     Dedicated logic registers      ; 183                                             ;
+; Total registers                    ; 183                                             ;
+; Total pins                         ; 27                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 2,048                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 1                                               ;
++------------------------------------+-------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -152,73 +157,81 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 6           ;
-; Maximum allowed            ; 6           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
-+----------------------------+-------------+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                        ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                              ; Library ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
-; Vhdl files/vga_sync.vhd          ; yes             ; User VHDL File                     ; //files.auckland.ac.nz/myhome/Documents/GitHub/305_MiniProject/Flappy_Bird/Vhdl files/vga_sync.vhd        ;         ;
-; Vhdl files/mouse.vhd             ; yes             ; User VHDL File                     ; //files.auckland.ac.nz/myhome/Documents/GitHub/305_MiniProject/Flappy_Bird/Vhdl files/mouse.vhd           ;         ;
-; Vhdl files/clock_div_25MHz.vhd   ; yes             ; User Wizard-Generated File         ; //files.auckland.ac.nz/myhome/Documents/GitHub/305_MiniProject/Flappy_Bird/Vhdl files/clock_div_25MHz.vhd ;         ;
-; Vhdl files/bouncy_ball.vhd       ; yes             ; User VHDL File                     ; //files.auckland.ac.nz/myhome/Documents/GitHub/305_MiniProject/Flappy_Bird/Vhdl files/bouncy_ball.vhd     ;         ;
-; Flappy_Bird.bdf                  ; yes             ; User Block Diagram/Schematic File  ; //files.auckland.ac.nz/myhome/Documents/GitHub/305_MiniProject/Flappy_Bird/Flappy_Bird.bdf                ;         ;
-; altpll.tdf                       ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/altpll.tdf                                                 ;         ;
-; aglobal130.inc                   ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/aglobal130.inc                                             ;         ;
-; stratix_pll.inc                  ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/stratix_pll.inc                                            ;         ;
-; stratixii_pll.inc                ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/stratixii_pll.inc                                          ;         ;
-; cycloneii_pll.inc                ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/cycloneii_pll.inc                                          ;         ;
-; db/clock_div_25mhz_altpll.v      ; yes             ; Auto-Generated Megafunction        ; //files.auckland.ac.nz/myhome/Documents/GitHub/305_MiniProject/Flappy_Bird/db/clock_div_25mhz_altpll.v    ;         ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                      ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                            ; Library ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------+---------+
+; Vhdl files/char_rom_display.vhd  ; yes             ; User VHDL File                     ; //Mac/Home/Documents/GitHub/305_MiniProject/Flappy_Bird/Vhdl files/char_rom_display.vhd ;         ;
+; Vhdl files/vga_sync.vhd          ; yes             ; User VHDL File                     ; //Mac/Home/Documents/GitHub/305_MiniProject/Flappy_Bird/Vhdl files/vga_sync.vhd         ;         ;
+; Vhdl files/mouse.vhd             ; yes             ; User VHDL File                     ; //Mac/Home/Documents/GitHub/305_MiniProject/Flappy_Bird/Vhdl files/mouse.vhd            ;         ;
+; Vhdl files/clock_div_25MHz.vhd   ; yes             ; User Wizard-Generated File         ; //Mac/Home/Documents/GitHub/305_MiniProject/Flappy_Bird/Vhdl files/clock_div_25MHz.vhd  ;         ;
+; Vhdl files/char_rom.vhd          ; yes             ; User VHDL File                     ; //Mac/Home/Documents/GitHub/305_MiniProject/Flappy_Bird/Vhdl files/char_rom.vhd         ;         ;
+; Vhdl files/bouncy_ball.vhd       ; yes             ; User VHDL File                     ; //Mac/Home/Documents/GitHub/305_MiniProject/Flappy_Bird/Vhdl files/bouncy_ball.vhd      ;         ;
+; Vhdl files/bcd_to_seven_seg.vhd  ; yes             ; User VHDL File                     ; //Mac/Home/Documents/GitHub/305_MiniProject/Flappy_Bird/Vhdl files/bcd_to_seven_seg.vhd ;         ;
+; Flappy_Bird.bdf                  ; yes             ; User Block Diagram/Schematic File  ; //Mac/Home/Documents/GitHub/305_MiniProject/Flappy_Bird/Flappy_Bird.bdf                 ;         ;
+; Vhdl files/show_colour.vhd       ; yes             ; User VHDL File                     ; //Mac/Home/Documents/GitHub/305_MiniProject/Flappy_Bird/Vhdl files/show_colour.vhd      ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altpll.tdf                            ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                        ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_pll.inc                       ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratixii_pll.inc                     ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/cycloneii_pll.inc                     ;         ;
+; db/clock_div_25mhz_altpll.v      ; yes             ; Auto-Generated Megafunction        ; //Mac/Home/Documents/GitHub/305_MiniProject/Flappy_Bird/db/clock_div_25mhz_altpll.v     ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf                        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc                 ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc                        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc                         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                            ;         ;
+; altram.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                          ;         ;
+; db/altsyncram_kt91.tdf           ; yes             ; Auto-Generated Megafunction        ; //Mac/Home/Documents/GitHub/305_MiniProject/Flappy_Bird/db/altsyncram_kt91.tdf          ;         ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                                                                        ;
-+---------------------------------------------+------------------------------------------------------------------------------------------------------+
-; Resource                                    ; Usage                                                                                                ;
-+---------------------------------------------+------------------------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 226                                                                                                  ;
-;                                             ;                                                                                                      ;
-; Total combinational functions               ; 179                                                                                                  ;
-; Logic element usage by number of LUT inputs ;                                                                                                      ;
-;     -- 4 input functions                    ; 61                                                                                                   ;
-;     -- 3 input functions                    ; 52                                                                                                   ;
-;     -- <=2 input functions                  ; 66                                                                                                   ;
-;                                             ;                                                                                                      ;
-; Logic elements by mode                      ;                                                                                                      ;
-;     -- normal mode                          ; 109                                                                                                  ;
-;     -- arithmetic mode                      ; 70                                                                                                   ;
-;                                             ;                                                                                                      ;
-; Total registers                             ; 127                                                                                                  ;
-;     -- Dedicated logic registers            ; 127                                                                                                  ;
-;     -- I/O registers                        ; 0                                                                                                    ;
-;                                             ;                                                                                                      ;
-; I/O pins                                    ; 12                                                                                                   ;
-; Embedded Multiplier 9-bit elements          ; 0                                                                                                    ;
-; Total PLLs                                  ; 1                                                                                                    ;
-;     -- PLLs                                 ; 1                                                                                                    ;
-;                                             ;                                                                                                      ;
-; Maximum fan-out node                        ; clock_div_25MHz:inst4|altpll:altpll_component|clock_div_25MHz_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 77                                                                                                   ;
-; Total fan-out                               ; 878                                                                                                  ;
-; Average fan-out                             ; 2.64                                                                                                 ;
-+---------------------------------------------+------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                               ;
++---------------------------------------------+-----------------------------+
+; Resource                                    ; Usage                       ;
++---------------------------------------------+-----------------------------+
+; Estimated Total logic elements              ; 352                         ;
+;                                             ;                             ;
+; Total combinational functions               ; 288                         ;
+; Logic element usage by number of LUT inputs ;                             ;
+;     -- 4 input functions                    ; 112                         ;
+;     -- 3 input functions                    ; 93                          ;
+;     -- <=2 input functions                  ; 83                          ;
+;                                             ;                             ;
+; Logic elements by mode                      ;                             ;
+;     -- normal mode                          ; 200                         ;
+;     -- arithmetic mode                      ; 88                          ;
+;                                             ;                             ;
+; Total registers                             ; 183                         ;
+;     -- Dedicated logic registers            ; 183                         ;
+;     -- I/O registers                        ; 0                           ;
+;                                             ;                             ;
+; I/O pins                                    ; 27                          ;
+; Total memory bits                           ; 2048                        ;
+; Embedded Multiplier 9-bit elements          ; 0                           ;
+; Total PLLs                                  ; 1                           ;
+;     -- PLLs                                 ; 1                           ;
+;                                             ;                             ;
+; Maximum fan-out node                        ; MOUSE:inst|MOUSE_CLK_FILTER ;
+; Maximum fan-out                             ; 93                          ;
+; Total fan-out                               ; 1541                        ;
+; Average fan-out                             ; 2.88                        ;
++---------------------------------------------+-----------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -226,24 +239,41 @@ applicable agreement for further details.
 +--------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                       ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                              ; Library Name ;
 +--------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------+--------------+
-; |Flappy_Bird                                     ; 179 (0)           ; 127 (0)      ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |Flappy_Bird                                                                                     ;              ;
-;    |MOUSE:inst|                                  ; 51 (51)           ; 63 (63)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|MOUSE:inst                                                                          ;              ;
-;    |VGA_SYNC:inst2|                              ; 59 (59)           ; 48 (48)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|VGA_SYNC:inst2                                                                      ;              ;
-;    |bouncy_ball:inst3|                           ; 69 (69)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|bouncy_ball:inst3                                                                   ;              ;
-;    |clock_div_25MHz:inst4|                       ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|clock_div_25MHz:inst4                                                               ;              ;
-;       |altpll:altpll_component|                  ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|clock_div_25MHz:inst4|altpll:altpll_component                                       ;              ;
-;          |clock_div_25MHz_altpll:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|clock_div_25MHz:inst4|altpll:altpll_component|clock_div_25MHz_altpll:auto_generated ;              ;
+; |Flappy_Bird                                     ; 288 (1)           ; 183 (0)      ; 2048        ; 0            ; 0       ; 0         ; 27   ; 0            ; |Flappy_Bird                                                                                     ; work         ;
+;    |MOUSE:inst|                                  ; 112 (112)         ; 118 (118)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|MOUSE:inst                                                                          ; work         ;
+;    |VGA_SYNC:inst2|                              ; 59 (59)           ; 48 (48)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|VGA_SYNC:inst2                                                                      ; work         ;
+;    |VGA_SYNC:inst36|                             ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|VGA_SYNC:inst36                                                                     ; work         ;
+;    |bcd_to_seven_seg:inst8|                      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|bcd_to_seven_seg:inst8                                                              ; work         ;
+;    |bcd_to_seven_seg:inst9|                      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|bcd_to_seven_seg:inst9                                                              ; work         ;
+;    |bouncy_ball:inst3|                           ; 70 (70)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|bouncy_ball:inst3                                                                   ; work         ;
+;    |char_rom:inst6|                              ; 4 (4)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|char_rom:inst6                                                                      ; work         ;
+;       |altsyncram:altsyncram_component|          ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|char_rom:inst6|altsyncram:altsyncram_component                                      ; work         ;
+;          |altsyncram_kt91:auto_generated|        ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|char_rom:inst6|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated       ; work         ;
+;    |char_rom_display:inst5|                      ; 25 (25)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|char_rom_display:inst5                                                              ; work         ;
+;    |clock_div_25MHz:inst4|                       ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|clock_div_25MHz:inst4                                                               ; work         ;
+;       |altpll:altpll_component|                  ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|clock_div_25MHz:inst4|altpll:altpll_component                                       ; work         ;
+;          |clock_div_25MHz_altpll:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|clock_div_25MHz:inst4|altpll:altpll_component|clock_div_25MHz_altpll:auto_generated ; work         ;
+;    |show_colour:inst34|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|show_colour:inst34                                                                  ; work         ;
 +--------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                                                          ;
-+--------+--------------+---------+--------------+--------------+------------------------------------+-----------------------------------------------------------------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                    ; IP Include File                                                                                           ;
-+--------+--------------+---------+--------------+--------------+------------------------------------+-----------------------------------------------------------------------------------------------------------+
-; Altera ; ALTPLL       ; N/A     ; N/A          ; N/A          ; |Flappy_Bird|clock_div_25MHz:inst4 ; //files.auckland.ac.nz/myhome/Documents/GitHub/305_MiniProject/Flappy_Bird/Vhdl files/clock_div_25MHz.vhd ;
-+--------+--------------+---------+--------------+--------------+------------------------------------+-----------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                       ;
++------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------+
+; Name                                                                                     ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF        ;
++------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------+
+; char_rom:inst6|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 512          ; 8            ; --           ; --           ; 4096 ; tcgrom.mif ;
++------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                       ;
++--------+--------------+---------+--------------+--------------+------------------------------------+----------------------------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                    ; IP Include File                                                                        ;
++--------+--------------+---------+--------------+--------------+------------------------------------+----------------------------------------------------------------------------------------+
+; Altera ; ALTPLL       ; N/A     ; N/A          ; N/A          ; |Flappy_Bird|clock_div_25MHz:inst4 ; //Mac/Home/Documents/GitHub/305_MiniProject/Flappy_Bird/Vhdl files/clock_div_25MHz.vhd ;
++--------+--------------+---------+--------------+--------------+------------------------------------+----------------------------------------------------------------------------------------+
 
 
 Encoding Type:  One-Hot
@@ -261,6 +291,28 @@ Encoding Type:  One-Hot
 +-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
 
 
++------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                              ;
++-----------------------------------------------------+-----------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal               ; Free of Timing Hazards ;
++-----------------------------------------------------+-----------------------------------+------------------------+
+; show_colour:inst34|blue                             ; training                          ; yes                    ;
+; char_rom_display:inst5|font_col[1]                  ; char_rom_display:inst5|process_0  ; yes                    ;
+; char_rom_display:inst5|font_col[0]                  ; char_rom_display:inst5|process_0  ; yes                    ;
+; char_rom_display:inst5|font_col[2]                  ; char_rom_display:inst5|process_0  ; yes                    ;
+; char_rom_display:inst5|font_row[0]                  ; char_rom_display:inst5|process_0  ; yes                    ;
+; char_rom_display:inst5|font_row[1]                  ; char_rom_display:inst5|process_0  ; yes                    ;
+; char_rom_display:inst5|font_row[2]                  ; char_rom_display:inst5|process_0  ; yes                    ;
+; char_rom_display:inst5|address[0]                   ; char_rom_display:inst5|address[5] ; yes                    ;
+; char_rom_display:inst5|address[1]                   ; char_rom_display:inst5|address[5] ; yes                    ;
+; char_rom_display:inst5|address[2]                   ; char_rom_display:inst5|address[5] ; yes                    ;
+; char_rom_display:inst5|address[3]                   ; char_rom_display:inst5|address[5] ; yes                    ;
+; char_rom_display:inst5|address[4]                   ; char_rom_display:inst5|address[5] ; yes                    ;
+; Number of user-specified and inferred latches = 12  ;                                   ;                        ;
++-----------------------------------------------------+-----------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
 +------------------------------------------------------------------------------------------+
 ; Registers Removed During Synthesis                                                       ;
 +-----------------------------------------+------------------------------------------------+
@@ -272,9 +324,53 @@ Encoding Type:  One-Hot
 ; MOUSE:inst|CHAROUT[2]                   ; Stuck at VCC due to stuck port data_in         ;
 ; MOUSE:inst|CHAROUT[0,1]                 ; Stuck at GND due to stuck port data_in         ;
 ; MOUSE:inst|SHIFTOUT[10]                 ; Stuck at VCC due to stuck port data_in         ;
+; VGA_SYNC:inst36|pixel_row[2]            ; Merged with VGA_SYNC:inst2|pixel_row[2]        ;
+; VGA_SYNC:inst36|pixel_row[1]            ; Merged with VGA_SYNC:inst2|pixel_row[1]        ;
+; VGA_SYNC:inst36|pixel_row[0]            ; Merged with VGA_SYNC:inst2|pixel_row[0]        ;
+; VGA_SYNC:inst36|red_out                 ; Merged with VGA_SYNC:inst36|green_out          ;
+; VGA_SYNC:inst36|pixel_row[3]            ; Merged with VGA_SYNC:inst2|pixel_row[3]        ;
+; VGA_SYNC:inst36|pixel_row[4]            ; Merged with VGA_SYNC:inst2|pixel_row[4]        ;
+; VGA_SYNC:inst36|pixel_row[5]            ; Merged with VGA_SYNC:inst2|pixel_row[5]        ;
+; VGA_SYNC:inst36|pixel_row[6]            ; Merged with VGA_SYNC:inst2|pixel_row[6]        ;
+; VGA_SYNC:inst36|pixel_row[7]            ; Merged with VGA_SYNC:inst2|pixel_row[7]        ;
+; VGA_SYNC:inst36|pixel_row[8]            ; Merged with VGA_SYNC:inst2|pixel_row[8]        ;
+; VGA_SYNC:inst36|pixel_row[9]            ; Merged with VGA_SYNC:inst2|pixel_row[9]        ;
+; VGA_SYNC:inst36|video_on_v              ; Merged with VGA_SYNC:inst2|video_on_v          ;
+; VGA_SYNC:inst36|pixel_column[0]         ; Merged with VGA_SYNC:inst2|pixel_column[0]     ;
+; VGA_SYNC:inst36|pixel_column[1]         ; Merged with VGA_SYNC:inst2|pixel_column[1]     ;
+; VGA_SYNC:inst36|pixel_column[2]         ; Merged with VGA_SYNC:inst2|pixel_column[2]     ;
+; VGA_SYNC:inst36|pixel_column[3]         ; Merged with VGA_SYNC:inst2|pixel_column[3]     ;
+; VGA_SYNC:inst36|pixel_column[4]         ; Merged with VGA_SYNC:inst2|pixel_column[4]     ;
+; VGA_SYNC:inst36|pixel_column[5]         ; Merged with VGA_SYNC:inst2|pixel_column[5]     ;
+; VGA_SYNC:inst36|pixel_column[6]         ; Merged with VGA_SYNC:inst2|pixel_column[6]     ;
+; VGA_SYNC:inst36|pixel_column[7]         ; Merged with VGA_SYNC:inst2|pixel_column[7]     ;
+; VGA_SYNC:inst36|pixel_column[8]         ; Merged with VGA_SYNC:inst2|pixel_column[8]     ;
+; VGA_SYNC:inst36|pixel_column[9]         ; Merged with VGA_SYNC:inst2|pixel_column[9]     ;
+; VGA_SYNC:inst36|video_on_h              ; Merged with VGA_SYNC:inst2|video_on_h          ;
+; VGA_SYNC:inst36|v_count[0]              ; Merged with VGA_SYNC:inst2|v_count[0]          ;
+; VGA_SYNC:inst36|v_count[1]              ; Merged with VGA_SYNC:inst2|v_count[1]          ;
+; VGA_SYNC:inst36|v_count[2]              ; Merged with VGA_SYNC:inst2|v_count[2]          ;
+; VGA_SYNC:inst36|v_count[3]              ; Merged with VGA_SYNC:inst2|v_count[3]          ;
+; VGA_SYNC:inst36|v_count[4]              ; Merged with VGA_SYNC:inst2|v_count[4]          ;
+; VGA_SYNC:inst36|v_count[5]              ; Merged with VGA_SYNC:inst2|v_count[5]          ;
+; VGA_SYNC:inst36|v_count[6]              ; Merged with VGA_SYNC:inst2|v_count[6]          ;
+; VGA_SYNC:inst36|v_count[7]              ; Merged with VGA_SYNC:inst2|v_count[7]          ;
+; VGA_SYNC:inst36|v_count[8]              ; Merged with VGA_SYNC:inst2|v_count[8]          ;
+; VGA_SYNC:inst36|v_count[9]              ; Merged with VGA_SYNC:inst2|v_count[9]          ;
+; VGA_SYNC:inst36|h_count[0]              ; Merged with VGA_SYNC:inst2|h_count[0]          ;
+; VGA_SYNC:inst36|h_count[1]              ; Merged with VGA_SYNC:inst2|h_count[1]          ;
+; VGA_SYNC:inst36|h_count[2]              ; Merged with VGA_SYNC:inst2|h_count[2]          ;
+; VGA_SYNC:inst36|h_count[3]              ; Merged with VGA_SYNC:inst2|h_count[3]          ;
+; VGA_SYNC:inst36|h_count[4]              ; Merged with VGA_SYNC:inst2|h_count[4]          ;
+; VGA_SYNC:inst36|h_count[5]              ; Merged with VGA_SYNC:inst2|h_count[5]          ;
+; VGA_SYNC:inst36|h_count[6]              ; Merged with VGA_SYNC:inst2|h_count[6]          ;
+; VGA_SYNC:inst36|h_count[7]              ; Merged with VGA_SYNC:inst2|h_count[7]          ;
+; VGA_SYNC:inst36|h_count[8]              ; Merged with VGA_SYNC:inst2|h_count[8]          ;
+; VGA_SYNC:inst36|h_count[9]              ; Merged with VGA_SYNC:inst2|h_count[9]          ;
 ; bouncy_ball:inst3|ball_y_motion[2,4..9] ; Merged with bouncy_ball:inst3|ball_y_motion[0] ;
+; MOUSE:inst|cursor_row[9]                ; Stuck at GND due to stuck port data_in         ;
 ; VGA_SYNC:inst2|pixel_row[9]             ; Stuck at GND due to stuck port data_in         ;
-; Total Number of Removed Registers = 18  ;                                                ;
+; Total Number of Removed Registers = 62  ;                                                ;
 +-----------------------------------------+------------------------------------------------+
 
 
@@ -283,12 +379,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 127   ;
+; Total registers                              ; 183   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Synchronous Load   ; 20    ;
 ; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 62    ;
+; Number of registers using Clock Enable       ; 120   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -308,13 +404,27 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |Flappy_Bird|VGA_SYNC:inst2|v_count[8] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Flappy_Bird|MOUSE:inst|new_cursor_row[9]      ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |Flappy_Bird|VGA_SYNC:inst2|v_count[8]         ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |Flappy_Bird|MOUSE:inst|cursor_row[2]          ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |Flappy_Bird|MOUSE:inst|cursor_column[6]       ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Flappy_Bird|char_rom_display:inst5|address[0] ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Flappy_Bird|char_rom_display:inst5|address[1] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Source assignments for char_rom:inst6|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------------+
+; Assignment                      ; Value              ; From ; To                                     ;
++---------------------------------+--------------------+------+----------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                      ;
++---------------------------------+--------------------+------+----------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------+
@@ -691,6 +801,67 @@ Encoding Type:  One-Hot
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: char_rom:inst6|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+---------------------------------+
+; Parameter Name                     ; Value                ; Type                            ;
++------------------------------------+----------------------+---------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                         ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                      ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                    ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                    ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                  ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                         ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                         ;
+; WIDTH_A                            ; 8                    ; Signed Integer                  ;
+; WIDTHAD_A                          ; 9                    ; Signed Integer                  ;
+; NUMWORDS_A                         ; 512                  ; Signed Integer                  ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                         ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                         ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                         ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                         ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                         ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                         ;
+; WIDTH_B                            ; 1                    ; Untyped                         ;
+; WIDTHAD_B                          ; 1                    ; Untyped                         ;
+; NUMWORDS_B                         ; 1                    ; Untyped                         ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                         ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                         ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                         ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                         ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                         ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                         ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                         ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                         ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                         ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                         ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                         ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                         ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                  ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                         ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                         ;
+; BYTE_SIZE                          ; 8                    ; Untyped                         ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                         ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                         ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                         ;
+; INIT_FILE                          ; tcgrom.mif           ; Untyped                         ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                         ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                         ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                         ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                         ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                         ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                         ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                         ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                         ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                         ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                         ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                         ;
+; DEVICE_FAMILY                      ; Cyclone III          ; Untyped                         ;
+; CBXI_PARAMETER                     ; altsyncram_kt91      ; Untyped                         ;
++------------------------------------+----------------------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-------------------------------------------------------------------------------+
 ; altpll Parameter Settings by Entity Instance                                  ;
 +-------------------------------+-----------------------------------------------+
@@ -708,12 +879,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+-----------------------------------------------+
 
 
++--------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                           ;
++-------------------------------------------+------------------------------------------------+
+; Name                                      ; Value                                          ;
++-------------------------------------------+------------------------------------------------+
+; Number of entity instances                ; 1                                              ;
+; Entity Instance                           ; char_rom:inst6|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                            ;
+;     -- WIDTH_A                            ; 8                                              ;
+;     -- NUMWORDS_A                         ; 512                                            ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                   ;
+;     -- WIDTH_B                            ; 1                                              ;
+;     -- NUMWORDS_B                         ; 1                                              ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                         ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                   ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                           ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                      ;
++-------------------------------------------+------------------------------------------------+
+
+
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -722,10 +913,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Sat May 14 16:46:41 2022
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon May 16 01:42:23 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Flappy_Bird -c Flappy_Bird
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl files/char_rom_display.vhd
+    Info (12022): Found design unit 1: char_rom_display-arc
+    Info (12023): Found entity 1: char_rom_display
 Info (12021): Found 2 design units, including 1 entities, in source file vhdl files/vga_sync.vhd
     Info (12022): Found design unit 1: VGA_SYNC-a
     Info (12023): Found entity 1: VGA_SYNC
@@ -750,8 +944,12 @@ Info (12021): Found 2 design units, including 1 entities, in source file vhdl fi
 Info (12021): Found 1 design units, including 1 entities, in source file flappy_bird.bdf
     Info (12023): Found entity 1: Flappy_Bird
 Info (12021): Found 0 design units, including 0 entities, in source file vhdl files/pipe_gen.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl files/show_colour.vhd
+    Info (12022): Found design unit 1: show_colour-arc
+    Info (12023): Found entity 1: show_colour
 Info (12127): Elaborating entity "Flappy_Bird" for the top level hierarchy
 Warning (275011): Block or symbol "VGA_SYNC" of instance "inst2" overlaps another block or symbol
+Warning (275011): Block or symbol "show_colour" of instance "inst34" overlaps another block or symbol
 Warning (275008): Primitive "NOT" of instance "inst7" not used
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:inst2"
 Info (12128): Elaborating entity "clock_div_25MHz" for hierarchy "clock_div_25MHz:inst4"
@@ -816,6 +1014,14 @@ Info (12133): Instantiated megafunction "clock_div_25MHz:inst4|altpll:altpll_com
 Info (12021): Found 1 design units, including 1 entities, in source file db/clock_div_25mhz_altpll.v
     Info (12023): Found entity 1: clock_div_25MHz_altpll
 Info (12128): Elaborating entity "clock_div_25MHz_altpll" for hierarchy "clock_div_25MHz:inst4|altpll:altpll_component|clock_div_25MHz_altpll:auto_generated"
+Info (12128): Elaborating entity "show_colour" for hierarchy "show_colour:inst34"
+Warning (10492): VHDL Process Statement warning at show_colour.vhd(16): signal "red_text" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at show_colour.vhd(17): signal "green_text" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at show_colour.vhd(19): signal "red_ball" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at show_colour.vhd(20): signal "green_ball" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at show_colour.vhd(21): signal "blue_ball" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at show_colour.vhd(13): inferring latch(es) for signal or variable "blue", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "blue" at show_colour.vhd(13)
 Info (12128): Elaborating entity "bouncy_ball" for hierarchy "bouncy_ball:inst3"
 Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:inst"
 Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read
@@ -823,21 +1029,83 @@ Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHARO
 Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "char_rom" for hierarchy "char_rom:inst6"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "char_rom:inst6|altsyncram:altsyncram_component"
+Info (12130): Elaborated megafunction instantiation "char_rom:inst6|altsyncram:altsyncram_component"
+Info (12133): Instantiated megafunction "char_rom:inst6|altsyncram:altsyncram_component" with the following parameter:
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "tcgrom.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone III"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "512"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "widthad_a" = "9"
+    Info (12134): Parameter "width_a" = "8"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_kt91.tdf
+    Info (12023): Found entity 1: altsyncram_kt91
+Info (12128): Elaborating entity "altsyncram_kt91" for hierarchy "char_rom:inst6|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated"
+Info (12128): Elaborating entity "char_rom_display" for hierarchy "char_rom_display:inst5"
+Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(19): signal "row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(19): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(20): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(24): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(28): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(32): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(36): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(40): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(44): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(48): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(52): signal "row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(53): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at char_rom_display.vhd(16): inferring latch(es) for signal or variable "address", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at char_rom_display.vhd(16): inferring latch(es) for signal or variable "font_row", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at char_rom_display.vhd(16): inferring latch(es) for signal or variable "font_col", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "font_col[0]" at char_rom_display.vhd(16)
+Info (10041): Inferred latch for "font_col[1]" at char_rom_display.vhd(16)
+Info (10041): Inferred latch for "font_col[2]" at char_rom_display.vhd(16)
+Info (10041): Inferred latch for "font_row[0]" at char_rom_display.vhd(16)
+Info (10041): Inferred latch for "font_row[1]" at char_rom_display.vhd(16)
+Info (10041): Inferred latch for "font_row[2]" at char_rom_display.vhd(16)
+Info (10041): Inferred latch for "address[0]" at char_rom_display.vhd(16)
+Info (10041): Inferred latch for "address[1]" at char_rom_display.vhd(16)
+Info (10041): Inferred latch for "address[2]" at char_rom_display.vhd(16)
+Info (10041): Inferred latch for "address[3]" at char_rom_display.vhd(16)
+Info (10041): Inferred latch for "address[4]" at char_rom_display.vhd(16)
+Info (10041): Inferred latch for "address[5]" at char_rom_display.vhd(16)
+Info (12128): Elaborating entity "bcd_to_seven_seg" for hierarchy "bcd_to_seven_seg:inst8"
+Warning (13012): Latch char_rom_display:inst5|address[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[8]
+Warning (13012): Latch char_rom_display:inst5|address[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[8]
+Warning (13012): Latch char_rom_display:inst5|address[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9]
+Warning (13012): Latch char_rom_display:inst5|address[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[7]
+Warning (13012): Latch char_rom_display:inst5|address[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[8]
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
+Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "char_rom:inst6|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated|ALTSYNCRAM"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 244 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 7 output pins
+Info (21057): Implemented 394 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 21 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 231 logic cells
+    Info (21061): Implemented 358 logic cells
+    Info (21064): Implemented 8 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4667 megabytes
-    Info: Processing ended: Sat May 14 16:46:44 2022
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:02
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 40 warnings
+    Info: Peak virtual memory: 4646 megabytes
+    Info: Processing ended: Mon May 16 01:42:31 2022
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:06
 
 

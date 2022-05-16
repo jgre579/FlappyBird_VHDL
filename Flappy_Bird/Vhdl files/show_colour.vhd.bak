@@ -1,0 +1,26 @@
+LIBRARY ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+--This is a priority mux which chooses the configuration of loading elements on the vga screen
+--Inputs: RGB Values from each relement and Enable Signal from each element
+entity show_colour is
+	port (red_ball,green_ball,blue_ball,red_text,green_text,blue_text: in std_logic;
+			red,green,blue: out std_logic);
+end show_colour;
+
+Architecture arc of show_colour is
+begin	
+	process(red_ball,green_ball,blue_ball,red_text,green_text,blue_text)
+	begin
+	
+			red<=red_ball;
+			green<=green_ball;
+			blue<=blue_ball;
+		
+			red<=red_text;
+			green<=green_text;
+			blue<=blue_text;
+
+	end process;
+end architecture arc;
+		

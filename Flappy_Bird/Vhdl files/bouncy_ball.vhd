@@ -6,7 +6,7 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 
 ENTITY bouncy_ball IS
 	PORT
-		( pb1, pb2, clk, vert_sync, mouse_click	: IN std_logic;
+		( pb1, pb2, clk, vert_sync, mouse_click: IN std_logic;
           pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
 		  red, green, blue, top, bot 			: OUT std_logic);		
 END bouncy_ball;
@@ -18,7 +18,7 @@ SIGNAL size 					: std_logic_vector(9 DOWNTO 0);
 SIGNAL ball_y_pos				: std_logic_vector(9 DOWNTO 0);
 SiGNAL ball_x_pos				: std_logic_vector(10 DOWNTO 0);
 SIGNAL ball_y_motion			: std_logic_vector(9 DOWNTO 0);
-
+SIGNAL texts_on				: std_logic;
 BEGIN           
 
 size <= CONV_STD_LOGIC_VECTOR(8,10);
@@ -35,7 +35,7 @@ ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' &
 --Red <=  pb1;
 --Green <= (not pb2) and (not ball_on);
 --Blue <=  not ball_on;
-
+	
 	Red <=  pb2;
 	Green <= '0' when ball_on = '1' else '1';
 	Blue <=  pb1 when ball_on = '1' else '1';
@@ -77,14 +77,14 @@ begin
 			end if;
 		end if;
 		
-	
-		
-		
 		-- Compute next ball Y position
 		ball_y_pos <= ball_y_pos + ball_y_motion;
 		
 		top <= ball_hit_top;
 		bot <= ball_hit_bot;
+		
+		
+		
 	end if;
 end process Move_Ball;
 
