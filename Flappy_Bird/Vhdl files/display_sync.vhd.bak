@@ -1,0 +1,25 @@
+LIBRARY IEEE;
+USE  IEEE.STD_LOGIC_1164.all;
+USE  IEEE.STD_LOGIC_ARITH.all;
+USE  IEEE.STD_LOGIC_UNSIGNED.all;
+
+entity display_sync is
+	port (ball_on, text_on: in std_logic;
+			red,green,blue: out std_logic);
+end show_colour;
+
+Architecture arc of show_colour is
+begin	
+	red <= 	'1' when ball_on else
+				'1' when text_on else
+				'1';
+	green <= '0' when ball_on else
+				'0' when text_on else 
+				'1';
+	blue <=  '0' when ball_on else	
+				'0' when text_on else 
+				'1';
+				
+
+end architecture arc;
+		

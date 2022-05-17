@@ -8,12 +8,12 @@ ENTITY bouncy_ball IS
 	PORT
 		( pb1, pb2, clk, vert_sync, mouse_click: IN std_logic;
           pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
-		  red, green, blue, top, bot 			: OUT std_logic);		
+		  ball_on, top, bot 			: OUT std_logic);		
 END bouncy_ball;
 
 architecture behavior of bouncy_ball is
 
-SIGNAL ball_on					: std_logic;
+
 SIGNAL size 					: std_logic_vector(9 DOWNTO 0);  
 SIGNAL ball_y_pos				: std_logic_vector(9 DOWNTO 0);
 SiGNAL ball_x_pos				: std_logic_vector(10 DOWNTO 0);
@@ -36,9 +36,9 @@ ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' &
 --Green <= (not pb2) and (not ball_on);
 --Blue <=  not ball_on;
 	
-	Red <=  pb2;
-	Green <= '0' when ball_on = '1' else '1';
-	Blue <=  pb1 when ball_on = '1' else '1';
+--	Red <=  pb2 when ball_on = '1';
+--	Green <= '0' when ball_on = '1';
+--	Blue <=  pb1 when ball_on = '1';
 
 
 Move_Ball: process (vert_sync) 
