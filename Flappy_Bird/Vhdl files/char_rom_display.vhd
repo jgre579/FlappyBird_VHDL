@@ -15,44 +15,69 @@ architecture arc of char_rom_display is
 	begin
 		process(clk)
 			begin
-							--training
-						if(row >= "0000010000" and row < "0000100000" and col >= "0110000000" and col < "1000000000") then 
-							if(col >= "0110000000" and col < "0110010000") then
-								address <= "010100"; --T
+--							--training
+--						if(row >= "0000010000" and row < "0000100000" and col >= "0110000000" and col < "1000000000") then 
+--							if(col >= "0110000000" and col < "0110010000") then
+--								address <= "010100"; --T
+--							end if;
+--							
+--							if(col >= "0110010000" and col < "0110100000") then
+--								address <= "010010"; --R
+--							end if;
+--							
+--							if(col >= "0110100000" and col < "0110110000") then
+--								address <= "000001"; --A
+--							end if;
+--							
+--							if(col >= "0110110000" and col < "0111000000") then
+--								address <= "001001"; --I
+--							end if;
+--							
+--							if(col >= "0111000000" and col < "0111010000") then
+--								address <= "001110"; --N
+--							end if;
+--							
+--							if(col >= "0111010000" and col < "0111100000") then
+--								address <= "001001"; --I
+--							end if;
+--							
+--							if(col >= "0111100000" and col < "0111110000") then
+--								address <= "001110"; --N
+--							end if;
+--							
+--							if(col >= "0111110000" and col < "1000000000") then
+--								address <= "000111"; --G
+--							end if;
+--							
+--							font_row <= row(3 downto 1);
+--							font_col <= col(3 downto 1);
+--					end if; 
+
+							--score
+						if(row >= "0000010000" and row < "0000100000" and col >= "100010000" and col < "101100000") then 
+							if(col >= "100010000" and col < "100100000") then
+								address <= "010011"; --S
 							end if;
 							
-							if(col >= "0110010000" and col < "0110100000") then
+							if(col >= "100100000" and col < "100110000") then
+								address <= "000011"; --C
+							end if;
+							
+							if(col >= "100110000" and col < "101000000") then
+								address <= "001111"; --O
+							end if;
+							
+							if(col >= "101000000" and col < "101010000") then
 								address <= "010010"; --R
 							end if;
 							
-							if(col >= "0110100000" and col < "0110110000") then
-								address <= "000001"; --A
+							if(col >= "101010000" and col < "101100000") then
+								address <= "000101"; --E
 							end if;
 							
-							if(col >= "0110110000" and col < "0111000000") then
-								address <= "001001"; --I
-							end if;
-							
-							if(col >= "0111000000" and col < "0111010000") then
-								address <= "001110"; --N
-							end if;
-							
-							if(col >= "0111010000" and col < "0111100000") then
-								address <= "001001"; --I
-							end if;
-							
-							if(col >= "0111100000" and col < "0111110000") then
-								address <= "001110"; --N
-							end if;
-							
-							if(col >= "0111110000" and col < "1000000000") then
-								address <= "000111"; --G
-							end if;
 							
 							font_row <= row(3 downto 1);
 							font_col <= col(3 downto 1);
-
-
 					end if; 
 
 		end process;

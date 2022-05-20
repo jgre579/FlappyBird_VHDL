@@ -41,7 +41,7 @@ set_global_assignment -name DEVICE EP3C16F484C6
 set_global_assignment -name TOP_LEVEL_ENTITY Flappy_Bird
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:39:39  MAY 12, 2022"
-set_global_assignment -name LAST_QUARTUS_VERSION 13.0
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -105,3 +105,4 @@ set_global_assignment -name VHDL_FILE "Vhdl files/show_colour.vhd"
 set_location_assignment PIN_J6 -to training
 set_global_assignment -name VHDL_FILE "Vhdl files/display_sync.vhd"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VHDL_FILE "Vhdl files/game_states.vhd"
