@@ -1,0 +1,79 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0\lsfr\work
+Elfsr1
+Z1 w1652890898
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\altera\13.0\lsfr\work
+Z5 8C:/altera/13.0/lsfr/lsfr.vhd
+Z6 FC:/altera/13.0/lsfr/lsfr.vhd
+l0
+L4
+Z7 VUZVhDXeEge6P4l:bFzHo81
+Z8 !s100 ^Wng7]gA@]KnjCeYOaA:Y3
+Z9 OV;C;10.1d;51
+32
+Z10 !s108 1652894086.834000
+Z11 !s90 -reportprogress|300|-work|work|C:/altera/13.0/lsfr/lsfr.vhd|
+Z12 !s107 C:/altera/13.0/lsfr/lsfr.vhd|
+Z13 o-work work -O0
+Z14 tExplicit 1
+!i10b 1
+Artl
+R2
+R3
+Z15 DEx4 work 5 lfsr1 0 22 UZVhDXeEge6P4l:bFzHo81
+l16
+L12
+Z16 V=90UFYl>:0TRO__58G[m^2
+Z17 !s100 4kUXc5DOXA70Jho?]DkCj1
+R9
+32
+R10
+R11
+R12
+R13
+R14
+!i10b 1
+Etb_lfsr1
+Z18 w1652890921
+Z19 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z20 DPx4 ieee 16 std_logic_textio 0 22 ?Il0a149GV276[?[UMDWh2
+R2
+R3
+R4
+Z21 8C:/altera/13.0/lsfr/test_lsfr.vhd
+Z22 FC:/altera/13.0/lsfr/test_lsfr.vhd
+l0
+L7
+Z23 VT:AF7mf[an9^;YfPIzgJY1
+Z24 !s100 [PK]DnBa=B94M>Tg55D7o3
+R9
+32
+!i10b 1
+Z25 !s108 1652894090.994000
+Z26 !s90 -reportprogress|300|-work|work|C:/altera/13.0/lsfr/test_lsfr.vhd|
+Z27 !s107 C:/altera/13.0/lsfr/test_lsfr.vhd|
+R13
+R14
+Atest
+R19
+R20
+R2
+R3
+Z28 DEx4 work 8 tb_lfsr1 0 22 T:AF7mf[an9^;YfPIzgJY1
+l28
+L10
+Z29 VeBP@9gSRU4a;^L6BkOif>2
+Z30 !s100 H>IB]fZAb>WJ_5YGSB<OE3
+R9
+32
+!i10b 1
+R25
+R26
+R27
+R13
+R14
