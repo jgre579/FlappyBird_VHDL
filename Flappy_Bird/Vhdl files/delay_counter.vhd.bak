@@ -1,0 +1,40 @@
+LIBRARY IEEE;
+USE  IEEE.STD_LOGIC_1164.all;
+USE  IEEE.STD_LOGIC_ARITH.all;
+USE  IEEE.STD_LOGIC_UNSIGNED.all;
+
+entity delay_counter is
+	port (clk in std_logic;
+			q: out std_logic);
+end display_sync;
+
+Architecture arc of display_sync is
+begin	
+	
+	process (clk) is
+
+	variable counter integer := 0;
+	
+	begin 
+		if (rising_edge(clk)) then
+	
+			if (counter = 5000) then 
+				counter = 0;
+				q <= '1';
+			else
+			
+				counter = counter + 1;
+				q <='0';
+			end if; 
+			
+		end if;
+	end process;
+			
+		
+		
+	
+
+				
+
+end architecture arc;
+		

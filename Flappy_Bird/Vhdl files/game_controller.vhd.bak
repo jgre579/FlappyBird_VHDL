@@ -1,0 +1,45 @@
+LIBRARY IEEE;
+USE  IEEE.STD_LOGIC_1164.all;
+USE  IEEE.STD_LOGIC_ARITH.all;
+USE  IEEE.STD_LOGIC_UNSIGNED.all;
+
+entity game_controller is
+	port (game_enable, is_pipe_collided, is_powerup_collided, is_mouse_clicked: in std_logic;
+			game_over, score, jump, reset, enable: out std_logic);
+end display_sync;
+
+Architecture arc of display_sync is
+signal is_playing : std_logic := '1';
+begin	
+
+
+process is
+
+variable lives : unsigned(1 downto 0) := 3;
+
+begin 
+
+	if(game_state_in = '1' and is_playing = '1') then 
+	-- Play the game
+	
+		jump <= is_mouse_clicked;
+		enable = '1';
+		
+		if(is_pipe_collided = '1') then 
+			
+			if(lives = 1) then 
+			-- Game is over
+				is_playing = '0';
+			elsif 
+				lives = lives - 1;
+			end if;
+		end if; 
+				
+			
+			
+	
+
+
+
+end architecture arc;
+		

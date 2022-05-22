@@ -47,23 +47,16 @@ applicable agreement for further details.
 	(port
 		(pt 264 80)
 		(output)
-		(text "right_button" (rect 0 0 46 12)(font "Arial" ))
-		(text "right_button" (rect 197 75 243 87)(font "Arial" ))
-		(line (pt 264 80)(pt 248 80)(line_width 1))
+		(text "mouse_cursor_row[9..0]" (rect 0 0 99 12)(font "Arial" ))
+		(text "mouse_cursor_row[9..0]" (rect 144 75 243 87)(font "Arial" ))
+		(line (pt 264 80)(pt 248 80)(line_width 3))
 	)
 	(port
 		(pt 264 96)
 		(output)
-		(text "mouse_cursor_row[9..0]" (rect 0 0 99 12)(font "Arial" ))
-		(text "mouse_cursor_row[9..0]" (rect 144 91 243 103)(font "Arial" ))
-		(line (pt 264 96)(pt 248 96)(line_width 3))
-	)
-	(port
-		(pt 264 112)
-		(output)
 		(text "mouse_cursor_column[9..0]" (rect 0 0 113 12)(font "Arial" ))
-		(text "mouse_cursor_column[9..0]" (rect 130 107 243 119)(font "Arial" ))
-		(line (pt 264 112)(pt 248 112)(line_width 3))
+		(text "mouse_cursor_column[9..0]" (rect 130 91 243 103)(font "Arial" ))
+		(line (pt 264 96)(pt 248 96)(line_width 3))
 	)
 	(port
 		(pt 264 32)

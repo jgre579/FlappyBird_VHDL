@@ -41,15 +41,10 @@ set_global_assignment -name DEVICE EP3C16F484C6
 set_global_assignment -name TOP_LEVEL_ENTITY Flappy_Bird
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:39:39  MAY 12, 2022"
-set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name LAST_QUARTUS_VERSION 13.0
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
-set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
-set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_K18 -to blue_out
 set_location_assignment PIN_G21 -to clk
 set_location_assignment PIN_J21 -to green_out
@@ -98,11 +93,16 @@ set_global_assignment -name VHDL_FILE "Vhdl files/bcd_to_seven_seg.vhd"
 set_global_assignment -name VHDL_FILE "Vhdl files/ball.vhd"
 set_global_assignment -name BDF_FILE Flappy_Bird.bdf
 set_global_assignment -name VHDL_FILE "Vhdl files/pipe_gen.vhd"
-set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
-set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
 set_global_assignment -name VHDL_FILE "Vhdl files/show_colour.vhd"
-set_location_assignment PIN_J6 -to training
 set_global_assignment -name VHDL_FILE "Vhdl files/display_sync.vhd"
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name VHDL_FILE "Vhdl files/game_states.vhd"
+set_global_assignment -name VHDL_FILE "Vhdl files/game_controller.vhd"
+set_location_assignment PIN_J6 -to sw0
+set_location_assignment PIN_J3 -to led2
+set_location_assignment PIN_H1 -to led3
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VHDL_FILE "Vhdl files/delay_counter.vhd"
+set_global_assignment -name BDF_FILE Block1.bdf
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

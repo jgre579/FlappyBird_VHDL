@@ -6,7 +6,7 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 
 ENTITY pipe_gen IS
 	PORT
-		( pb1, pb2, clk, horiz_sync, mouse_click	: IN std_logic;
+		(clk, vert_sync, enable, reset	: IN std_logic;
           pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
 			pipe_on, pipe2_on, pipe3_on: OUT std_logic);		
 END pipe_gen;
@@ -98,7 +98,7 @@ pipe3_bot_on <= '1' when ( ('0' & pixel_column >= '0' & pipe3_x_pos) and ('0' & 
 
 pipe3_on <= pipe3_bot_on or pipe3_top_on;
 
-Move_Pipes: process (horiz_sync) 
+Move_Pipes: process (vert_sync) 
 
 variable count : integer := 0;
 variable count2 : integer := 0;
@@ -108,8 +108,8 @@ variable enable_pipe3 : integer := 0;
 
 
 begin
-	-- Move pipes once every horiz_sync 
-	if (rising_edge(horiz_sync)) then			
+	-- Move pipes once every vert_sync 
+	if (rising_edge(vert_sync) and enable = '1') then			
 	
 		--pipe 1  ___________________________________________________________________
 		if(count = 750) then -- moving pipes once

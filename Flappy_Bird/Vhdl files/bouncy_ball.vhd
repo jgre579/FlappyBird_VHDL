@@ -6,9 +6,9 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 
 ENTITY bouncy_ball IS
 	PORT
-		( pb1, pb2, clk, vert_sync, mouse_click: IN std_logic;
+		(clk, vert_sync, mouse_click, enable, reset: IN std_logic;
           pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
-		  ball_on, top, bot 			: OUT std_logic);		
+		  ball_on 			: OUT std_logic);		
 END bouncy_ball;
 
 architecture behavior of bouncy_ball is
@@ -30,23 +30,12 @@ ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' &
 			'0';
 
 
--- Colours for pixel data on video signal
--- Changing the background and ball colour by pushbuttons
---Red <=  pb1;
---Green <= (not pb2) and (not ball_on);
---Blue <=  not ball_on;
-	
---	Red <=  pb2 when ball_on = '1';
---	Green <= '0' when ball_on = '1';
---	Blue <=  pb1 when ball_on = '1';
-
-
 Move_Ball: process (vert_sync) 
 variable ball_hit_top : std_logic := '0'; 	
 variable ball_hit_bot : std_logic := '0'; 
 begin
 	-- Move ball once every vertical sync
-	if (rising_edge(vert_sync)) then			
+	if (rising_edge(vert_sync) and enable = '1') then			
 	
 		-- Bounce off top or bottom of the screen
 		if ( ('0' & ball_y_pos >= CONV_STD_LOGIC_VECTOR(479,10) - size) ) then
@@ -80,9 +69,7 @@ begin
 		-- Compute next ball Y position
 		ball_y_pos <= ball_y_pos + ball_y_motion;
 		
-		top <= ball_hit_top;
-		bot <= ball_hit_bot;
-		
+
 		
 		
 	end if;
