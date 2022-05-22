@@ -11,35 +11,30 @@ end delay_counter;
 Architecture arc of delay_counter is
 begin	
 	
-	process (clk) is
+	process  is
 
 	variable counter : integer := 0;
+	variable t_q : std_logic := '0';
 	
 	begin 
-		if(reset = '1') then 
-			counter := 500000;
-			
-		else 
-			counter := 0;
-		end if;
+		
+		wait until rising_edge(clk);
 		
 		if(enable = '1') then 
-			counter := 500000;
+			if(counter < 200) then 
+				counter := counter + 1;
+				t_q := '0';
+			else 
+				counter := 0;
+				t_q := '1';
+			end if;
 		else 
-			counter := 0;
+			t_q := '0';
 		end if;
 		
-	
-		if (rising_edge(clk)) then
-			
-			if (counter > 0 ) then 
-				counter := counter - 1;
-				q <= '1';
-			else
-				q <='0';
-			end if; 
-			
-		end if;
+		q <= t_q;
+		
+		
 	end process;
 			
 		

@@ -8,7 +8,7 @@ ENTITY bouncy_ball IS
 	PORT
 		(clk, vert_sync, mouse_click, enable, reset: IN std_logic;
           pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
-		  ball_on 			: OUT std_logic);		
+		  ball_on			: OUT std_logic);		
 END bouncy_ball;
 
 architecture behavior of bouncy_ball is
@@ -19,6 +19,8 @@ SIGNAL ball_y_pos				: std_logic_vector(9 DOWNTO 0);
 SiGNAL ball_x_pos				: std_logic_vector(10 DOWNTO 0);
 SIGNAL ball_y_motion			: std_logic_vector(9 DOWNTO 0);
 SIGNAL texts_on				: std_logic;
+
+
 BEGIN           
 
 size <= CONV_STD_LOGIC_VECTOR(8,10);

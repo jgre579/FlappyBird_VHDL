@@ -112,7 +112,7 @@ begin
 	if (rising_edge(vert_sync) and enable = '1') then			
 	
 		--pipe 1  ___________________________________________________________________
-		if(count = 750) then -- moving pipes once
+		if(count = 2) then -- moving pipes once
 			pipe_x_motion <= CONV_STD_LOGIC_VECTOR(1,10);
 			
 			count := 0;
@@ -128,7 +128,7 @@ begin
 		end if; 
 		
 		if(enable_pipe2 = 1)then 
-			if(count2 = 750) then 
+			if(count2 = 2) then 
 				pipe2_x_motion <= CONV_STD_LOGIC_VECTOR(1,10);
 				count2 := 0;
 			else
@@ -144,7 +144,7 @@ begin
 		end if; 
 		
 		if(enable_pipe3 = 1)then 
-			if(count3 = 750) then 
+			if(count3 = 2) then 
 				pipe3_x_motion <= CONV_STD_LOGIC_VECTOR(1,10);
 				count3 := 0;
 			else

@@ -4,6 +4,7 @@ clk => clock_div_25MHz:inst8.inclk0
 sw2 => game_controller:inst.game_enable
 mouse_data <> MOUSE:inst4.mouse_data
 mouse_clk <> MOUSE:inst4.mouse_clk
+pb2 => game_controller:inst.btn2
 green_out <= VGA_SYNC:inst2.green_out
 blue_out <= VGA_SYNC:inst2.blue_out
 horiz_sync_out <= horiz_sync.DB_MAX_OUTPUT_PORT_TYPE
@@ -11,6 +12,7 @@ vert_sync_out <= vert_sync.DB_MAX_OUTPUT_PORT_TYPE
 led0 <= game_controller:inst.led0
 led1 <= game_controller:inst.led1
 led2 <= game_controller:inst.led2
+led3 <= is_pipe_collided.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Flappy_Bird|VGA_SYNC:inst2
@@ -186,13 +188,15 @@ pipe2_on => red.OUTPUTSELECT
 pipe2_on => process_0.IN1
 pipe3_on => process_0.IN1
 pipe3_on => red.DATAA
-timer => process_0.IN1
-clk => ~NO_FANOUT~
+vert_sync => coll.OUTPUTSELECT
+vert_sync => collision.ENA
+clk => coll.CLK
+clk => collision.CLK
 red <= red.DB_MAX_OUTPUT_PORT_TYPE
 green <= green.DB_MAX_OUTPUT_PORT_TYPE
 blue <= blue.DB_MAX_OUTPUT_PORT_TYPE
-is_pipe_collided <= process_0.DB_MAX_OUTPUT_PORT_TYPE
-timer_enable <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+is_pipe_collided <= collision.DB_MAX_OUTPUT_PORT_TYPE
+timer_enable <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Flappy_Bird|bouncy_ball:inst3
@@ -291,23 +295,29 @@ ball_on <= ball_on.DB_MAX_OUTPUT_PORT_TYPE
 |Flappy_Bird|game_controller:inst
 clk => ~NO_FANOUT~
 game_enable => jump.OUTPUTSELECT
+game_enable => timer_enable.IN0
+game_enable => led2.IN1
 game_enable => enable.DATAIN
 game_enable => led3.DATAIN
-game_enable => lives[0].ENA
-game_enable => lives[1].ENA
-is_pipe_collided => lives[0].CLK
-is_pipe_collided => lives[1].CLK
+game_enable => timer_enable~reg0.ENA
+game_enable => led2~reg0.ENA
+is_pipe_collided => timer_enable~reg0.CLK
+is_pipe_collided => led2~reg0.CLK
 is_powerup_collided => ~NO_FANOUT~
 is_mouse_clicked => jump.DATAB
+btn2 => led2.IN0
+timer_end => timer_enable.IN1
+timer_end => led2.IN1
 game_over <= game_over.DB_MAX_OUTPUT_PORT_TYPE
 score <= score.DB_MAX_OUTPUT_PORT_TYPE
 jump <= jump.DB_MAX_OUTPUT_PORT_TYPE
-reset <= comb.DB_MAX_OUTPUT_PORT_TYPE
+reset <= reset.DB_MAX_OUTPUT_PORT_TYPE
 enable <= game_enable.DB_MAX_OUTPUT_PORT_TYPE
-led0 <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
-led1 <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
-led2 <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+led0 <= led0.DB_MAX_OUTPUT_PORT_TYPE
+led1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+led2 <= led2~reg0.DB_MAX_OUTPUT_PORT_TYPE
 led3 <= game_enable.DB_MAX_OUTPUT_PORT_TYPE
+timer_enable <= timer_enable~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Flappy_Bird|MOUSE:inst4
@@ -462,6 +472,77 @@ mouse_cursor_column[6] <= cursor_column[6].DB_MAX_OUTPUT_PORT_TYPE
 mouse_cursor_column[7] <= cursor_column[7].DB_MAX_OUTPUT_PORT_TYPE
 mouse_cursor_column[8] <= cursor_column[8].DB_MAX_OUTPUT_PORT_TYPE
 mouse_cursor_column[9] <= cursor_column[9].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Flappy_Bird|delay_counter:inst13
+clk => q~reg0.CLK
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+clk => counter[3].CLK
+clk => counter[4].CLK
+clk => counter[5].CLK
+clk => counter[6].CLK
+clk => counter[7].CLK
+clk => counter[8].CLK
+clk => counter[9].CLK
+clk => counter[10].CLK
+clk => counter[11].CLK
+clk => counter[12].CLK
+clk => counter[13].CLK
+clk => counter[14].CLK
+clk => counter[15].CLK
+clk => counter[16].CLK
+clk => counter[17].CLK
+clk => counter[18].CLK
+clk => counter[19].CLK
+clk => counter[20].CLK
+clk => counter[21].CLK
+clk => counter[22].CLK
+clk => counter[23].CLK
+clk => counter[24].CLK
+clk => counter[25].CLK
+clk => counter[26].CLK
+clk => counter[27].CLK
+clk => counter[28].CLK
+clk => counter[29].CLK
+clk => counter[30].CLK
+clk => counter[31].CLK
+enable => t_q.OUTPUTSELECT
+enable => counter[0].ENA
+enable => counter[1].ENA
+enable => counter[2].ENA
+enable => counter[3].ENA
+enable => counter[4].ENA
+enable => counter[5].ENA
+enable => counter[6].ENA
+enable => counter[7].ENA
+enable => counter[8].ENA
+enable => counter[9].ENA
+enable => counter[10].ENA
+enable => counter[11].ENA
+enable => counter[12].ENA
+enable => counter[13].ENA
+enable => counter[14].ENA
+enable => counter[15].ENA
+enable => counter[16].ENA
+enable => counter[17].ENA
+enable => counter[18].ENA
+enable => counter[19].ENA
+enable => counter[20].ENA
+enable => counter[21].ENA
+enable => counter[22].ENA
+enable => counter[23].ENA
+enable => counter[24].ENA
+enable => counter[25].ENA
+enable => counter[26].ENA
+enable => counter[27].ENA
+enable => counter[28].ENA
+enable => counter[29].ENA
+enable => counter[30].ENA
+enable => counter[31].ENA
+reset => ~NO_FANOUT~
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Flappy_Bird|char_rom:inst6
@@ -1019,7 +1100,6 @@ vert_sync => \Move_Pipes:count[28].CLK
 vert_sync => \Move_Pipes:count[29].CLK
 vert_sync => \Move_Pipes:count[30].CLK
 vert_sync => \Move_Pipes:count[31].CLK
-enable => pipe3_x_pos[8].ENA
 enable => pipe3_x_pos[7].ENA
 enable => pipe3_x_pos[6].ENA
 enable => pipe3_x_pos[5].ENA
@@ -1038,6 +1118,7 @@ enable => pipe3_width[3].ENA
 enable => pipe3_width[2].ENA
 enable => pipe3_width[1].ENA
 enable => pipe3_width[0].ENA
+enable => pipe3_x_pos[8].ENA
 enable => pipe3_x_pos[9].ENA
 enable => pipe3_x_pos[10].ENA
 enable => pipe2_width[0].ENA
@@ -1357,18 +1438,5 @@ pixel_column[9] => LessThan7.IN15
 pipe_on <= pipe_on.DB_MAX_OUTPUT_PORT_TYPE
 pipe2_on <= pipe2_on.DB_MAX_OUTPUT_PORT_TYPE
 pipe3_on <= pipe3_on.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Flappy_Bird|delay_counter:inst13
-clk => q~reg0.CLK
-enable => LessThan0.IN32
-enable => LessThan0.IN33
-enable => LessThan0.IN34
-enable => LessThan0.IN35
-enable => LessThan0.IN36
-enable => LessThan0.IN37
-enable => LessThan0.IN38
-reset => ~NO_FANOUT~
-q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

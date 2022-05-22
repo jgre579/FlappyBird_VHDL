@@ -1,5 +1,5 @@
 Flow report for Flappy_Bird
-Sun May 22 16:16:40 2022
+Sun May 22 19:12:44 2022
 Quartus II 32-bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Sun May 22 16:16:36 2022      ;
+; Flow Status                        ; Successful - Sun May 22 19:12:41 2022      ;
 ; Quartus II 32-bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; Flappy_Bird                                ;
 ; Top-level Entity Name              ; Flappy_Bird                                ;
 ; Family                             ; Cyclone III                                ;
 ; Device                             ; EP3C16F484C6                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 635 / 15,408 ( 4 % )                       ;
-;     Total combinational functions  ; 609 / 15,408 ( 4 % )                       ;
-;     Dedicated logic registers      ; 291 / 15,408 ( 2 % )                       ;
-; Total registers                    ; 291                                        ;
-; Total pins                         ; 12 / 347 ( 3 % )                           ;
+; Total logic elements               ; 665 / 15,408 ( 4 % )                       ;
+;     Total combinational functions  ; 633 / 15,408 ( 4 % )                       ;
+;     Dedicated logic registers      ; 325 / 15,408 ( 2 % )                       ;
+; Total registers                    ; 325                                        ;
+; Total pins                         ; 14 / 347 ( 4 % )                           ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 2,048 / 516,096 ( < 1 % )                  ;
 ; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                            ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/22/2022 16:16:22 ;
+; Start date & time ; 05/22/2022 19:12:27 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Flappy_Bird         ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+--------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                          ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+--------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 88925246337591.165319298203272 ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 88925246337591.165320354710976 ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                             ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                              ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; 16764057                       ; --            ; --          ; Top        ;
@@ -91,10 +91,10 @@ applicable agreement for further details.
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 401 MB              ; 00:00:03                           ;
-; Fitter                    ; 00:00:09     ; 1.0                     ; 550 MB              ; 00:00:09                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 361 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 374 MB              ; 00:00:03                           ;
-; Total                     ; 00:00:15     ; --                      ; --                  ; 00:00:16                           ;
+; Fitter                    ; 00:00:08     ; 1.0                     ; 543 MB              ; 00:00:08                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 361 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 374 MB              ; 00:00:02                           ;
+; Total                     ; 00:00:15     ; --                      ; --                  ; 00:00:14                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

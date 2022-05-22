@@ -1,0 +1,19 @@
+--LIBRARY IEEE;
+--USE  IEEE.STD_LOGIC_1164.all;
+--USE  IEEE.STD_LOGIC_ARITH.all;
+--USE  IEEE.STD_LOGIC_UNSIGNED.all;
+--
+--entity pipe_collision is
+--	port (clk : in std_logic;
+--			bird_y, bird_height, gap_start, gap_end: in std_logic_vector(9 downto 0);
+--			is_pipe_collided: out std_logic);
+--end pipe_collision;
+--
+--Architecture arc of pipe_collision is
+--begin	
+--	
+--	is_pipe_collided <= '1' when (bird_y > gap_start) and (bird_y + bird_height < gap_end) else '0';
+--				
+--
+--end architecture arc;
+--		
