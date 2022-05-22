@@ -10,11 +10,13 @@ end game_controller;
 
 Architecture arc of game_controller is
 signal is_playing : std_logic := '1';
+signal death 		: std_logic := '0';
+
 begin	
 
-enable <= game_enable;
+enable <= game_enable when is_playing = '1' else '0';
 led3 <= game_enable;
-
+game_over <= death; 
 jump <= is_mouse_clicked when game_enable = '1' and is_playing = '1' else '0';
 
 
@@ -28,14 +30,17 @@ begin
 	
 	
 	--if (rising_edge(clk)) then 
-	
+		-- Play the game
+
 	if(game_enable = '1' and is_playing = '1') then 
-	-- Play the game
-	
-		
-		if(is_pipe_collided = '1') then 
+
+	if(is_pipe_collided = '1') then 
+			
+			--if collided, change state of is_playing to 0 and death to 1 
 			led2 <= '1';
 			timer_enable <= '1';
+			is_playing <= '0';
+			death <= '1'; 
 			
 		end if;
 		
@@ -82,8 +87,13 @@ begin
 --			led2 <= '0';
 --	end case;
 	
-	
-	
+		--reset death, parameter reset, and is_playing
+		if(btn2 = '0') then 
+			death <= '0';
+			reset <= '1';
+			is_playing <= '1'; 
+		end if;
+
 	--end if;
 end process;
 

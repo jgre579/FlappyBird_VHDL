@@ -6,7 +6,7 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 
 ENTITY pipe_gen IS
 	PORT
-		(clk, vert_sync, enable, reset	: IN std_logic;
+		(clk, vert_sync, enable, reset, game_over : IN std_logic;
           pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
 			pipe_on, pipe2_on, pipe3_on: OUT std_logic);		
 END pipe_gen;
@@ -55,14 +55,14 @@ pipe_bot_height <= CONV_STD_LOGIC_VECTOR(490-300,10);
 pipe_bot_y_pos <= CONV_STD_LOGIC_VECTOR(300,10);
 
 pipe_top_on <= '1' when ( ('0' & pixel_column >= '0' & pipe_x_pos) and ('0' & pixel_column <= '0' & pipe_x_pos + pipe_width) 	-- x_pos - size <= pixel_column <= x_pos + size
-					and ('0' & pixel_row <= pipe_top_y_pos) )  else	-- y_pos - size <= pixel_row <= y_pos + size
+					and ('0' & pixel_row <= pipe_top_y_pos))  else	-- y_pos - size <= pixel_row <= y_pos + size
 			'0';
 
 pipe_bot_on <= '1' when ( ('0' & pixel_column >= '0' & pipe_x_pos) and ('0' & pixel_column <= '0' & pipe_x_pos + pipe_width) 	-- x_pos - size <= pixel_column <= x_pos + size
-					and ('0' & pipe_bot_y_pos <= pixel_row) ) else	-- y_pos - size <= pixel_row <= y_pos + size
+					and ('0' & pipe_bot_y_pos <= pixel_row)) else	-- y_pos - size <= pixel_row <= y_pos + size
 			'0';
 
-pipe_on <= pipe_bot_on or pipe_top_on;
+pipe_on <= (pipe_bot_on or pipe_top_on);
 
 -- pipe 2 ___________________________________________________________________
 pipe2_top_height <= CONV_STD_LOGIC_VECTOR(100,10);
@@ -79,7 +79,7 @@ pipe2_bot_on <= '1' when ( ('0' & pixel_column >= '0' & pipe2_x_pos) and ('0' & 
 					and ('0' & pipe2_bot_y_pos <= pixel_row) ) else	-- y_pos - size <= pixel_row <= y_pos + size
 			'0';
 
-pipe2_on <= pipe2_bot_on or pipe2_top_on;
+pipe2_on <= (pipe2_bot_on or pipe2_top_on);
 
 -- pipe 3 ___________________________________________________________________
 pipe3_top_height <= CONV_STD_LOGIC_VECTOR(150,10);
@@ -96,7 +96,7 @@ pipe3_bot_on <= '1' when ( ('0' & pixel_column >= '0' & pipe3_x_pos) and ('0' & 
 					and ('0' & pipe2_bot_y_pos <= pixel_row) ) else	-- y_pos - size <= pixel_row <= y_pos + size
 			'0';
 
-pipe3_on <= pipe3_bot_on or pipe3_top_on;
+pipe3_on <= (pipe3_bot_on or pipe3_top_on);
 
 Move_Pipes: process (vert_sync) 
 
@@ -109,8 +109,9 @@ variable enable_pipe3 : integer := 0;
 
 begin
 	-- Move pipes once every vert_sync 
+	-- will only move if switch is enabled
 	if (rising_edge(vert_sync) and enable = '1') then			
-	
+
 		--pipe 1  ___________________________________________________________________
 		if(count = 2) then -- moving pipes once
 			pipe_x_motion <= CONV_STD_LOGIC_VECTOR(1,10);
@@ -211,9 +212,22 @@ begin
 			pipe3_x_pos <= pipe3_x_pos - pipe3_x_motion;
 			pipe3_width <= CONV_STD_LOGIC_VECTOR(50, 10);
 		end if;
-
-
-	end if;
+		
+		-- resetting pipes after pressing the reset button
+		elsif	(rising_edge(vert_sync) and reset = '1' and game_over = '1')then 
+				pipe_x_pos <= CONV_STD_LOGIC_VECTOR(640,11);
+				pipe_width <= CONV_STD_LOGIC_VECTOR(50, 10);
+				
+				pipe2_x_pos <= CONV_STD_LOGIC_VECTOR(640,11);	
+				pipe2_width <= CONV_STD_LOGIC_VECTOR(50, 10);
+			
+				pipe3_x_pos <= CONV_STD_LOGIC_VECTOR(640,11);
+				pipe3_width <= CONV_STD_LOGIC_VECTOR(50, 10);
+				
+				enable_pipe2 := 0; 
+				enable_pipe3 := 0; 
+				
+		end if; 
 end process Move_Pipes;
 
 END behavior;
