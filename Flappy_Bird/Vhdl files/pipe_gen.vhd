@@ -8,7 +8,8 @@ ENTITY pipe_gen IS
 	PORT
 		(clk, vert_sync, enable, reset, game_over : IN std_logic;
           pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
-			pipe_on, next_pipe_on : OUT std_logic);		
+			pipe_on, next_pipe_on : OUT std_logic;
+			pipe_position :	OUT std_logic_vector(10 DOWNTO 0));		
 END pipe_gen;
 
 architecture behavior of pipe_gen is
@@ -26,7 +27,7 @@ SiGNAL pipe_fade_x			: std_logic_vector(9 DOWNTO 0);
 
 BEGIN           
 
-
+pipe_position <= pipe_x_pos; 
 -- ball_x_pos and ball_y_pos show the (x,y) for the centre of ball
 
 -- pipe 1  ___________________________________________________________________
