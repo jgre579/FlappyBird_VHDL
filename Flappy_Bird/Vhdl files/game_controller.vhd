@@ -92,6 +92,8 @@ begin
 			death <= '0';
 			reset <= '1';
 			is_playing <= '1'; 
+		else 
+			reset <= '0';
 		end if;
 
 	--end if;

@@ -4,7 +4,8 @@ USE  IEEE.STD_LOGIC_ARITH.all;
 USE  IEEE.STD_LOGIC_UNSIGNED.all;
 
 entity delay_counter is
-	port (clk, enable, reset : in std_logic;
+	port (clk, enable, reset: in std_logic;
+			number : in integer;
 			q : out std_logic);
 end delay_counter;
 
@@ -21,7 +22,7 @@ begin
 		wait until rising_edge(clk);
 		
 		if(enable = '1') then 
-			if(counter < 200) then 
+			if(counter < number) then 
 				counter := counter + 1;
 				t_q := '0';
 			else 

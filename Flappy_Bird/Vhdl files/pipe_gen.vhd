@@ -8,7 +8,7 @@ ENTITY pipe_gen IS
 	PORT
 		(clk, vert_sync, enable, reset, game_over : IN std_logic;
           pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
-			pipe_on, next_pipe_on : OUT std_logic;
+			pipe_on, next_pipe_on, pipe_passed : OUT std_logic;
 			pipe_position :	OUT std_logic_vector(10 DOWNTO 0));		
 END pipe_gen;
 
@@ -50,64 +50,85 @@ pipe_on <= (pipe_bot_on or pipe_top_on);
 
 
 
-Move_Pipes: process (vert_sync) 
+Move_Pipes: process (clk) 
 
 variable count : integer := 0;
+variable v_next_pipe_on : std_logic := '0';
+variable v_pipe_passed : std_logic := '0';
 
 
 begin
 	-- Move pipes once every vert_sync 
 	-- will only move if switch is enabled
-	if (rising_edge(vert_sync) and enable = '1') then			
-
+	if (rising_edge(vert_sync)) then 
+					
+		if(enable = '1') then 
 		--pipe 1  ___________________________________________________________________
-		if(count = 1) then -- moving pipes once
-			pipe_x_motion <= CONV_STD_LOGIC_VECTOR(5,10);
-			
-			count := 0;
-		else -- resetting pipe count after moving 
-			pipe_x_motion <= CONV_STD_LOGIC_VECTOR(0,10);
-			count := count + 1;
-		end if;
+			if(count = 1) then -- moving pipes once
+				pipe_x_motion <= CONV_STD_LOGIC_VECTOR(5,10);
+				
+				count := 0;
+			else -- resetting pipe count after moving 
+				pipe_x_motion <= CONV_STD_LOGIC_VECTOR(0,10);
+				count := count + 1;
+			end if;
 		
 		
 --		pipe1  ___________________________________________________________________
-		if(pipe_x_pos <= CONV_STD_LOGIC_VECTOR(0, 10)) then 
-			
+			if(pipe_x_pos <= CONV_STD_LOGIC_VECTOR(0, 10)) then 
 				
-			if(pipe_width <= CONV_STD_LOGIC_VECTOR(0, 10)) then 
-				pipe_x_pos <= CONV_STD_LOGIC_VECTOR(640,11);
-				pipe_width <= CONV_STD_LOGIC_VECTOR(50, 10);
-			
+					
+				if(pipe_width <= CONV_STD_LOGIC_VECTOR(0, 10)) then 
+					pipe_x_pos <= CONV_STD_LOGIC_VECTOR(640,11);
+					pipe_width <= CONV_STD_LOGIC_VECTOR(50, 10);
+				
+				else 
+					pipe_width <= pipe_width - pipe_x_motion;
+				end if;
+				
+				
 			else 
-				pipe_width <= pipe_width - pipe_x_motion;
+				pipe_x_pos <= pipe_x_pos - pipe_x_motion;
+				pipe_width <= CONV_STD_LOGIC_VECTOR(50, 10);
+			end if;
+		
+			if(pipe_x_pos = CONV_STD_LOGIC_VECTOR(415, 11))then
+				v_next_pipe_on := '1';
+			else 
+				v_next_pipe_on := '0';
+			end if;
+		
+			if(pipe_x_pos <= CONV_STD_LOGIC_VECTOR(300, 11)) then 
+				v_pipe_passed := '1';
+			else 
+				v_pipe_passed :='0';
 			end if;
 			
+			end if;
 			
-		else 
-			pipe_x_pos <= pipe_x_pos - pipe_x_motion;
-			pipe_width <= CONV_STD_LOGIC_VECTOR(50, 10);
-		end if;
-		
-		if(pipe_x_pos <= CONV_STD_LOGIC_VECTOR(415, 11))then
-			next_pipe_on <= '1'; 
-		else 
-			--next_pipe_on <= '0';
-		end if;
+			if(reset = '1') then 
+				-- resetting pipes after pressing the reset button
+				pipe_x_pos <= CONV_STD_LOGIC_VECTOR(640,11);
+				pipe_width <= CONV_STD_LOGIC_VECTOR(50, 10);
+				v_next_pipe_on := '0';
+				v_pipe_passed := '0';
+			end if;
 		
 		
 		
-		-- resetting pipes after pressing the reset button
-	elsif	(rising_edge(vert_sync) and reset = '1' and game_over = '1')then 
-			pipe_x_pos <= CONV_STD_LOGIC_VECTOR(640,11);
-			pipe_width <= CONV_STD_LOGIC_VECTOR(50, 10);
-			next_pipe_on <= '0';
-	elsif (enable = '0' and rising_edge(vert_sync)) then 
+		
+			next_pipe_on <= v_next_pipe_on;
+			pipe_passed <= v_pipe_passed;
 	
-			--next_pipe_on <= '0';
-			
-							
-	end if; 
+				
+								
+		end if; 
+	
+	
+	
+	
+	
+	
 end process Move_Pipes;
 
 END behavior;

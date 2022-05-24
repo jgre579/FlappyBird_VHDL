@@ -1,0 +1,54 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.all;
+USE  IEEE.STD_LOGIC_ARITH.all;
+USE  IEEE.STD_LOGIC_SIGNED.all;
+
+
+ENTITY pipe_controller
+ IS
+	PORT(
+		enable1, enable2, enable3 : out std_logic;
+		enable, clk, next_pipe : in std_logic
+		);		
+END pipe_controller;
+
+architecture behavior of pipe_controller is
+
+
+
+
+
+BEGIN     
+
+process (clk) is
+
+variable t_enable1 : std_logic := '0';
+variable t_enable2 : std_logic := '0';
+variable t_enable3 : std_logic := '0';
+
+begin 
+
+			if(rising_edge(clk) and enable = '1') then 
+			
+				t_enable1 := '1';
+				
+				if (next_pipe = '1') then 
+					if(t_enable2 = '0') then 
+						t_enable2 := '1';
+					else 
+						t_enable3 := '1';
+					end if;
+				end if;
+				
+				enable1 <= t_enable1;
+				enable2 <= t_enable2;
+				enable3 <= t_enable3;
+				
+			end if;
+
+					
+						
+
+
+END behavior;
+

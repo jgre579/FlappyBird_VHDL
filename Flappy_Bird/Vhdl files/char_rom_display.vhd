@@ -26,10 +26,10 @@ architecture arc of char_rom_display is
 			begin
 				
 				if(rising_edge(clk))then
-					if(enable = '0' and death = '0' and reset = '1')then
+					if(enable = '0' and death = '0')then
 							modes := "00";
 				
-					elsif(enable = '1' and death = '0' and reset = '1')then
+					elsif(enable = '1' and death = '0')then
 							modes := "01";		
 							
 					elsif(death = '1')then 
