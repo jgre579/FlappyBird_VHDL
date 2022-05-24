@@ -98,7 +98,7 @@ begin
 				v_next_pipe_on := '0';
 			end if;
 		
-			if(pipe_x_pos <= CONV_STD_LOGIC_VECTOR(300, 11)) then 
+			if(pipe_x_pos = CONV_STD_LOGIC_VECTOR(300, 11)) then 
 				v_pipe_passed := '1';
 			else 
 				v_pipe_passed :='0';
