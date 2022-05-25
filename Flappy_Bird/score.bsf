@@ -20,7 +20,7 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 248 128)
+	(rect 16 16 264 128)
 	(text "score" (rect 5 0 27 12)(font "Arial" ))
 	(text "inst" (rect 8 96 20 108)(font "Arial" ))
 	(port
@@ -45,27 +45,34 @@ applicable agreement for further details.
 		(line (pt 0 64)(pt 16 64)(line_width 1))
 	)
 	(port
-		(pt 232 32)
+		(pt 0 80)
+		(input)
+		(text "is_pipe_collided" (rect 0 0 60 12)(font "Arial" ))
+		(text "is_pipe_collided" (rect 21 75 81 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 248 32)
 		(output)
 		(text "score_ones[5..0]" (rect 0 0 67 12)(font "Arial" ))
-		(text "score_ones[5..0]" (rect 144 27 211 39)(font "Arial" ))
-		(line (pt 232 32)(pt 216 32)(line_width 3))
+		(text "score_ones[5..0]" (rect 160 27 227 39)(font "Arial" ))
+		(line (pt 248 32)(pt 232 32)(line_width 3))
 	)
 	(port
-		(pt 232 48)
+		(pt 248 48)
 		(output)
 		(text "score_tens[5..0]" (rect 0 0 64 12)(font "Arial" ))
-		(text "score_tens[5..0]" (rect 147 43 211 55)(font "Arial" ))
-		(line (pt 232 48)(pt 216 48)(line_width 3))
+		(text "score_tens[5..0]" (rect 163 43 227 55)(font "Arial" ))
+		(line (pt 248 48)(pt 232 48)(line_width 3))
 	)
 	(port
-		(pt 232 64)
+		(pt 248 64)
 		(output)
 		(text "score_hundreds[5..0]" (rect 0 0 84 12)(font "Arial" ))
-		(text "score_hundreds[5..0]" (rect 127 59 211 71)(font "Arial" ))
-		(line (pt 232 64)(pt 216 64)(line_width 3))
+		(text "score_hundreds[5..0]" (rect 143 59 227 71)(font "Arial" ))
+		(line (pt 248 64)(pt 232 64)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 216 96)(line_width 1))
+		(rectangle (rect 16 16 232 96)(line_width 1))
 	)
 )

@@ -1,6 +1,6 @@
 Assembler report for Flappy_Bird
-Tue May 24 22:49:32 2022
-Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+Wed May 25 12:06:52 2022
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -10,7 +10,7 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/Jorda/OneDrive/Desktop/UoA2022/COMPSYS 305/305_MiniProject/Flappy_Bird/output_files/Flappy_Bird.sof
+  5. Assembler Device Options: /Documents/GitHub/305_MiniProject/Flappy_Bird/output_files/Flappy_Bird.sof
   6. Assembler Messages
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue May 24 22:49:32 2022 ;
+; Assembler Status      ; Successful - Wed May 25 12:06:52 2022 ;
 ; Revision Name         ; Flappy_Bird                           ;
 ; Top-level Entity Name ; Flappy_Bird                           ;
 ; Family                ; Cyclone III                           ;
@@ -77,24 +77,24 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+--------------------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                                    ;
-+--------------------------------------------------------------------------------------------------------------+
-; File Name                                                                                                    ;
-+--------------------------------------------------------------------------------------------------------------+
-; C:/Users/Jorda/OneDrive/Desktop/UoA2022/COMPSYS 305/305_MiniProject/Flappy_Bird/output_files/Flappy_Bird.sof ;
-+--------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------+
+; Assembler Generated Files                                                  ;
++----------------------------------------------------------------------------+
+; File Name                                                                  ;
++----------------------------------------------------------------------------+
+; /Documents/GitHub/305_MiniProject/Flappy_Bird/output_files/Flappy_Bird.sof ;
++----------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Jorda/OneDrive/Desktop/UoA2022/COMPSYS 305/305_MiniProject/Flappy_Bird/output_files/Flappy_Bird.sof ;
-+----------------+-----------------------------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                                               ;
-+----------------+-----------------------------------------------------------------------------------------------------------------------+
-; Device         ; EP3C16F484C6                                                                                                          ;
-; JTAG usercode  ; 0x0013BD88                                                                                                            ;
-; Checksum       ; 0x0013BD88                                                                                                            ;
-+----------------+-----------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: /Documents/GitHub/305_MiniProject/Flappy_Bird/output_files/Flappy_Bird.sof ;
++----------------+-------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                             ;
++----------------+-------------------------------------------------------------------------------------+
+; Device         ; EP3C16F484C6                                                                        ;
+; JTAG usercode  ; 0x0014EC35                                                                          ;
+; Checksum       ; 0x0014EC35                                                                          ;
++----------------+-------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -102,15 +102,15 @@ applicable agreement for further details.
 +--------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
-    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Tue May 24 22:49:31 2022
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed May 25 12:06:50 2022
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Flappy_Bird -c Flappy_Bird
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4548 megabytes
-    Info: Processing ended: Tue May 24 22:49:32 2022
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 4541 megabytes
+    Info: Processing ended: Wed May 25 12:06:52 2022
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 
