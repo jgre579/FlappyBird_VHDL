@@ -1,0 +1,64 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.all;
+USE  IEEE.STD_LOGIC_ARITH.all;
+USE  IEEE.STD_LOGIC_SIGNED.all;
+
+
+ENTITY level_control
+ IS
+	PORT(
+				
+		score_tens, score_hundreds	: in std_logic_vector(5 downto 0);
+		game_mode : in std_logic
+		speed : out integer range 0 to 10;
+		
+		);		
+END level_control;
+
+architecture behavior of level_control is
+
+
+BEGIN    
+
+
+process (vert_sync, pipe_passed) is
+
+
+begin 
+	
+	-- TRAINING MODE
+	if(game_mode = '0') then 
+	
+		speed <= 3;
+		
+	else 
+		-- GAME MODE
+		if(score_hundreds >= "110001") then 
+			speed <= 9;
+		else 
+			case score_tens is 
+			when "110000" => speed <= 3;
+			when "110001" => speed <= 6;
+			when others => speed <= 9;
+		end case;
+		end if;
+	end if;
+		
+		
+		
+		
+			
+		
+
+end process;
+
+
+
+
+
+					
+						
+
+
+END behavior;
+

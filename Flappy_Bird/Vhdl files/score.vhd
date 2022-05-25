@@ -9,7 +9,7 @@ ENTITY score
 	PORT(
 				
 		pipe_passed, reset, vert_sync, is_pipe_collided: in std_logic;
-		score_ones,score_tens, score_hundreds	: OUT std_logic_vector(5 downto 0)
+		score_ones,score_tens, score_hundreds, game_mode	: OUT std_logic_vector(5 downto 0)
 		
 		);		
 END score;
@@ -74,6 +74,7 @@ begin
 		
 
 end process;
+
 
 
 

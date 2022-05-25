@@ -6,9 +6,10 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 
 ENTITY bouncy_ball IS
 	PORT
-		(clk, vert_sync, mouse_click, enable, reset, game_over	: IN std_logic;
-          pixel_row, pixel_column										: IN std_logic_vector(9 DOWNTO 0);
-		  ball_on																: OUT std_logic);
+		(
+		clk, vert_sync, mouse_click, enable, reset, game_over	: IN std_logic;	
+      pixel_row, pixel_column										: IN std_logic_vector(9 DOWNTO 0);
+		ball_on																: OUT std_logic);
 		  		
 END bouncy_ball;
 
