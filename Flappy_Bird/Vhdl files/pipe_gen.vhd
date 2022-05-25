@@ -65,7 +65,7 @@ begin
 		if(enable = '1') then 
 		--pipe 1  ___________________________________________________________________
 			if(count = 1) then -- moving pipes once
-				pipe_x_motion <= CONV_STD_LOGIC_VECTOR(5,10);
+				pipe_x_motion <= CONV_STD_LOGIC_VECTOR(10,10);
 				
 				count := 0;
 			else -- resetting pipe count after moving 
@@ -92,7 +92,7 @@ begin
 				pipe_width <= CONV_STD_LOGIC_VECTOR(50, 10);
 			end if;
 		
-			if(pipe_x_pos = CONV_STD_LOGIC_VECTOR(415, 11))then
+			if(pipe_x_pos = CONV_STD_LOGIC_VECTOR(420, 11))then
 				v_next_pipe_on := '1';
 			else 
 				v_next_pipe_on := '0';

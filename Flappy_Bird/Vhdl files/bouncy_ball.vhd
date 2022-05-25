@@ -15,7 +15,7 @@ END bouncy_ball;
 architecture behavior of bouncy_ball is
 
 
-SIGNAL size 											: std_logic_vector(9 DOWNTO 0);  
+SIGNAL size 											: std_logic_vector(9 DOWNTO 0):= CONV_STD_LOGIC_VECTOR(300, 10);  
 SIGNAL ball_y_pos										: std_logic_vector(9 DOWNTO 0);
 SiGNAL ball_x_pos										: std_logic_vector(10 DOWNTO 0);
 SIGNAL ball_y_motion									: std_logic_vector(9 DOWNTO 0);

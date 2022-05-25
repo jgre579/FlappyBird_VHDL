@@ -52,9 +52,11 @@ begin
 		when pause_debounce1 =>
 			game_enable <= '0';
 			game_reset <= '0';
+			text_mode <= "000";
 		when pause_debounce2 =>
 			game_enable <= '0';
 			game_reset <= '0';
+			text_mode <= "000";
 			--text_mode <= "000";		
 		
 		end case;
