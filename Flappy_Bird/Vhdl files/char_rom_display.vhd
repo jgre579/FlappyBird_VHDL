@@ -139,38 +139,38 @@ architecture arc of char_rom_display is
 						end if; 
 					
 					elsif(modes = "10")then
-						if(row >= "11110000" and row < "100000000" and col >= "100100000" and col < "110110000") then 
-							if(col >= "100100000" and col < "100110000") then
+						if(row >= "11100000" and row < "11110000" and col >= "100000000" and col < "110010000") then 
+							if(col >= "100000000" and col < "100010000") then
 								address <= "000111"; --G
 							end if;
 							
-							if(col >= "100110000" and col < "101000000") then
+							if(col >= "100010000" and col < "100100000") then
 								address <= "000001"; --A
 							end if;
 							
-							if(col >= "101000000" and col < "101010000") then
+							if(col >= "100100000" and col < "100110000") then
 								address <= "001101"; --M
 							end if;
 							
-							if(col >= "101010000" and col < "101100000") then
+							if(col >= "100110000" and col < "101000000") then
 								address <= "000101"; --E
 							end if;
-							if(col >= "101100000" and col < "101110000") then
+							if(col >= "101000000" and col < "101010000") then
 								address <= "100000"; -- space 
 							end if;
-							if(col >= "101110000" and col < "110000000") then
+							if(col >= "101010000" and col < "101100000") then
 								address <= "001111"; --O
 							end if;
 														
-							if(col >= "110000000" and col < "110010000") then
+							if(col >= "101100000" and col < "101110000") then
 								address <= "010110"; --V
 							end if;
 							
-							if(col >= "110010000" and col < "110100000") then
+							if(col >= "101110000" and col < "110000000") then
 								address <= "000101"; --E
 							end if;
 														
-							if(col >= "110100000" and col < "110110000") then
+							if(col >= "110000000" and col < "110010000") then
 								address <= "010010"; --R
 							end if;
 								font_row <= row(3 downto 1);
