@@ -1,4 +1,13 @@
 
+State Machine - |Flappy_Bird|fsm:inst22|state
+Name state.pause_debounce2 state.pause_debounce1 state.dead_state state.pause_state state.play_state state.entry_state 
+state.entry_state 0 0 0 0 0 0 
+state.play_state 0 0 0 0 1 1 
+state.pause_state 0 0 0 1 0 1 
+state.dead_state 0 0 1 0 0 1 
+state.pause_debounce1 0 1 0 0 0 1 
+state.pause_debounce2 1 0 0 0 0 1 
+
 State Machine - |Flappy_Bird|MOUSE:inst4|mouse_state
 Name mouse_state.INPUT_PACKETS mouse_state.WAIT_CMD_ACK mouse_state.WAIT_OUTPUT_READY mouse_state.LOAD_COMMAND2 mouse_state.LOAD_COMMAND mouse_state.INHIBIT_TRANS 
 mouse_state.INHIBIT_TRANS 0 0 0 0 0 0 

@@ -1,0 +1,117 @@
+library IEEE;
+use  IEEE.STD_LOGIC_1164.all;
+use  IEEE.STD_LOGIC_ARITH.all;
+use  IEEE.STD_LOGIC_UNSIGNED.all;
+
+entity fsm is
+
+	port(
+		clk, reset, start_btn, pause_btn, is_dead: in std_logic;
+		game_enable, game_reset : out std_logic; 
+	)
+	
+end fsm;
+
+architecture behav of fsm is
+
+type state_type is (entry_state, play_state, pause_state, dead_state, pause_debounce);
+signal state, next_state : state_type;
+
+begin 
+sync_process process(clk) is 
+begin 
+	if(rising_edge(clk)) then 
+		if(reset = '1') then
+			state <= entry_state;
+		else 
+			state <= next_state;
+		end if;
+	end if;
+end process;
+
+output_decode : process (state) is 
+begin 
+	case state is
+		when entry_state =>
+			game_enable <= '0';
+			game_reset <= '0';
+			-- text_mode = entry text;
+		when play_state =>
+			game_enable <= '1';
+			game_reset <= '0';
+		when pause_state <= 
+			game_enable <= '0';
+			game_reset <= '0';
+			-- text_mode = pause text
+		when dead_state <=
+			game_enable <= '0';
+			game_reset <= '1';
+			-- text_mode = dead text
+			
+		when pause_debounce <=
+		end case;
+end process
+
+next_state_decode : process (state, start_btn, pause_btn, is_dead, reset) is 
+begin 
+	case (state) is 
+		when entry_state =>
+			-- Start button pressed (active low)
+			if(start_btn = '0') then 
+				next_state <= play_state;
+			else
+				next_state <= entry_state;
+			end if;
+		when play_state =>
+			-- Pause button pressed and bird is not dead
+			if(pause_btn = '0' and is_dead ='0') then 
+				next_state <= pause_debounce;
+			elsif(pause_btn = '1' and is_dead = '0') then 
+				next_state <= play_state;
+			else 
+				next_state <= dead_state;
+			end if; 
+		when pause_debounce =>	
+			-- Make sure button is released first
+			if(pause_btn = '1') then 
+				next_state <= pause_btn;
+			else 
+				next_state <= pause_debounce;
+			end if; 
+		when pause_state =>
+			-- Pause button pressed
+			if(pause = '0') then 
+				next_state <= play_state;
+			else
+				next_state <= pause_state
+			end if;
+		when dead_state =>
+			if(reset = '1') then 
+				next_state <= entry_state;
+			else 
+				next_state <= dead_state;
+			end if;
+				
+					
+					
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			

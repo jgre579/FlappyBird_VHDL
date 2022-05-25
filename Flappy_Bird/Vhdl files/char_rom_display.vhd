@@ -5,32 +5,37 @@ USE IEEE.STD_LOGIC_UNSIGNED.all;
 
 entity char_rom_display is
 	port
-	(clk, enable, death, reset														:IN std_logic ;
-	 score_ones, score_tens, score_hundreds									:IN std_logic_vector(5 downto 0);
-	 high_score_ones, high_score_tens, high_score_hundreds				:IN std_logic_vector(5 downto 0);
-	 row, col 																			:IN std_logic_vector(9 downto 0);
-	 address  																			:OUT std_logic_vector(5 downto 0);
-	 font_row, font_col 																:OUT std_logic_vector(2 downto 0));
+	(clk								:IN std_logic ;
+	 text_mode						:IN std_logic_vector(2 downto 0) := "011"; 
+	 score_ones						:IN std_logic_vector(5 downto 0);
+	 score_tens						:IN std_logic_vector(5 downto 0);
+	 score_hundreds				:IN std_logic_vector(5 downto 0);
+	 high_score_ones						:IN std_logic_vector(5 downto 0);
+	 high_score_tens						:IN std_logic_vector(5 downto 0);
+	 high_score_hundreds			:IN std_logic_vector(5 downto 0);
+	 row, col 						:IN std_logic_vector(9 downto 0);
+	 address  						:OUT std_logic_vector(5 downto 0);
+	 font_row, font_col 			:OUT std_logic_vector(2 downto 0));
 End entity char_rom_display;
 
 architecture arc of char_rom_display is
 	begin
-		process(clk, reset)
+		process(clk)
 		
 		variable modes : std_logic_vector(1 downto 0) := "11";
 
 			begin
 				
-				if(rising_edge(clk))then
-					if(enable = '0' and death = '0')then
-							modes := "00";
-				
-					elsif(enable = '1' and death = '0')then
-							modes := "01";		
-							
-					elsif(death = '1')then 
-						modes := "10";
-					end if;
+				--if(rising_edge(clk))then
+--					if(enable = '0' and death = '0')then
+--							modes := "00";
+--				
+--					elsif(enable = '1' and death = '0')then
+--							modes := "01";		
+--							
+--					elsif(death = '1')then 
+--						modes := "10";
+--					end if;
 
 --							--training
 --						if(row >= "0000010000" and row < "0000100000" and col >= "0110000000" and col < "1000000000") then 
@@ -68,8 +73,8 @@ architecture arc of char_rom_display is
 --							
 --							font_row <= row(3 downto 1);
 --							font_col <= col(3 downto 1);
---					end if; 
-				if(modes = "00")then
+			--end if; 
+				if(text_mode = "000")then
 						if(row >= "11110000" and row < "100000000" and col >= "100010000" and col < "101110000") then 
 							if(col >= "100010000" and col < "100100000") then
 								address <= "010000"; --P
@@ -99,7 +104,7 @@ architecture arc of char_rom_display is
 						end if; 
 
 					--score
-					elsif(modes = "01")then 
+					elsif(text_mode = "001")then 
 							if(row >= "0000010000" and row < "0000100000" and col >= "100010000" and col < "110110000") then 
 							if(col >= "100010000" and col < "100100000") then
 								address <= "010011"; --S
@@ -138,9 +143,9 @@ architecture arc of char_rom_display is
 							font_col <= col(3 downto 1);
 						end if; 
 					
-					elsif(modes = "10")then
-						if(row >= "11100000" and row < "11110000" and col >= "100000000" and col < "110010000") then 
-							if(col >= "100000000" and col < "100010000") then
+					elsif(text_mode = "010")then
+						if(row >= "11110000" and row < "100000000" and col >= "100100000" and col < "110110000") then 
+							if(col >= "100100000" and col < "100110000") then
 								address <= "000111"; --G
 							end if;
 							
@@ -237,7 +242,7 @@ architecture arc of char_rom_display is
 					font_row <= row(3 downto 1);
 					font_col <= col(3 downto 1);
 					end if; 
-			end if; 
+			--end if; 
 			
 --			if(row >= "11110000" and row < "100000000" and col >= "11111000" and col < "110001000") then 
 --							if(col >= "11111000" and col < "100001000") then

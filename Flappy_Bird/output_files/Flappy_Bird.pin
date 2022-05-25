@@ -63,7 +63,7 @@
  -- Pin directions (input, output or bidir) are based on device operating in user mode.
  ---------------------------------------------------------------------------------
 
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Quartus II 32-bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 CHIP  "Flappy_Bird"  ASSIGNED TO AN: EP3C16F484C6
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
@@ -246,7 +246,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : F21       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : F22       :        :                   :         : 6         :                
 GND+                         : G1        :        :                   :         : 1         :                
 GND+                         : G2        :        :                   :         : 1         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : G3        :        :                   :         : 1         :                
+pb1                          : G3        : input  : 2.5 V             :         : 1         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : G4        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G5        :        :                   :         : 1         :                
 VCCA3                        : G6        : power  :                   : 2.5V    :           :                
@@ -267,11 +267,11 @@ GND                          : G20       : gnd    :                   :         
 clk                          : G21       : input  : 2.5 V             :         : 6         : Y              
 GND+                         : G22       :        :                   :         : 6         :                
 led3                         : H1        : output : 2.5 V             :         : 1         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : H2        :        :                   :         : 1         :                
+pb0                          : H2        : input  : 2.5 V             :         : 1         : Y              
 GND                          : H3        : gnd    :                   :         :           :                
 VCCIO1                       : H4        : power  :                   : 2.5V    : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H5        :        :                   :         : 1         :                
-sw2                          : H6        : input  : 2.5 V             :         : 1         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H6        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H7        :        :                   :         : 1         :                
 GND                          : H8        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H9        :        :                   :         : 8         :                
