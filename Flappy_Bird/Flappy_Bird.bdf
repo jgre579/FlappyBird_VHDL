@@ -40,7 +40,7 @@ applicable agreement for further details.
 	(input)
 	(rect 768 296 936 312)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "pb2" (rect 5 0 23 12)(font "Arial" ))
+	(text "pb2" (rect 5 0 22 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -51,12 +51,13 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 720 312 768 328))
 )
 (pin
 	(input)
 	(rect 768 312 936 328)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "pb1" (rect 5 0 23 12)(font "Arial" ))
+	(text "pb1" (rect 5 0 22 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -67,12 +68,13 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 712 328 768 344))
 )
 (pin
 	(input)
 	(rect 768 328 936 344)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "pb0" (rect 5 0 23 12)(font "Arial" ))
+	(text "pb0" (rect 5 0 22 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -83,6 +85,7 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 712 344 768 360))
 )
 (pin
 	(output)
@@ -1542,42 +1545,25 @@ applicable agreement for further details.
 		(pt 264 32)
 		(output)
 		(text "address[5..0]" (rect 0 0 64 12)(font "Arial" ))
-		(text "address[5..0]" (rect 189 27 243 39)(font "Arial" ))
+		(text "address[5..0]" (rect 189 27 253 39)(font "Arial" ))
 		(line (pt 264 32)(pt 248 32)(line_width 3))
 	)
 	(port
 		(pt 264 48)
 		(output)
 		(text "font_row[2..0]" (rect 0 0 68 12)(font "Arial" ))
-		(text "font_row[2..0]" (rect 186 43 243 55)(font "Arial" ))
+		(text "font_row[2..0]" (rect 186 43 254 55)(font "Arial" ))
 		(line (pt 264 48)(pt 248 48)(line_width 3))
 	)
 	(port
 		(pt 264 64)
 		(output)
 		(text "font_col[2..0]" (rect 0 0 66 12)(font "Arial" ))
-		(text "font_col[2..0]" (rect 188 59 243 71)(font "Arial" ))
+		(text "font_col[2..0]" (rect 188 59 254 71)(font "Arial" ))
 		(line (pt 264 64)(pt 248 64)(line_width 3))
 	)
 	(drawing
 		(rectangle (rect 16 16 248 192))
-	)
-)
-(symbol
-	(rect 816 632 848 664)
-	(text "GND" (rect 8 16 29 26)(font "Arial" (font_size 6)))
-	(text "inst23" (rect 3 21 32 33)(font "Arial" )(invisible))
-	(port
-		(pt 16 0)
-		(output)
-		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
-		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
-		(line (pt 16 8)(pt 16 0))
-	)
-	(drawing
-		(line (pt 8 8)(pt 16 16))
-		(line (pt 16 16)(pt 24 8))
-		(line (pt 8 8)(pt 24 8))
 	)
 )
 (connector
@@ -2362,10 +2348,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 856 632)
-	(pt 832 632)
-)
-(connector
 	(text "clk25" (rect 794 560 819 572)(font "Arial" ))
 	(pt 856 568)
 	(pt 832 568)
@@ -2420,6 +2402,11 @@ applicable agreement for further details.
 	(text "reset_btn" (rect 1002 328 1048 340)(font "Arial" ))
 	(pt 984 336)
 	(pt 936 336)
+)
+(connector
+	(text "is_pipe_collided" (rect 752 624 828 636)(font "Arial" ))
+	(pt 856 632)
+	(pt 832 632)
 )
 (junction (pt 272 848))
 (junction (pt 272 864))
