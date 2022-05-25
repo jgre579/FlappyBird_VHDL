@@ -19,7 +19,7 @@ architecture behavior of level_control is
 
 
 BEGIN    
-speed <= CONV_STD_LOGIC_VECTOR(9, 10);
+--speed <= CONV_STD_LOGIC_VECTOR(2, 10);
 
 process  is
 
@@ -28,22 +28,22 @@ begin
 	wait until rising_edge(clk);
 	
 	-- TRAINING MODE
---	if(game_mode = '0') then 
---	
---		speed <= CONV_STD_LOGIC_VECTOR(3, 10);
---		
---	else 
---		-- GAME MODE
---		if(score_hundreds >= "110001") then 
---			speed <= CONV_STD_LOGIC_VECTOR(9, 10);
---		else 
---			case score_tens is 
---			when "110000" => speed <= CONV_STD_LOGIC_VECTOR(3, 10);
---			when "110001" => speed <= CONV_STD_LOGIC_VECTOR(6, 10);
---			when others => speed <= CONV_STD_LOGIC_VECTOR(9, 10);
---		end case;
---		end if;
---	end if;
+	if(game_mode = '0') then 
+	
+		speed <= CONV_STD_LOGIC_VECTOR(2, 10);
+		
+	else 
+		-- GAME MODE
+		if(score_hundreds >= "110001") then 
+			speed <= CONV_STD_LOGIC_VECTOR(6, 10);
+		else 
+			case score_tens is 
+			when "110000" => speed <= CONV_STD_LOGIC_VECTOR(2, 10);
+			when "110001" => speed <= CONV_STD_LOGIC_VECTOR(4, 10);
+			when others => speed <= CONV_STD_LOGIC_VECTOR(6, 10);
+		end case;
+		end if;
+	end if;
 		
 		
 		
