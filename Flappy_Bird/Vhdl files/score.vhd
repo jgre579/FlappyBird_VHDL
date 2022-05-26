@@ -9,7 +9,7 @@ ENTITY score
 	PORT(
 				
 		pipe_passed, reset, vert_sync, is_pipe_collided: in std_logic;
-		score_ones,score_tens, score_hundreds, game_mode	: OUT std_logic_vector(5 downto 0)
+		score_ones,score_tens, score_hundreds	: OUT std_logic_vector(5 downto 0)
 		
 		);		
 END score;
@@ -42,7 +42,7 @@ begin
 				s_pipe_passed <= '1';
 			end if;
 			
-			if(reset = '0' and s_pipe_passed = '1' and is_pipe_collided = '0') then 
+			if(reset = '1' and s_pipe_passed = '1' and is_pipe_collided = '0') then 
 				if(v_current_score_ones < "111001")then 
 					v_current_score_ones := v_current_score_ones + "000001";
 				elsif(v_current_score_tens < "111001")then
@@ -53,7 +53,8 @@ begin
 					v_current_score_hundreds := v_current_score_hundreds + "000001";
 				end if;
 				s_pipe_passed <= '0';
-			elsif (reset = '1') then 
+				
+			elsif (reset = '0') then 
 		
 				v_current_score_ones := "110000";
 				v_current_score_tens := "110000";

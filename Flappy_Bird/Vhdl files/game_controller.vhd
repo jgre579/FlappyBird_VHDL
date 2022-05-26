@@ -33,7 +33,6 @@ begin
 		-- Play the game
 
 	if(game_enable = '1' and is_playing = '1') then 
-
 	if(is_pipe_collided = '1') then 
 			
 			--if collided, change state of is_playing to 0 and death to 1 
@@ -90,10 +89,10 @@ begin
 		--reset death, parameter reset, and is_playing
 		if(btn2 = '0') then 
 			death <= '0';
-			reset <= '1';
+			reset <= '0';
 			is_playing <= '1'; 
 		else 
-			reset <= '0';
+			reset <= '1';
 		end if;
 
 	--end if;
