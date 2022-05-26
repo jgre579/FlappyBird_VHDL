@@ -1,6 +1,6 @@
 Assembler report for Flappy_Bird
-Thu May 26 10:56:40 2022
-Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+Thu May 26 16:02:19 2022
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -10,7 +10,7 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/Jorda/OneDrive/Desktop/UoA2022/COMPSYS 305/305_MiniProject/Flappy_Bird/output_files/Flappy_Bird.sof
+  5. Assembler Device Options: C:/Users/maysr/Documents/GitHub/305_MiniProject/Flappy_Bird/output_files/Flappy_Bird.sof
   6. Assembler Messages
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu May 26 10:56:40 2022 ;
+; Assembler Status      ; Successful - Thu May 26 16:02:19 2022 ;
 ; Revision Name         ; Flappy_Bird                           ;
 ; Top-level Entity Name ; Flappy_Bird                           ;
 ; Family                ; Cyclone III                           ;
@@ -77,24 +77,24 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+--------------------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                                    ;
-+--------------------------------------------------------------------------------------------------------------+
-; File Name                                                                                                    ;
-+--------------------------------------------------------------------------------------------------------------+
-; C:/Users/Jorda/OneDrive/Desktop/UoA2022/COMPSYS 305/305_MiniProject/Flappy_Bird/output_files/Flappy_Bird.sof ;
-+--------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                ;
++------------------------------------------------------------------------------------------+
+; File Name                                                                                ;
++------------------------------------------------------------------------------------------+
+; C:/Users/maysr/Documents/GitHub/305_MiniProject/Flappy_Bird/output_files/Flappy_Bird.sof ;
++------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Jorda/OneDrive/Desktop/UoA2022/COMPSYS 305/305_MiniProject/Flappy_Bird/output_files/Flappy_Bird.sof ;
-+----------------+-----------------------------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                                               ;
-+----------------+-----------------------------------------------------------------------------------------------------------------------+
-; Device         ; EP3C16F484C6                                                                                                          ;
-; JTAG usercode  ; 0x0015F971                                                                                                            ;
-; Checksum       ; 0x0015F971                                                                                                            ;
-+----------------+-----------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/maysr/Documents/GitHub/305_MiniProject/Flappy_Bird/output_files/Flappy_Bird.sof ;
++----------------+---------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                           ;
++----------------+---------------------------------------------------------------------------------------------------+
+; Device         ; EP3C16F484C6                                                                                      ;
+; JTAG usercode  ; 0x001675B4                                                                                        ;
+; Checksum       ; 0x001675B4                                                                                        ;
++----------------+---------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -102,14 +102,14 @@ applicable agreement for further details.
 +--------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
-    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Thu May 26 10:56:39 2022
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu May 26 16:02:18 2022
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Flappy_Bird -c Flappy_Bird
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4544 megabytes
-    Info: Processing ended: Thu May 26 10:56:40 2022
+    Info: Peak virtual memory: 4545 megabytes
+    Info: Processing ended: Thu May 26 16:02:19 2022
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

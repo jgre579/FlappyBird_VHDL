@@ -63,25 +63,10 @@ begin
 			end if;
 		end if;
 		
-			
-
-		
 		score_ones <= v_current_score_ones ;
 		score_tens <= v_current_score_tens ;
 		score_hundreds <= v_current_score_hundreds;
 		
-			
-		
-
 end process;
-
-
-
-
-
-					
-						
-
-
 END behavior;
 
