@@ -7,7 +7,7 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 ENTITY pipe_gen IS
 	PORT
 		(clk, vert_sync, enable, reset, game_over : IN std_logic;
-         pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
+         pixel_row, pixel_column, rand_num_out: IN std_logic_vector(9 DOWNTO 0);
 			speed : in std_logic_vector(9 DOWNTO 0);
 			pipe_on, next_pipe_on, pipe_passed : OUT std_logic;
 			pipe_position :	OUT std_logic_vector(10 DOWNTO 0));		
@@ -22,18 +22,19 @@ SIGNAL pipe_top_y_pos		: std_logic_vector(9 DOWNTO 0);
 SIGNAL pipe_bot_y_pos		: std_logic_vector(9 DOWNTO 0);
 SiGNAL pipe_x_pos				: std_logic_vector(10 DOWNTO 0);
 SIGNAL pipe_x_motion			: std_logic_vector(9 DOWNTO 0);
+--SIGNAL rand_loc 				: integer; --(trying to add input of rand_num_out as pipe y pos)
 SIGNAL pipe_top_on, pipe_bot_on : std_logic;
-
 SiGNAL pipe_fade_x			: std_logic_vector(9 DOWNTO 0);
 
 BEGIN           
 
+--rand_loc <= CONV_INTEGER(rand_num_out); 
 pipe_position <= pipe_x_pos; 
 -- ball_x_pos and ball_y_pos show the (x,y) for the centre of ball
 
 -- pipe 1  ___________________________________________________________________
 pipe_top_height <= CONV_STD_LOGIC_VECTOR(150,10);
-pipe_top_y_pos <= CONV_STD_LOGIC_VECTOR(50,10);
+pipe_top_y_pos <= CONV_STD_LOGIC_VECTOR(200,10); --(feed rand_loc as y pos)
 
 pipe_bot_height <= CONV_STD_LOGIC_VECTOR(490-300,10);
 pipe_bot_y_pos <= CONV_STD_LOGIC_VECTOR(300,10);

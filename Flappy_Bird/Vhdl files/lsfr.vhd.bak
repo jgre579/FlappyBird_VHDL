@@ -5,19 +5,19 @@ library ieee;
 	 
 -- random number generator
 
-entity lfsr is
-	port (
+entity lfsr1 is
+  port (
     clk    : in  std_logic; 
     rand_num_out  : out std_logic_vector (7 downto 0) -- lfsr output
   );
-end lfsr;
+end lfsr1;
 
-architecture behaviour of lfsr is
+architecture behaviour of lfsr1 is
 	signal rand_num: std_logic_vector (7 downto 0):= "01111111";
 
 	begin
 		process (clk) 
-		variable temp : std_logic:= '0';
+		variable temp : std_logic:= 0;
 		begin
 			if (rising_edge(clk)) then
             temp := rand_num(6) XOR rand_num(4) XOR rand_num(3) XOR rand_num(2) XOR rand_num(0);
