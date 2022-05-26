@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Flappy_Bird
-Thu May 26 17:30:19 2022
+Fri May 27 05:47:31 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -6436,7 +6436,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu May 26 17:30:17 2022
+    Info: Processing started: Fri May 27 05:47:29 2022
 Info: Command: quartus_sta Flappy_Bird -c Flappy_Bird
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -6594,8 +6594,8 @@ Info (332146): Worst-case minimum pulse width slack is -1.109
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4605 megabytes
-    Info: Processing ended: Thu May 26 17:30:19 2022
+    Info: Peak virtual memory: 4606 megabytes
+    Info: Processing ended: Fri May 27 05:47:31 2022
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
