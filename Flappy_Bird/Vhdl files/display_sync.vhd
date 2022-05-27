@@ -12,20 +12,21 @@ Architecture arc of display_sync is
 
 signal collision_occured : std_logic;
 begin	
+
 	red <= 	'1' when ball_on = '1' else
 				'0' when text_on = '1' else
-				'0' when pipe_on = '1' else
-				'1' when lives_on = '1' and enable = '1' else
+				'1' when lives_on = '1' else
+				'0' when pipe_on = '1' and enable = '1' else
 				'1';
 	green <= '0' when ball_on = '1' else
 				'0' when text_on = '1' else 
-				'1' when pipe_on = '1' else
-				'0' when lives_on = '1' and enable = '1' else
+				'0' when lives_on = '1' else
+				'1' when pipe_on = '1' and enable = '1' else
 				'1';
 	blue <=  '0' when ball_on = '1' else	
-				'0' when text_on = '1' else 
-				'0' when pipe_on = '1' else
-				'1' when lives_on = '1' and enable = '1' else
+				'0' when text_on = '1' else
+				'1' when lives_on = '1' else	
+				'0' when pipe_on = '1' and enable = '1' else
 				'1';
 				
 	
@@ -64,8 +65,4 @@ begin
 		
 		
 	end process;
-
-				
-
 end architecture arc;
-		
