@@ -14,6 +14,7 @@ entity char_rom_display is
 	 high_score_tens						:IN std_logic_vector(5 downto 0);
 	 high_score_hundreds			:IN std_logic_vector(5 downto 0);
 	 row, col 						:IN std_logic_vector(9 downto 0);
+	 game_mode						:IN std_logic; 
 	 address  						:OUT std_logic_vector(5 downto 0);
 	 font_row, font_col 			:OUT std_logic_vector(2 downto 0));
 End entity char_rom_display;
@@ -164,7 +165,7 @@ architecture arc of char_rom_display is
 								font_col <= col(3 downto 1);
 						end if;
 					
-						if(row >= "100010000" and row < "100100000" and col >= "11010000" and col < "111000000") then
+						if(row >= "100110000" and row < "101000000" and col >= "11010000" and col < "111000000") then
 							
 							if(col >= "11010000" and col < "11100000") then
 								address <= "001000"; -- H 
@@ -224,6 +225,7 @@ architecture arc of char_rom_display is
 					font_row <= row(3 downto 1);
 					font_col <= col(3 downto 1);
 					end if; 
+					
 				elsif(text_mode = "111")then
 
 						if(row >= "11110000" and row < "100000000" and col >= "11110000" and col < "110010000") then
@@ -270,7 +272,113 @@ architecture arc of char_rom_display is
 					font_row <= row(3 downto 1);
 					font_col <= col(3 downto 1);
 					end if; 
-				
+					
+					if(row >= "100010000" and row < "100100000" and col >= "100000000" and col < "101100000") then
+							if(col >= "100000000" and col < "100010000") then
+								address <= "001110"; -- N
+							end if;
+							if(col >= "100010000" and col < "100100000") then
+								address <= "001111"; -- O
+							end if;
+							if(col >= "100100000" and col < "100110000") then
+								address <= "010010"; -- R
+							end if;
+
+							if(col >= "100110000" and col < "101000000") then
+								address <= "001101"; -- M
+							end if;
+							if(col >= "101000000" and col < "101010000") then
+								address <= "000001"; -- A
+							end if;
+							if(col >= "101010000" and col < "101100000") then
+								address <= "001100"; -- L
+							end if;
+
+
+					font_row <= row(3 downto 1);
+					font_col <= col(3 downto 1);
+					end if; 
+
+					if(game_mode = '1')then
+						if(row >= "100010000" and row < "100100000" and col >= "11000000" and col < "100000000") then
+							
+							if(col >= "11000000" and col < "11010000") then
+								address <= "010011"; -- S
+							end if;
+							
+							if(col >= "11010000" and col < "11100000") then
+								address <= "010111"; -- W
+							end if;
+							
+							if(col >= "11100000" and col < "11110000") then
+								address <= "110000"; -- 0
+							end if;
+							
+							if(col >= "11110000" and col < "100000000") then
+								address <= "011110"; -- UP
+							end if;
+					font_row <= row(3 downto 1);
+					font_col <= col(3 downto 1);
+
+					end if; 
+					end if; 
+		
+					if(row >= "100100000" and row < "100110000" and col >= "100000000" and col < "110000000") then
+
+							if(col >= "100000000" and col < "100010000") then
+								address <= "010100"; -- T
+							end if;
+							if(col >= "100010000" and col < "100100000") then
+								address <= "010010"; -- R
+							end if;
+							if(col >= "100100000" and col < "100110000") then
+								address <= "000001"; -- A
+							end if;
+
+							if(col >= "100110000" and col < "101000000") then
+								address <= "001001"; -- I
+							end if;
+							if(col >= "101000000" and col < "101010000") then
+								address <= "001110"; -- N
+							end if;
+							if(col >= "101010000" and col < "101100000") then
+								address <= "001001"; -- I
+							end if;
+							if(col >= "101100000" and col < "101110000") then
+								address <= "001110"; -- N
+							end if;
+							if(col >= "101110000" and col < "110000000") then
+								address <= "000111"; -- G
+							end if;
+
+					font_row <= row(3 downto 1);
+					font_col <= col(3 downto 1);
+					end if; 
+
+					
+					if(game_mode = '0')then
+					if(row >= "100100000" and row < "100110000" and col >= "11000000" and col < "100000000") then
+							
+							if(col >= "11000000" and col < "11010000") then
+								address <= "010011"; -- S
+							end if;
+							
+							if(col >= "11010000" and col < "11100000") then
+								address <= "010111"; -- W
+							end if;
+							
+							if(col >= "11100000" and col < "11110000") then
+								address <= "110000"; -- 0
+							end if;
+							
+							if(col >= "11110000" and col < "100000000") then
+								address <= "011100"; -- DOWN
+							end if;
+							
+						font_row <= row(3 downto 1);
+						font_col <= col(3 downto 1);
+						end if; 
+					end if; 
 				end if; 
 			end process;
 end architecture arc;
