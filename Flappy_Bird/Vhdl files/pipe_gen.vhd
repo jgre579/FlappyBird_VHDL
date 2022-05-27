@@ -8,10 +8,10 @@ ENTITY pipe_gen IS
 	PORT
 		(clk, vert_sync, enable, reset, game_over : IN std_logic;
          pixel_row, pixel_column: IN std_logic_vector(9 DOWNTO 0);
-			rand_num_out : IN std_logic_vector(9 DOWNTO 0);
+			rand_num_out : IN std_logic_vector(7 DOWNTO 0);
 			speed : in std_logic_vector(9 DOWNTO 0);
 			pipe_on, next_pipe_on, pipe_passed : OUT std_logic;
-			pipe_position :	OUT std_logic_vector(10 DOWNTO 0));		
+			pipe_position :	OUT std_logic_vector(9 DOWNTO 0));		
 END pipe_gen;
 
 architecture behavior of pipe_gen is
@@ -28,14 +28,14 @@ SIGNAL pipe_fade_x			: std_logic_vector(9 DOWNTO 0);
 
 BEGIN           
 
-pipe_position <= pipe_x_pos; 
+pipe_position <= pipe_width; 
 -- ball_x_pos and ball_y_pos show the (x,y) for the centre of ball
 
 -- pipe 1  ___________________________________________________________________
 
-pipe_top_y_pos <=rand_num_out;
+pipe_bot_y_pos <=("00" & rand_num_out) - "100101100";
 
-pipe_bot_y_pos <=rand_num_out + "1100100";
+pipe_top_y_pos <=("00" & rand_num_out);
 
 pipe_top_on <= '1' when ( ('0' & pixel_column >= '0' & pipe_x_pos) and ('0' & pixel_column <= '0' & pipe_x_pos + pipe_width) 	-- x_pos - size <= pixel_column <= x_pos + size
 					and ('0' & pixel_row <= pipe_top_y_pos))  else	-- y_pos - size <= pixel_row <= y_pos + size

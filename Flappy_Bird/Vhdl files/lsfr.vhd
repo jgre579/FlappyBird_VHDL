@@ -7,7 +7,9 @@ library ieee;
 
 entity lfsr is
 	port (
-    clk    : in  std_logic; 
+	 
+	 pipe_position : IN std_logic_vector (9 downto 0);
+    clk    			: in  std_logic; 
     rand_num_out  : out std_logic_vector (7 downto 0) -- lfsr output
   );
 end lfsr;
@@ -19,10 +21,20 @@ architecture behaviour of lfsr is
 		process (clk) 
 		variable temp : std_logic:= '0';
 		begin
-			if (rising_edge(clk)) then
-            temp := rand_num(6) XOR rand_num(4) XOR rand_num(3) XOR rand_num(2) XOR rand_num(0);
-				rand_num<= temp & rand_num(7 DOWNTO 1);
-         end if;
+		
+		--pipe_position <= CONV_STD_LOGIC_VECTOR(640, 11)
+			if(rising_edge(clk))then
+				if (pipe_position <= CONV_STD_LOGIC_VECTOR(0, 11))then
+					temp := rand_num(6) XOR rand_num(4) XOR rand_num(3) XOR rand_num(2) XOR rand_num(0);
+					rand_num<= temp & rand_num(7 DOWNTO 1);
+				end if;
+				if (rand_num >= CONV_STD_LOGIC_VECTOR(450, 11))then
+					rand_num <= rand_num - CONV_STD_LOGIC_VECTOR(100, 8);
+				elsif (rand_num <= CONV_STD_LOGIC_VECTOR(20, 11))then
+					rand_num <= rand_num + CONV_STD_LOGIC_VECTOR(20, 8);
+				end if;
+			end if; 
+							
       end process;
 	rand_num_out <= rand_num;
 end behaviour;
