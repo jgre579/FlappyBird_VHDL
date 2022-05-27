@@ -28,10 +28,10 @@ begin
 
 size <= CONV_STD_LOGIC_VECTOR(8,10);
  --ball_x_pos and ball_y_pos show the (x,y) for the centre of ball
-life1_x_pos <= CONV_STD_LOGIC_VECTOR(50,10);
-life2_x_pos <= CONV_STD_LOGIC_VECTOR(100,10);
-life3_x_pos <= CONV_STD_LOGIC_VECTOR(150,10);
-lives_y_pos <= CONV_STD_LOGIC_VECTOR(400,10);
+life1_x_pos <= CONV_STD_LOGIC_VECTOR(42,10);
+life2_x_pos <= CONV_STD_LOGIC_VECTOR(72,10);
+life3_x_pos <= CONV_STD_LOGIC_VECTOR(102,10);
+lives_y_pos <= CONV_STD_LOGIC_VECTOR(55,10);
 
 timer_number <= 12000000;
 	

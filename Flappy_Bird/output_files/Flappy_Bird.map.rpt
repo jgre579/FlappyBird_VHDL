@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Flappy_Bird
-Sat May 28 06:01:53 2022
+Sat May 28 08:33:12 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -17,19 +17,18 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   9. Analysis & Synthesis IP Cores Summary
  10. State Machine - |Flappy_Bird|fsm:inst22|state
  11. State Machine - |Flappy_Bird|MOUSE:inst4|mouse_state
- 12. User-Specified and Inferred Latches
- 13. Registers Removed During Synthesis
- 14. Removed Registers Triggering Further Register Optimizations
- 15. General Register Statistics
- 16. Inverted Register Statistics
- 17. Multiplexer Restructuring Statistics (Restructuring Performed)
- 18. Source assignments for char_rom:inst6|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated
- 19. Parameter Settings for User Entity Instance: clock_div_25MHz:inst8|altpll:altpll_component
- 20. Parameter Settings for User Entity Instance: char_rom:inst6|altsyncram:altsyncram_component
- 21. altpll Parameter Settings by Entity Instance
- 22. altsyncram Parameter Settings by Entity Instance
- 23. Elapsed Time Per Partition
- 24. Analysis & Synthesis Messages
+ 12. Registers Removed During Synthesis
+ 13. Removed Registers Triggering Further Register Optimizations
+ 14. General Register Statistics
+ 15. Inverted Register Statistics
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Source assignments for char_rom:inst6|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated
+ 18. Parameter Settings for User Entity Instance: clock_div_25MHz:inst8|altpll:altpll_component
+ 19. Parameter Settings for User Entity Instance: char_rom:inst6|altsyncram:altsyncram_component
+ 20. altpll Parameter Settings by Entity Instance
+ 21. altsyncram Parameter Settings by Entity Instance
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
 
 
 
@@ -55,15 +54,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat May 28 06:01:53 2022           ;
+; Analysis & Synthesis Status        ; Successful - Sat May 28 08:33:12 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Flappy_Bird                                     ;
 ; Top-level Entity Name              ; Flappy_Bird                                     ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 1,206                                           ;
-;     Total combinational functions  ; 1,132                                           ;
-;     Dedicated logic registers      ; 436                                             ;
-; Total registers                    ; 436                                             ;
+; Total logic elements               ; 1,264                                           ;
+;     Total combinational functions  ; 1,184                                           ;
+;     Dedicated logic registers      ; 448                                             ;
+; Total registers                    ; 448                                             ;
 ; Total pins                         ; 16                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 4,096                                           ;
@@ -217,20 +216,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+------------------------------+
 ; Resource                                    ; Usage                        ;
 +---------------------------------------------+------------------------------+
-; Estimated Total logic elements              ; 1,206                        ;
+; Estimated Total logic elements              ; 1,264                        ;
 ;                                             ;                              ;
-; Total combinational functions               ; 1132                         ;
+; Total combinational functions               ; 1184                         ;
 ; Logic element usage by number of LUT inputs ;                              ;
-;     -- 4 input functions                    ; 441                          ;
-;     -- 3 input functions                    ; 297                          ;
-;     -- <=2 input functions                  ; 394                          ;
+;     -- 4 input functions                    ; 487                          ;
+;     -- 3 input functions                    ; 302                          ;
+;     -- <=2 input functions                  ; 395                          ;
 ;                                             ;                              ;
 ; Logic elements by mode                      ;                              ;
-;     -- normal mode                          ; 689                          ;
+;     -- normal mode                          ; 741                          ;
 ;     -- arithmetic mode                      ; 443                          ;
 ;                                             ;                              ;
-; Total registers                             ; 436                          ;
-;     -- Dedicated logic registers            ; 436                          ;
+; Total registers                             ; 448                          ;
+;     -- Dedicated logic registers            ; 448                          ;
 ;     -- I/O registers                        ; 0                            ;
 ;                                             ;                              ;
 ; I/O pins                                    ; 16                           ;
@@ -241,8 +240,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                                             ;                              ;
 ; Maximum fan-out node                        ; VGA_SYNC:inst2|vert_sync_out ;
 ; Maximum fan-out                             ; 238                          ;
-; Total fan-out                               ; 4874                         ;
-; Average fan-out                             ; 3.03                         ;
+; Total fan-out                               ; 5119                         ;
+; Average fan-out                             ; 3.06                         ;
 +---------------------------------------------+------------------------------+
 
 
@@ -251,31 +250,31 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                       ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                              ; Library Name ;
 +--------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------+--------------+
-; |Flappy_Bird                                     ; 1132 (12)         ; 436 (0)      ; 4096        ; 0            ; 0       ; 0         ; 16   ; 0            ; |Flappy_Bird                                                                                     ; work         ;
+; |Flappy_Bird                                     ; 1184 (12)         ; 448 (0)      ; 4096        ; 0            ; 0       ; 0         ; 16   ; 0            ; |Flappy_Bird                                                                                     ; work         ;
 ;    |MOUSE:inst4|                                 ; 52 (52)           ; 63 (63)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|MOUSE:inst4                                                                         ; work         ;
 ;    |VGA_SYNC:inst2|                              ; 59 (59)           ; 48 (48)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|VGA_SYNC:inst2                                                                      ; work         ;
-;    |bouncy_ball:inst3|                           ; 68 (68)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|bouncy_ball:inst3                                                                   ; work         ;
+;    |bouncy_ball:inst3|                           ; 66 (66)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|bouncy_ball:inst3                                                                   ; work         ;
 ;    |char_rom:inst6|                              ; 5 (5)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|char_rom:inst6                                                                      ; work         ;
 ;       |altsyncram:altsyncram_component|          ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|char_rom:inst6|altsyncram:altsyncram_component                                      ; work         ;
 ;          |altsyncram_kt91:auto_generated|        ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|char_rom:inst6|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated       ; work         ;
-;    |char_rom_display:inst5|                      ; 257 (257)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|char_rom_display:inst5                                                              ; work         ;
+;    |char_rom_display:inst5|                      ; 315 (315)         ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|char_rom_display:inst5                                                              ; work         ;
 ;    |clock_div_25MHz:inst8|                       ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|clock_div_25MHz:inst8                                                               ; work         ;
 ;       |altpll:altpll_component|                  ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|clock_div_25MHz:inst8|altpll:altpll_component                                       ; work         ;
 ;          |clock_div_25MHz_altpll:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|clock_div_25MHz:inst8|altpll:altpll_component|clock_div_25MHz_altpll:auto_generated ; work         ;
 ;    |delay_counter:inst13|                        ; 42 (42)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|delay_counter:inst13                                                                ; work         ;
-;    |display_sync:inst1|                          ; 12 (12)           ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|display_sync:inst1                                                                  ; work         ;
+;    |display_sync:inst1|                          ; 8 (8)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|display_sync:inst1                                                                  ; work         ;
 ;    |fsm:inst22|                                  ; 9 (9)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|fsm:inst22                                                                          ; work         ;
 ;    |high_score:inst20|                           ; 32 (32)           ; 18 (18)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|high_score:inst20                                                                   ; work         ;
 ;    |level_control:inst23|                        ; 6 (6)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|level_control:inst23                                                                ; work         ;
 ;    |lfsr:inst24|                                 ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|lfsr:inst24                                                                         ; work         ;
 ;    |lfsr_second:inst37|                          ; 10 (10)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|lfsr_second:inst37                                                                  ; work         ;
 ;    |lfsr_third:inst38|                           ; 7 (7)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|lfsr_third:inst38                                                                   ; work         ;
-;    |lives:inst|                                  ; 34 (34)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|lives:inst                                                                          ; work         ;
+;    |lives:inst|                                  ; 29 (29)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|lives:inst                                                                          ; work         ;
 ;    |pipe_controller:inst19|                      ; 54 (54)           ; 38 (38)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|pipe_controller:inst19                                                              ; work         ;
-;    |pipe_gen:inst10|                             ; 137 (137)         ; 55 (55)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|pipe_gen:inst10                                                                     ; work         ;
-;    |pipe_gen:inst11|                             ; 137 (137)         ; 55 (55)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|pipe_gen:inst11                                                                     ; work         ;
-;    |pipe_gen:inst12|                             ; 137 (137)         ; 55 (55)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|pipe_gen:inst12                                                                     ; work         ;
-;    |score:inst21|                                ; 54 (54)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|score:inst21                                                                        ; work         ;
+;    |pipe_gen:inst10|                             ; 138 (138)         ; 55 (55)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|pipe_gen:inst10                                                                     ; work         ;
+;    |pipe_gen:inst11|                             ; 139 (139)         ; 55 (55)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|pipe_gen:inst11                                                                     ; work         ;
+;    |pipe_gen:inst12|                             ; 138 (138)         ; 55 (55)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|pipe_gen:inst12                                                                     ; work         ;
+;    |score:inst21|                                ; 55 (55)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|score:inst21                                                                        ; work         ;
 +--------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -326,28 +325,6 @@ Encoding Type:  One-Hot
 ; mouse_state.WAIT_CMD_ACK      ; 0                         ; 1                        ; 0                             ; 0                         ; 0                        ; 1                         ;
 ; mouse_state.INPUT_PACKETS     ; 1                         ; 0                        ; 0                             ; 0                         ; 0                        ; 1                         ;
 +-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                               ;
-+-----------------------------------------------------+------------------------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal                ; Free of Timing Hazards ;
-+-----------------------------------------------------+------------------------------------+------------------------+
-; char_rom_display:inst5|font_col[1]                  ; char_rom_display:inst5|font_row[2] ; yes                    ;
-; char_rom_display:inst5|font_col[0]                  ; char_rom_display:inst5|font_row[2] ; yes                    ;
-; char_rom_display:inst5|font_col[2]                  ; char_rom_display:inst5|font_row[2] ; yes                    ;
-; char_rom_display:inst5|font_row[0]                  ; char_rom_display:inst5|font_row[2] ; yes                    ;
-; char_rom_display:inst5|font_row[1]                  ; char_rom_display:inst5|font_row[2] ; yes                    ;
-; char_rom_display:inst5|font_row[2]                  ; char_rom_display:inst5|font_row[2] ; yes                    ;
-; char_rom_display:inst5|address[0]                   ; char_rom_display:inst5|address[5]  ; yes                    ;
-; char_rom_display:inst5|address[1]                   ; char_rom_display:inst5|address[5]  ; yes                    ;
-; char_rom_display:inst5|address[2]                   ; char_rom_display:inst5|address[5]  ; yes                    ;
-; char_rom_display:inst5|address[3]                   ; char_rom_display:inst5|address[5]  ; yes                    ;
-; char_rom_display:inst5|address[4]                   ; char_rom_display:inst5|address[5]  ; yes                    ;
-; char_rom_display:inst5|address[5]                   ; char_rom_display:inst5|address[5]  ; yes                    ;
-; Number of user-specified and inferred latches = 12  ;                                    ;                        ;
-+-----------------------------------------------------+------------------------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +-------------------------------------------------------------------------------------------------------------+
@@ -431,12 +408,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 436   ;
+; Total registers                              ; 448   ;
 ; Number of registers using Synchronous Clear  ; 64    ;
-; Number of registers using Synchronous Load   ; 27    ;
+; Number of registers using Synchronous Load   ; 31    ;
 ; Number of registers using Asynchronous Clear ; 19    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 361   ;
+; Number of registers using Clock Enable       ; 373   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -446,30 +423,30 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +------------------------------------------+---------+
 ; Inverted Register                        ; Fan out ;
 +------------------------------------------+---------+
-; lives:inst|v_current_lives[1]            ; 6       ;
-; lives:inst|v_current_lives[0]            ; 5       ;
+; lives:inst|v_current_lives[1]            ; 4       ;
+; lives:inst|v_current_lives[0]            ; 3       ;
+; lfsr:inst24|rand_num[6]                  ; 6       ;
+; lfsr:inst24|rand_num[2]                  ; 4       ;
+; lfsr:inst24|rand_num[1]                  ; 3       ;
+; lfsr:inst24|rand_num[0]                  ; 3       ;
 ; lfsr_third:inst38|rand_num[6]            ; 6       ;
 ; lfsr_second:inst37|rand_num[6]           ; 6       ;
 ; lfsr_second:inst37|rand_num[4]           ; 8       ;
 ; lfsr_second:inst37|rand_num[3]           ; 4       ;
 ; lfsr_second:inst37|rand_num[1]           ; 3       ;
 ; lfsr_second:inst37|rand_num[0]           ; 3       ;
-; lfsr:inst24|rand_num[6]                  ; 6       ;
-; lfsr:inst24|rand_num[2]                  ; 4       ;
-; lfsr:inst24|rand_num[1]                  ; 3       ;
-; lfsr:inst24|rand_num[0]                  ; 3       ;
-; score:inst21|v_current_score_tens[4]     ; 8       ;
-; score:inst21|v_current_score_hundreds[4] ; 7       ;
-; score:inst21|v_current_score_ones[4]     ; 10      ;
 ; high_score:inst20|high_score_ones[4]     ; 2       ;
 ; high_score:inst20|high_score_hundreds[4] ; 3       ;
+; score:inst21|v_current_score_ones[4]     ; 10      ;
 ; high_score:inst20|high_score_tens[4]     ; 3       ;
-; score:inst21|v_current_score_ones[5]     ; 10      ;
+; score:inst21|v_current_score_tens[4]     ; 8       ;
+; score:inst21|v_current_score_hundreds[4] ; 8       ;
+; score:inst21|v_current_score_hundreds[5] ; 8       ;
 ; score:inst21|v_current_score_tens[5]     ; 10      ;
-; score:inst21|v_current_score_hundreds[5] ; 7       ;
-; high_score:inst20|high_score_tens[5]     ; 3       ;
-; high_score:inst20|high_score_ones[5]     ; 2       ;
 ; high_score:inst20|high_score_hundreds[5] ; 3       ;
+; high_score:inst20|high_score_ones[5]     ; 2       ;
+; score:inst21|v_current_score_ones[5]     ; 9       ;
+; high_score:inst20|high_score_tens[5]     ; 3       ;
 ; MOUSE:inst4|send_char                    ; 3       ;
 ; MOUSE:inst4|SHIFTOUT[3]                  ; 1       ;
 ; MOUSE:inst4|SHIFTOUT[5]                  ; 1       ;
@@ -485,29 +462,31 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Flappy_Bird|pipe_gen:inst11|\Move_Pipes:v_next_pipe_on     ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Flappy_Bird|pipe_gen:inst12|\Move_Pipes:v_pipe_passed      ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Flappy_Bird|pipe_gen:inst10|\Move_Pipes:v_pipe_passed      ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Flappy_Bird|lives:inst|timer_enable                        ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |Flappy_Bird|VGA_SYNC:inst2|v_count[9]                      ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Flappy_Bird|level_control:inst23|speed[1]                  ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |Flappy_Bird|pipe_controller:inst19|current_highest_pipe[6] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Flappy_Bird|pipe_gen:inst11|\Move_Pipes:v_pipe_passed      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Flappy_Bird|pipe_gen:inst12|\Move_Pipes:v_next_pipe_on     ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Flappy_Bird|pipe_gen:inst10|\Move_Pipes:v_next_pipe_on     ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Flappy_Bird|lives:inst|loose_life                          ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |Flappy_Bird|VGA_SYNC:inst2|v_count[3]                      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Flappy_Bird|level_control:inst23|speed[2]                  ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |Flappy_Bird|pipe_controller:inst19|current_highest_pipe[3] ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |Flappy_Bird|score:inst21|v_current_score_ones[3]           ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |Flappy_Bird|pipe_gen:inst10|pipe_x_pos[4]                  ;
-; 5:1                ; 9 bits    ; 27 LEs        ; 9 LEs                ; 18 LEs                 ; Yes        ; |Flappy_Bird|pipe_gen:inst10|pipe_width[9]                  ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |Flappy_Bird|pipe_gen:inst12|pipe_x_pos[1]                  ;
-; 5:1                ; 9 bits    ; 27 LEs        ; 9 LEs                ; 18 LEs                 ; Yes        ; |Flappy_Bird|pipe_gen:inst12|pipe_width[7]                  ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |Flappy_Bird|pipe_gen:inst11|pipe_x_pos[10]                 ;
-; 5:1                ; 9 bits    ; 27 LEs        ; 9 LEs                ; 18 LEs                 ; Yes        ; |Flappy_Bird|pipe_gen:inst11|pipe_width[6]                  ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |Flappy_Bird|pipe_gen:inst10|pipe_x_pos[1]                  ;
+; 5:1                ; 9 bits    ; 27 LEs        ; 9 LEs                ; 18 LEs                 ; Yes        ; |Flappy_Bird|pipe_gen:inst10|pipe_width[7]                  ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |Flappy_Bird|pipe_gen:inst12|pipe_x_pos[5]                  ;
+; 5:1                ; 9 bits    ; 27 LEs        ; 9 LEs                ; 18 LEs                 ; Yes        ; |Flappy_Bird|pipe_gen:inst12|pipe_width[5]                  ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |Flappy_Bird|pipe_gen:inst11|pipe_x_pos[4]                  ;
+; 5:1                ; 9 bits    ; 27 LEs        ; 9 LEs                ; 18 LEs                 ; Yes        ; |Flappy_Bird|pipe_gen:inst11|pipe_width[9]                  ;
 ; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Flappy_Bird|score:inst21|v_current_score_tens[1]           ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Flappy_Bird|score:inst21|v_current_score_hundreds[1]       ;
-; 5:1                ; 12 bits   ; 36 LEs        ; 0 LEs                ; 36 LEs                 ; Yes        ; |Flappy_Bird|high_score:inst20|high_score_ones[1]           ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Flappy_Bird|score:inst21|v_current_score_hundreds[2]       ;
+; 5:1                ; 12 bits   ; 36 LEs        ; 0 LEs                ; 36 LEs                 ; Yes        ; |Flappy_Bird|high_score:inst20|high_score_hundreds[3]       ;
+; 18:1               ; 6 bits    ; 72 LEs        ; 0 LEs                ; 72 LEs                 ; Yes        ; |Flappy_Bird|char_rom_display:inst5|font_col[2]             ;
+; 116:1              ; 6 bits    ; 462 LEs       ; 432 LEs              ; 30 LEs                 ; Yes        ; |Flappy_Bird|char_rom_display:inst5|address[4]              ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |Flappy_Bird|score:inst21|v_current_score_ones[4]           ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |Flappy_Bird|score:inst21|v_current_score_tens[4]           ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |Flappy_Bird|score:inst21|v_current_score_hundreds[4]       ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |Flappy_Bird|high_score:inst20|high_score_tens[5]           ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Flappy_Bird|pipe_controller:inst19|t_enable2               ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Flappy_Bird|display_sync:inst1|blue                        ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |Flappy_Bird|score:inst21|v_current_score_tens[5]           ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |Flappy_Bird|score:inst21|v_current_score_hundreds[5]       ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |Flappy_Bird|high_score:inst20|high_score_tens[4]           ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Flappy_Bird|pipe_controller:inst19|t_enable3               ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Flappy_Bird|display_sync:inst1|red                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
 
 
@@ -997,7 +976,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -1007,7 +986,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat May 28 06:01:42 2022
+    Info: Processing started: Sat May 28 08:32:59 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Flappy_Bird -c Flappy_Bird
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file vhdl files/lsfr.vhd
@@ -1190,156 +1169,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
     Info (12023): Found entity 1: altsyncram_kt91
 Info (12128): Elaborating entity "altsyncram_kt91" for hierarchy "char_rom:inst6|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated"
 Info (12128): Elaborating entity "char_rom_display" for hierarchy "char_rom_display:inst5"
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(28): signal "text_mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(29): signal "row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(29): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(30): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(34): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(38): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(42): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(46): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(50): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(53): signal "row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(54): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(58): signal "text_mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(59): signal "row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(59): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(60): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(63): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(67): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(71): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(75): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(78): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(81): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(82): signal "score_hundreds" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(84): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(85): signal "score_tens" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(87): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(88): signal "score_ones" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(90): signal "row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(91): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(94): signal "text_mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(95): signal "row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(95): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(96): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(99): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(103): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(107): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(111): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(114): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(117): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(118): signal "score_hundreds" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(120): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(121): signal "score_tens" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(123): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(124): signal "score_ones" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(126): signal "row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(127): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(130): signal "row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(130): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(131): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(135): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(139): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(143): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(146): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(149): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(153): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(157): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(161): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(164): signal "row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(165): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(168): signal "row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(168): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(170): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(174): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(178): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(182): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(186): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(190): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(193): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(197): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(201): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(205): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(208): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(212): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(213): signal "high_score_hundreds" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(215): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(216): signal "high_score_tens" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(218): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(219): signal "high_score_ones" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(221): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(225): signal "row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(226): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(229): signal "text_mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(231): signal "row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(231): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(233): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(237): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(241): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(245): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(249): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(253): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(256): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(260): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(264): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(268): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(272): signal "row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(273): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(276): signal "row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(276): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(277): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(280): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(283): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(287): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(290): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(293): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(298): signal "row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(299): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(302): signal "game_mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(303): signal "row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(303): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(305): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(309): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(313): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(317): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(320): signal "row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(321): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(326): signal "row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(326): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(328): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(331): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(334): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(338): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(341): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(344): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(347): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(350): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(354): signal "row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(355): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(359): signal "game_mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(360): signal "row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(360): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(362): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(366): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(370): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(374): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(378): signal "row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at char_rom_display.vhd(379): signal "col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at char_rom_display.vhd(24): inferring latch(es) for signal or variable "address", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at char_rom_display.vhd(24): inferring latch(es) for signal or variable "font_row", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at char_rom_display.vhd(24): inferring latch(es) for signal or variable "font_col", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "font_col[0]" at char_rom_display.vhd(24)
-Info (10041): Inferred latch for "font_col[1]" at char_rom_display.vhd(24)
-Info (10041): Inferred latch for "font_col[2]" at char_rom_display.vhd(24)
-Info (10041): Inferred latch for "font_row[0]" at char_rom_display.vhd(24)
-Info (10041): Inferred latch for "font_row[1]" at char_rom_display.vhd(24)
-Info (10041): Inferred latch for "font_row[2]" at char_rom_display.vhd(24)
-Info (10041): Inferred latch for "address[0]" at char_rom_display.vhd(24)
-Info (10041): Inferred latch for "address[1]" at char_rom_display.vhd(24)
-Info (10041): Inferred latch for "address[2]" at char_rom_display.vhd(24)
-Info (10041): Inferred latch for "address[3]" at char_rom_display.vhd(24)
-Info (10041): Inferred latch for "address[4]" at char_rom_display.vhd(24)
-Info (10041): Inferred latch for "address[5]" at char_rom_display.vhd(24)
 Info (12128): Elaborating entity "high_score" for hierarchy "high_score:inst20"
 Info (12128): Elaborating entity "score" for hierarchy "score:inst21"
 Info (12128): Elaborating entity "pipe_gen" for hierarchy "pipe_gen:inst11"
@@ -1351,35 +1180,23 @@ Info (12128): Elaborating entity "lfsr_third" for hierarchy "lfsr_third:inst38"
 Info (12128): Elaborating entity "level_control" for hierarchy "level_control:inst23"
 Info (12128): Elaborating entity "lfsr" for hierarchy "lfsr:inst24"
 Info (12128): Elaborating entity "lfsr_second" for hierarchy "lfsr_second:inst37"
-Warning (13012): Latch char_rom_display:inst5|address[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[8]
-Warning (13012): Latch char_rom_display:inst5|address[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9]
-Warning (13012): Latch char_rom_display:inst5|address[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst22|state.play_state
-Warning (13012): Latch char_rom_display:inst5|address[3] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst22|state.play_state
-Warning (13012): Latch char_rom_display:inst5|address[4] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst22|state.play_state
-Warning (13012): Latch char_rom_display:inst5|address[5] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst22|state.play_state
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1235 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1293 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 9 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 1210 logic cells
+    Info (21061): Implemented 1268 logic cells
     Info (21064): Implemented 8 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 172 warnings
-    Info: Peak virtual memory: 4643 megabytes
-    Info: Processing ended: Sat May 28 06:01:53 2022
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:09
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 4649 megabytes
+    Info: Processing ended: Sat May 28 08:33:12 2022
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:11
 
 
