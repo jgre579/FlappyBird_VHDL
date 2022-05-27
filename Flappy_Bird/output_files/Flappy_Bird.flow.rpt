@@ -1,5 +1,5 @@
 Flow report for Flappy_Bird
-Fri May 27 08:42:45 2022
+Fri May 27 22:40:14 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,15 +40,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Fri May 27 08:42:42 2022           ;
+; Flow Status                        ; Successful - Fri May 27 22:40:06 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Flappy_Bird                                     ;
 ; Top-level Entity Name              ; Flappy_Bird                                     ;
 ; Family                             ; Cyclone III                                     ;
 ; Device                             ; EP3C16F484C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 1,015 / 15,408 ( 7 % )                          ;
-;     Total combinational functions  ; 962 / 15,408 ( 6 % )                            ;
+; Total logic elements               ; 1,040 / 15,408 ( 7 % )                          ;
+;     Total combinational functions  ; 1,000 / 15,408 ( 6 % )                          ;
 ;     Dedicated logic registers      ; 420 / 15,408 ( 3 % )                            ;
 ; Total registers                    ; 420                                             ;
 ; Total pins                         ; 24 / 347 ( 7 % )                                ;
@@ -64,25 +64,25 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/27/2022 08:42:26 ;
+; Start date & time ; 05/27/2022 22:39:20 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Flappy_Bird         ;
 +-------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                 ;
-+-------------------------------------+---------------------------------+---------------+-------------+------------+
-; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id ;
-+-------------------------------------+---------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 159327854479212.165359774602044 ; --            ; --          ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; 16764057                        ; --            ; --          ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; --          ; Top        ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; --          ; Top        ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --            ; --          ; --         ;
-+-------------------------------------+---------------------------------+---------------+-------------+------------+
++---------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                              ;
++-------------------------------------+------------------------------+---------------+-------------+------------+
+; Assignment Name                     ; Value                        ; Default Value ; Entity Name ; Section Id ;
++-------------------------------------+------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID               ; 121376482255.165364796008340 ; --            ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                           ; --            ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                            ; --            ; --          ; --         ;
+; PARTITION_COLOR                     ; 16764057                     ; --            ; --          ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING        ; --            ; --          ; Top        ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                       ; --            ; --          ; Top        ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                 ; --            ; --          ; --         ;
++-------------------------------------+------------------------------+---------------+-------------+------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -90,11 +90,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4652 MB             ; 00:00:03                           ;
-; Fitter                    ; 00:00:10     ; 1.0                     ; 4927 MB             ; 00:00:10                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 4549 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4603 MB             ; 00:00:02                           ;
-; Total                     ; 00:00:16     ; --                      ; --                  ; 00:00:16                           ;
+; Analysis & Synthesis      ; 00:00:10     ; 1.0                     ; 4648 MB             ; 00:00:08                           ;
+; Fitter                    ; 00:00:30     ; 1.0                     ; 4924 MB             ; 00:00:26                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4543 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:07     ; 1.0                     ; 4606 MB             ; 00:00:05                           ;
+; Total                     ; 00:00:49     ; --                      ; --                  ; 00:00:41                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -103,10 +103,10 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; Sribunwongsa     ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; Sribunwongsa     ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; Sribunwongsa     ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; Sribunwongsa     ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; WYNNMO6559       ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; WYNNMO6559       ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; WYNNMO6559       ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; WYNNMO6559       ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
