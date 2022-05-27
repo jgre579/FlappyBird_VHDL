@@ -33,10 +33,9 @@ pipe_position <= pipe_x_pos;
 -- ball_x_pos and ball_y_pos show the (x,y) for the centre of ball
 
 -- pipe 1  ___________________________________________________________________
-pipe_top_height <= CONV_STD_LOGIC_VECTOR(150,10);
+
 pipe_top_y_pos <= CONV_STD_LOGIC_VECTOR(200,10); --(feed rand_loc as y pos)
 
-pipe_bot_height <= CONV_STD_LOGIC_VECTOR(490-300,10);
 pipe_bot_y_pos <= CONV_STD_LOGIC_VECTOR(300,10);
 
 pipe_top_on <= '1' when ( ('0' & pixel_column >= '0' & pipe_x_pos) and ('0' & pixel_column <= '0' & pipe_x_pos + pipe_width) 	-- x_pos - size <= pixel_column <= x_pos + size
@@ -48,8 +47,6 @@ pipe_bot_on <= '1' when ( ('0' & pixel_column >= '0' & pipe_x_pos) and ('0' & pi
 			'0';
 
 pipe_on <= (pipe_bot_on or pipe_top_on);
-
-
 
 
 Move_Pipes: process (clk) 
