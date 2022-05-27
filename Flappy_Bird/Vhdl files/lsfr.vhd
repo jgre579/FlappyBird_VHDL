@@ -15,7 +15,7 @@ entity lfsr is
 end lfsr;
 
 architecture behaviour of lfsr is
-	signal rand_num: std_logic_vector (7 downto 0):= "01111111";
+	signal rand_num: std_logic_vector (7 downto 0):= "01000111";
 
 	begin
 		process (clk) 
@@ -27,11 +27,6 @@ architecture behaviour of lfsr is
 				if (pipe_position <= CONV_STD_LOGIC_VECTOR(0, 11))then
 					temp := rand_num(6) XOR rand_num(4) XOR rand_num(3) XOR rand_num(2) XOR rand_num(0);
 					rand_num<= temp & rand_num(7 DOWNTO 1);
-				end if;
-				if (rand_num >= CONV_STD_LOGIC_VECTOR(450, 11))then
-					rand_num <= rand_num - CONV_STD_LOGIC_VECTOR(100, 8);
-				elsif (rand_num <= CONV_STD_LOGIC_VECTOR(20, 11))then
-					rand_num <= rand_num + CONV_STD_LOGIC_VECTOR(20, 8);
 				end if;
 			end if; 
 							

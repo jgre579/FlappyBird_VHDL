@@ -33,7 +33,7 @@ pipe_position <= pipe_width;
 
 -- pipe 1  ___________________________________________________________________
 
-pipe_bot_y_pos <=("00" & rand_num_out) - "100101100";
+pipe_bot_y_pos <=("00" & rand_num_out) - "110010000";
 
 pipe_top_y_pos <=("00" & rand_num_out);
 

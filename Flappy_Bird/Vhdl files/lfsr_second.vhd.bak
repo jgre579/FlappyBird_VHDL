@@ -15,7 +15,7 @@ entity lfsr_second is
 end lfsr_second;
 
 architecture behaviour of lfsr_second is
-	signal rand_num: std_logic_vector (7 downto 0):= "01011011";
+	signal rand_num: std_logic_vector (7 downto 0):= "01111011";
 
 	begin
 		process (clk) 
@@ -28,7 +28,6 @@ architecture behaviour of lfsr_second is
 					temp := rand_num(6) XOR rand_num(4) XOR rand_num(3) XOR rand_num(2) XOR rand_num(0);
 					rand_num<= temp & rand_num(7 DOWNTO 1);
 				end if;
-				
 			end if; 
 							
       end process;

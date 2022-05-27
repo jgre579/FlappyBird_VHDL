@@ -15,7 +15,7 @@ entity lfsr_third is
 end lfsr_third;
 
 architecture behaviour of lfsr_third is
-	signal rand_num: std_logic_vector (7 downto 0):= "01011011";
+	signal rand_num: std_logic_vector (7 downto 0):= "01000000";
 
 	begin
 		process (clk) 
