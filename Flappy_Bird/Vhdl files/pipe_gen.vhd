@@ -33,9 +33,7 @@ pipe_position <= pipe_width;
 
 -- pipe 1  ___________________________________________________________________
 
-pipe_bot_y_pos <=("00" & rand_num_out) - "110010000";
 
-pipe_top_y_pos <=("00" & rand_num_out);
 
 pipe_top_on <= '1' when ( ('0' & pixel_column >= '0' & pipe_x_pos) and ('0' & pixel_column <= '0' & pipe_x_pos + pipe_width) 	-- x_pos - size <= pixel_column <= x_pos + size
 					and ('0' & pixel_row <= pipe_top_y_pos))  else	-- y_pos - size <= pixel_row <= y_pos + size
@@ -60,7 +58,15 @@ begin
 	if (rising_edge(vert_sync)) then 
 					
 		if(enable = '1') then 
-		--pipe 1  ___________________________________________________________________
+			
+			if(pipe_width <= CONV_STD_LOGIC_VECTOR(0, 11) or pipe_bot_y_pos = "0000000000") then 
+			
+				pipe_bot_y_pos <=("00" & rand_num_out) - "110010000";
+				pipe_top_y_pos <=("00" & rand_num_out);
+			
+			end if;
+		
+		
 			if(count = 1) then -- moving pipes once
 				
 				pipe_x_motion <= speed;

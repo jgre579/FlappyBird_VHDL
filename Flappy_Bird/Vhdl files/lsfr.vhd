@@ -6,6 +6,7 @@ library ieee;
 -- random number generator
 
 entity lfsr is
+	generic (seed : std_logic_vector(7 downto 0) := "01000111" );
 	port (
 	 
 	 pipe_position : IN std_logic_vector (9 downto 0);
@@ -24,10 +25,10 @@ architecture behaviour of lfsr is
 		
 		--pipe_position <= CONV_STD_LOGIC_VECTOR(640, 11)
 			if(rising_edge(clk))then
-				if (pipe_position <= CONV_STD_LOGIC_VECTOR(0, 11))then
+				--if (pipe_position <= CONV_STD_LOGIC_VECTOR(0, 11))then
 					temp := rand_num(6) XOR rand_num(4) XOR rand_num(3) XOR rand_num(2) XOR rand_num(0);
 					rand_num<= temp & rand_num(7 DOWNTO 1);
-				end if;
+				--end if;
 			end if; 
 							
       end process;

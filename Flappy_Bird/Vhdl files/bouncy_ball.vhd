@@ -55,11 +55,11 @@ begin
 			
 			count := count + 1; 
 		-- Bounce off top or bottom of the screen
-			if ( ('0' & ball_y_pos >= CONV_STD_LOGIC_VECTOR(479,10) - size) ) then
+			if ( (ball_y_pos >= CONV_STD_LOGIC_VECTOR(479,10)) ) then
 				ball_hit_bot := '1';
 				touched_bot <= '1';
-			elsif (ball_y_pos <= size) then 
-				
+			elsif (ball_y_pos <= CONV_STD_LOGIC_VECTOR(2,10)) then 
+				ball_y_pos <= CONV_STD_LOGIC_VECTOR(0,10);
 				ball_hit_top := '1';
 			else 
 				ball_hit_top := '0';

@@ -92,6 +92,7 @@ begin
 				powerup_x_pos <= CONV_STD_LOGIC_VECTOR(640,11);
 				size_x <= CONV_STD_LOGIC_VECTOR(8, 10);
 				powerup_enable <= '0';
+				powerup_off_screen := '1';
 			end if;
 		
 		
