@@ -1,15 +1,15 @@
-Fitter Status : Successful - Sat May 28 19:29:10 2022
+Fitter Status : Successful - Sun May 29 09:34:39 2022
 Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Web Edition
 Revision Name : Flappy_Bird
 Top-level Entity Name : Flappy_Bird
 Family : Cyclone III
 Device : EP3C16F484C6
 Timing Models : Final
-Total logic elements : 1,468 / 15,408 ( 10 % )
-    Total combinational functions : 1,422 / 15,408 ( 9 % )
+Total logic elements : 1,481 / 15,408 ( 10 % )
+    Total combinational functions : 1,424 / 15,408 ( 9 % )
     Dedicated logic registers : 538 / 15,408 ( 3 % )
 Total registers : 538
-Total pins : 16 / 347 ( 5 % )
+Total pins : 15 / 347 ( 4 % )
 Total virtual pins : 0
 Total memory bits : 4,096 / 516,096 ( < 1 % )
 Embedded Multiplier 9-bit elements : 0 / 112 ( 0 % )

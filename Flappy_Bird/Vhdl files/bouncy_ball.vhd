@@ -10,7 +10,7 @@ ENTITY bouncy_ball IS
 		clk, vert_sync, mouse_click, enable, reset, game_over	: IN std_logic;	
 		text_mode															: IN std_logic_vector(2 downto 0);
       pixel_row, pixel_column											: IN std_logic_vector(9 DOWNTO 0);
-		ball_on																: OUT std_logic);
+		ball_on, touched_bot												: OUT std_logic);
 		  		
 END bouncy_ball;
 
@@ -44,39 +44,49 @@ variable count 		 : integer 	 := 0;
 begin
 
 	-- Move ball once every vertical sync, and only if enabled 
-	if (rising_edge(vert_sync) and enable = '1') then			
-		count := count + 1; 
-		-- Bounce off top or bottom of the screen
-		if ( ('0' & ball_y_pos >= CONV_STD_LOGIC_VECTOR(479,10) - size) ) then
-			ball_hit_bot := '1';
-		elsif (ball_y_pos <= size) then 
+	if (rising_edge(vert_sync)) then	
+		
+		if(reset = '1') then 
+			ball_y_pos <= CONV_STD_LOGIC_VECTOR(200,10);
+			touched_bot <= '0';
+		end if;
+		
+		if(enable = '1') then 
 			
-			ball_hit_top := '1';
-		else 
-			ball_hit_top := '0';
-			ball_hit_bot := '0';
-		end if;
-		
-		--Gravity
-		
-		if(ball_hit_top = '1') then 
-			ball_y_motion <= CONV_STD_LOGIC_VECTOR(2,10);
-		
-		elsif(mouse_click = '1') then 
-			--move upward
-				ball_y_motion <= - CONV_STD_LOGIC_VECTOR(9,10);
-				ball_hit_bot := '0';
-		else 
-			if (ball_hit_bot = '1') then 
-					
-					ball_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);
+			count := count + 1; 
+		-- Bounce off top or bottom of the screen
+			if ( ('0' & ball_y_pos >= CONV_STD_LOGIC_VECTOR(479,10) - size) ) then
+				ball_hit_bot := '1';
+				touched_bot <= '1';
+			elsif (ball_y_pos <= size) then 
+				
+				ball_hit_top := '1';
 			else 
-					ball_y_motion <= CONV_STD_LOGIC_VECTOR(2,10);
+				ball_hit_top := '0';
+				
 			end if;
-		end if;
-		
-		-- Compute next ball Y position
-		ball_y_pos <= ball_y_pos + ball_y_motion;
+			
+			
+			
+			--Gravity
+			
+			if(ball_hit_top = '1') then 
+				ball_y_motion <= CONV_STD_LOGIC_VECTOR(2,10);
+			
+			elsif(mouse_click = '1') then 
+				--move upward
+					ball_y_motion <= - CONV_STD_LOGIC_VECTOR(9,10);
+					ball_hit_bot := '0';
+			else 
+				ball_y_motion <= CONV_STD_LOGIC_VECTOR(2,10);
+			end if;
+			
+			-- Compute next ball Y position
+			ball_y_pos <= ball_y_pos + ball_y_motion;
+			
+			
+			end if;
+			
 		
 
 		
