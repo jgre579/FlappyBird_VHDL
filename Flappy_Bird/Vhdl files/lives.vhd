@@ -6,7 +6,7 @@ USE  IEEE.STD_LOGIC_UNSIGNED.all;
 entity lives is
 	port (
 	
-	clk, reset, life_lost, timer_end : in std_logic;
+	clk, reset, life_lost, timer_end, is_powerup_collided : in std_logic;
 	pixel_row, pixel_column : in std_logic_vector(9 downto 0);
 	lives_on, game_over, s_life_taken, timer_enable, led2 : out std_logic;
 	timer_number : out integer
@@ -84,15 +84,17 @@ end process;
 process (loose_life) is 
 variable v_current_lives : integer range 0 to 3 := 3;
 variable v_game_over : std_logic := '0';
-begin 
-	if(loose_life = '1') then 
-			if(v_current_lives > 1) then 
-				
-				v_current_lives := v_current_lives - 1;
-			else 
-				v_game_over := '1';
-			end if; 
-	end if;
+begin
+	
+		if(loose_life = '1') then 
+				if(v_current_lives > 1) then 
+					
+					v_current_lives := v_current_lives - 1;
+				else 
+					v_game_over := '1';
+				end if; 
+		end if;
+	
 	
 	if(reset = '1') then 
 			v_current_lives := 3;

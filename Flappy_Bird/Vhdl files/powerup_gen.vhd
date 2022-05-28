@@ -38,15 +38,16 @@ powerup_on <= '1' when (('0' & powerup_x_pos <= '0' & pixel_column) and ('0' & p
 Move_Pipes: process (clk) 
 
 variable count : integer := 0;
-
+variable powerup_off_screen : std_logic := '1';
 begin
 	-- Move pipes once every vert_sync 
 	-- will only move if switch is enabled
 	if (rising_edge(vert_sync)) then 
 	
-		if((score_ones = "110001" or score_ones = "110110")  and enable = '1' ) then 	
+		if((score_ones = "110001" or score_ones = "110110")  and enable = '1' and powerup_off_screen = '1' ) then 	
 			powerup_y_pos <= ("000" & rand_num);
 			powerup_enable <= '1';
+			powerup_off_screen := '0';
 		end if;
 					
 		if(powerup_enable = '1' and enable = '1') then 
@@ -61,6 +62,7 @@ begin
 					powerup_x_pos <= CONV_STD_LOGIC_VECTOR(640,11);
 					size_x <= CONV_STD_LOGIC_VECTOR(8, 10);
 					powerup_enable <='0';
+					powerup_off_screen := '1';
 				
 				else 
 					size_x <= size_x - powerup_x_motion;

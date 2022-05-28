@@ -4,14 +4,20 @@ USE  IEEE.STD_LOGIC_ARITH.all;
 USE  IEEE.STD_LOGIC_UNSIGNED.all;
 
 entity display_sync is
-	port (ball_on, text_on, pipe_on, vert_sync, clk, lives_on, enable, powerup_on: in std_logic;
-			red,green,blue, is_pipe_collided, timer_enable, is_powerup_collided: out std_logic);
+	port (ball_on, text_on, pipe_on, vert_sync, clk, lives_on, enable, powerup_on, timer_out: in std_logic;
+			red,green,blue, is_pipe_collided, timer_enable, is_powerup_collided: out std_logic;
+			timer_number : out integer
+			);
 end display_sync;
 
 Architecture arc of display_sync is
 
+
+
 signal powerup_collision : std_logic := '0';
 begin	
+
+	timer_number <= 75000000;
 
 	red <=	'1' when lives_on = '1' and enable = '1' 	else
 				'0' when text_on = '1' else
@@ -47,30 +53,45 @@ begin
 			if(rising_edge(clk)) then 
 			
 				if(ball_on = '1' and pipe_on = '1') then 
+								
 					temp_col:='1';
+				
+				else 
+					temp_col:='0';
 				end if;
 				
 				if(powerup_on = '1' and ball_on = '1') then 
 					
 					powerup_collision <= '1';
+					timer_enable <= '1';
+				end if;
+				
+				if(timer_out = '1') then 
+					powerup_collision <= '0';
+					timer_enable <= '0';
 				end if;
 			
 			
 			end if;
 			
-			if(vert_sync = '1' and rising_edge(clk) and powerup_collision = '0') then 
+			if(vert_sync = '1' and rising_edge(clk)) then 
 			
 				if(temp_col = '1') then
+				
 					v_pipe_collision := '1';
-					temp_col := '0';
+					
 				else 
 					v_pipe_collision :='0';		
 				end if;
 			end if;
---			
+			
+--			if(reset = '1') then 
+--				v_pipe_collision := '0';
+--				powerup_collision <= '0';
+--			end if;
 							
 				
-			is_pipe_collided <= v_pipe_collision;
+			is_pipe_collided <= v_pipe_collision and not powerup_collision;
 			is_powerup_collided <= powerup_collision;	
 			
 			
