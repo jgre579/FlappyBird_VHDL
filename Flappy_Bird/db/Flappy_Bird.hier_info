@@ -182,29 +182,30 @@ locked <= locked.DB_MAX_OUTPUT_PORT_TYPE
 
 |Flappy_Bird|display_sync:inst1
 ball_on => red.OUTPUTSELECT
+ball_on => green.OUTPUTSELECT
 ball_on => blue.OUTPUTSELECT
 ball_on => process_0.IN0
-ball_on => green.DATAA
+ball_on => process_0.IN0
 text_on => red.OUTPUTSELECT
 text_on => green.OUTPUTSELECT
 text_on => blue.OUTPUTSELECT
 pipe_on => process_0.IN1
 pipe_on => red.DATAA
 pipe_on => blue.DATAA
-vert_sync => coll.OUTPUTSELECT
-vert_sync => collision.ENA
-clk => coll.CLK
-clk => collision.CLK
+vert_sync => process_0.IN1
+clk => powerup_collision.CLK
+clk => temp_col.CLK
+clk => v_pipe_collision.CLK
 lives_on => red.IN0
 enable => red.IN1
-powerup_on => red.OUTPUTSELECT
-powerup_on => green.OUTPUTSELECT
-powerup_on => blue.OUTPUTSELECT
+powerup_on => red.IN1
+powerup_on => process_0.IN1
 red <= red.DB_MAX_OUTPUT_PORT_TYPE
 green <= green.DB_MAX_OUTPUT_PORT_TYPE
 blue <= blue.DB_MAX_OUTPUT_PORT_TYPE
-is_pipe_collided <= collision.DB_MAX_OUTPUT_PORT_TYPE
+is_pipe_collided <= v_pipe_collision.DB_MAX_OUTPUT_PORT_TYPE
 timer_enable <= comb.DB_MAX_OUTPUT_PORT_TYPE
+is_powerup_collided <= powerup_collision.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Flappy_Bird|bouncy_ball:inst3
