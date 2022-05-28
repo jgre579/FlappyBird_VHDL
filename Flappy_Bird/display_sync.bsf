@@ -73,6 +73,13 @@ applicable agreement for further details.
 		(line (pt 0 128)(pt 16 128)(line_width 1))
 	)
 	(port
+		(pt 0 144)
+		(input)
+		(text "powerup_on" (rect 0 0 48 12)(font "Arial" ))
+		(text "powerup_on" (rect 21 139 69 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 1))
+	)
+	(port
 		(pt 208 32)
 		(output)
 		(text "red" (rect 0 0 12 12)(font "Arial" ))
