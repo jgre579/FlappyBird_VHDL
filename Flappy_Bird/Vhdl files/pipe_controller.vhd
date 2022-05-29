@@ -8,15 +8,14 @@ ENTITY pipe_controller
  IS
 	PORT(
 		enable, clk, next_pipe, reset, timer_q, vert_sync 	: in std_logic;
-		enable1, enable2, enable3, pipe_timer_enable 		: out std_logic;
-		timer_number 													: out integer	
+		enable1, enable2, enable3, pipe_timer_enable 		: out std_logic
+
 		);		
 END pipe_controller;
 
 architecture behavior of pipe_controller is
 
 
-signal t_timer_number : integer := 40000000;
 
 
 BEGIN     
@@ -31,7 +30,6 @@ variable current_highest_pipe : integer range 0 to 3:= 0 ;
 begin 
 			
 			if(rising_edge(vert_sync)) then 
-				timer_number <= t_timer_number;
 				
 					-- If all pipes are off turn pipe 1 var high 
 					if (	t_enable1 = '0' and

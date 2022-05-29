@@ -11,7 +11,6 @@ entity char_rom_display is
 	 score_tens						:IN std_logic_vector(5 downto 0);
 	 score_hundreds				:IN std_logic_vector(5 downto 0);
 	 level_ones							:IN std_logic_vector(5 downto 0);
-	 level_tens							:IN std_logic_vector(5 downto 0);
 	 high_score_ones						:IN std_logic_vector(5 downto 0);
 	 high_score_tens						:IN std_logic_vector(5 downto 0);
 	 high_score_hundreds			:IN std_logic_vector(5 downto 0);
@@ -147,9 +146,9 @@ architecture arc of char_rom_display is
 								if(col >= "1000110000" and col < "1001000000") then
 									address <= "100000"; -- space 
 								end if;
-								if(col >= "1001000000" and col < "1001010000") then
-									address <= level_tens; -- level tens 
-								end if;
+--								if(col >= "1001000000" and col < "1001010000") then
+--									address <= level_tens; -- level tens 
+--								end if;
 								if(col >= "1001010000" and col < "1001100000") then
 									address <= level_ones; -- level ones 
 								end if;

@@ -10,7 +10,7 @@ ENTITY pipe_gen IS
 		(clk, vert_sync, enable, reset 			: IN std_logic;
          pixel_row, pixel_column					: IN std_logic_vector(9 DOWNTO 0);
 			rand_num_out 								: IN std_logic_vector(7 DOWNTO 0);
-			speed 										: IN std_logic_vector(9 DOWNTO 0);
+			speed 										: IN std_logic_vector(2 DOWNTO 0);
 			pipe_on, next_pipe_on, pipe_passed 	: OUT std_logic
 			);		
 END pipe_gen;
@@ -50,7 +50,7 @@ pipe_on <= (pipe_bot_on or pipe_top_on);
 
 Move_Pipes: process (clk) 
 
-variable count : integer := 0;
+variable count : std_logic := '0';
 variable v_next_pipe_on : std_logic := '0';
 variable v_pipe_passed : std_logic := '0';
 variable v_gap_size : std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(150, 10);
@@ -72,15 +72,19 @@ begin
 			
 			end if;
 			
-			if(count = 1) then
+			
 				
-				pipe_x_motion <= speed;
+			if(count = '1') then
 				
-				count := 0;
+				pipe_x_motion <= "0000000" & speed;
+				
+				count := '0';
 			else 
 				pipe_x_motion <= CONV_STD_LOGIC_VECTOR(0,10);
-				count := count + 1;
+				count := '1';
 			end if;
+				
+		
 			
 		
 		
@@ -90,7 +94,7 @@ begin
 				-- If pipe width is now 0 	
 				if(pipe_width <= CONV_STD_LOGIC_VECTOR(0, 10)) then 
 					-- Reset pipes position and width 
-					pipe_x_pos <= CONV_STD_LOGIC_VECTOR(640,11);
+					pipe_x_pos <= CONV_STD_LOGIC_VECTOR(648,11);
 					pipe_width <= CONV_STD_LOGIC_VECTOR(50, 10);
 				
 				else 
@@ -107,13 +111,13 @@ begin
 			
 
 			-- Use pipe postion for the emmision of game signals.
-			if(pipe_x_pos = CONV_STD_LOGIC_VECTOR(424, 11))then
+			if(pipe_x_pos = CONV_STD_LOGIC_VECTOR(432, 11))then
 				v_next_pipe_on := '1';
 			else 
 				v_next_pipe_on := '0';
 			end if;
 		
-			if(pipe_x_pos = CONV_STD_LOGIC_VECTOR(304, 11)) then 
+			if(pipe_x_pos = CONV_STD_LOGIC_VECTOR(312, 11)) then 
 				v_pipe_passed := '1';
 			else 
 				v_pipe_passed :='0';

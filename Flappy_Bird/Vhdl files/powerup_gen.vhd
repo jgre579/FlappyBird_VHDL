@@ -8,7 +8,8 @@ ENTITY powerup_gen IS
 	PORT
 		(
 		clk, vert_sync, enable, reset : in std_logic;
-		pixel_row, pixel_column, speed: IN std_logic_vector(9 DOWNTO 0);
+		pixel_row, pixel_column: IN std_logic_vector(9 DOWNTO 0);
+		speed: IN std_logic_vector(2 DOWNTO 0);
 		rand_num : in std_logic_vector(7 downto 0);
 		score_ones : in std_logic_vector(5 downto 0);
 		powerup_on : out std_logic
@@ -27,15 +28,13 @@ SIGNAL size_y : std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(8, 10);
 signal powerup_enable : std_logic;
 BEGIN     
 
---powerup_y_pos <= CONV_STD_LOGIC_VECTOR(400, 11);
---powerup_x_pos <= CONV_STD_LOGIC_VECTOR(400, 11);
 
 powerup_on <= '1' when (('0' & powerup_x_pos <= '0' & pixel_column) and ('0' & pixel_column <= '0' & powerup_x_pos + size_x) 	-- x_pos - size <= pixel_column <= x_pos + size
 					and ('0' & powerup_y_pos <= pixel_row) and ('0' & pixel_row <= powerup_y_pos + size_y)) else	-- y_pos - size <= pixel_row <= y_pos + size
 			'0' ;  
 
 
-Move_Pipes: process (clk) 
+Move_Powerup: process (clk) 
 
 variable count : integer := 0;
 variable powerup_off_screen : std_logic := '1';
@@ -52,8 +51,8 @@ begin
 					
 		if(powerup_enable = '1' and enable = '1') then 
 		
-			--powerup_x_pos <= CONV_STD_LOGIC_VECTOR(640,11);	
-			powerup_x_motion <= speed;
+			
+			powerup_x_motion <= "0000000" & speed;
 			
 			if(powerup_x_pos <= CONV_STD_LOGIC_VECTOR(0, 10)) then 
 			
@@ -107,7 +106,7 @@ begin
 	
 	
 	
-end process Move_Pipes;			
+end process Move_Powerup;			
 			
 			
 			

@@ -41,7 +41,7 @@ begin
 				
 	
 	
-	process (vert_sync, clk) is 
+	process (vert_sync, clk, powerup_collision) is 
 	
 		variable temp_col : std_logic := '0';
 		variable v_pipe_collision : std_logic := '0';
@@ -70,19 +70,21 @@ begin
 					powerup_collision <= '0';
 					timer_enable <= '0';
 				end if;
-			
-			
-			end if;
-			
-			if(vert_sync = '1' and rising_edge(clk)) then 
-			
-				if(temp_col = '1') then
 				
-					v_pipe_collision := '1';
+				if(vert_sync = '1') then 
+			
+					if(temp_col = '1') then
 					
-				else 
-					v_pipe_collision :='0';		
+						v_pipe_collision := '1';
+						
+					else 
+						v_pipe_collision :='0';		
+					end if;
+			
+			
 				end if;
+			
+			
 			end if;
 			
 							
