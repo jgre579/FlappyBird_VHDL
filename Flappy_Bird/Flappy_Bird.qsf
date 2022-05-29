@@ -89,6 +89,7 @@ set_location_assignment PIN_H1 -to led3
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VHDL_FILE "Vhdl files/box.vhd"
 set_global_assignment -name VHDL_FILE "Vhdl files/lsfr.vhd"
 set_global_assignment -name VHDL_FILE "Vhdl files/fsm.vhd"
 set_global_assignment -name VHDL_FILE "Vhdl files/char_rom_display.vhd"
@@ -98,22 +99,15 @@ set_global_assignment -name VHDL_FILE "Vhdl files/clock_div_25MHz.vhd"
 set_global_assignment -name VHDL_FILE "Vhdl files/char_rom.vhd"
 set_global_assignment -name VHDL_FILE "Vhdl files/bouncy_ball.vhd"
 set_global_assignment -name VHDL_FILE "Vhdl files/bcd_to_seven_seg.vhd"
-set_global_assignment -name VHDL_FILE "Vhdl files/ball.vhd"
 set_global_assignment -name BDF_FILE Flappy_Bird.bdf
 set_global_assignment -name VHDL_FILE "Vhdl files/pipe_gen.vhd"
-set_global_assignment -name VHDL_FILE "Vhdl files/show_colour.vhd"
 set_global_assignment -name VHDL_FILE "Vhdl files/display_sync.vhd"
-set_global_assignment -name VHDL_FILE "Vhdl files/game_states.vhd"
-set_global_assignment -name VHDL_FILE "Vhdl files/game_controller.vhd"
 set_global_assignment -name VHDL_FILE "Vhdl files/delay_counter.vhd"
 set_global_assignment -name BDF_FILE Block1.bdf
-set_global_assignment -name VHDL_FILE "Vhdl files/pipe_collision.vhd"
 set_global_assignment -name VHDL_FILE "Vhdl files/pipe_controller.vhd"
 set_global_assignment -name VHDL_FILE "Vhdl files/score.vhd"
 set_global_assignment -name VHDL_FILE "Vhdl files/high_score.vhd"
 set_global_assignment -name VHDL_FILE "Vhdl files/lives.vhd"
 set_global_assignment -name VHDL_FILE "Vhdl files/level_control.vhd"
-set_global_assignment -name VHDL_FILE "Vhdl files/lfsr_second.vhd"
-set_global_assignment -name VHDL_FILE "Vhdl files/lfsr_third.vhd"
 set_global_assignment -name VHDL_FILE "Vhdl files/powerup_gen.vhd"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
