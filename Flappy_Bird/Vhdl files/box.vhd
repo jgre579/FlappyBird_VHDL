@@ -21,14 +21,15 @@ SIGNAL size 											: std_logic_vector(9 DOWNTO 0);
 SIGNAL box_y_pos										: std_logic_vector(9 DOWNTO 0);
 SiGNAL box_x_pos										: std_logic_vector(10 DOWNTO 0);
 SIGNAL box_y_motion									: std_logic_vector(9 DOWNTO 0);
-
+constant DEFAULT_WIDTH : std_logic_vector(9 DOWNTO 0) :=  CONV_STD_LOGIC_VECTOR(8, 10);
+constant X_POS : std_logic_vector(10 DOWNTO 0) :=  CONV_STD_LOGIC_VECTOR(300, 11);
 
 BEGIN           
 
 
 
-size <= CONV_STD_LOGIC_VECTOR(8,10);
-box_x_pos <= CONV_STD_LOGIC_VECTOR(300,11);
+size <= DEFAULT_WIDTH;
+box_x_pos <= X_POS;
 
 box_on <= '1' when ((text_mode = "000" or text_mode = "001") and ('0' & box_x_pos <= '0' & pixel_column + size) and ('0' & pixel_column <= '0' & box_x_pos + size) 	-- x_pos - size <= pixel_column <= x_pos + size
 					and ('0' & box_y_pos <= pixel_row + size) and ('0' & pixel_row <= box_y_pos + size))  else	-- y_pos - size <= pixel_row <= y_pos + size
@@ -36,7 +37,9 @@ box_on <= '1' when ((text_mode = "000" or text_mode = "001") and ('0' & box_x_po
 
 			
 Move_Box: process (vert_sync) 
-variable ball_hit_top : std_logic := '0'; 	 
+variable ball_hit_top : std_logic := '0';
+constant FLY_MOTION : std_logic_vector(9 DOWNTO 0) :=  CONV_STD_LOGIC_VECTOR(9,10);
+constant GRAVITY_MOTION : std_logic_vector(9 DOWNTO 0) :=  CONV_STD_LOGIC_VECTOR(2,10); 	 
 begin
 
 	-- Move box only on vertical sync 
@@ -67,10 +70,10 @@ begin
 			--Apply Gravity	
 			if(mouse_click = '1' and ball_hit_top = '0') then 
 				--move upward on click
-					box_y_motion <= - CONV_STD_LOGIC_VECTOR(9,10);
+					box_y_motion <= - FLY_MOTION;
 			else 
 				-- Otherwise fall down 
-				box_y_motion <= CONV_STD_LOGIC_VECTOR(2,10);
+				box_y_motion <= GRAVITY_MOTION;
 			end if;
 			
 			-- Compute next ball Y position
