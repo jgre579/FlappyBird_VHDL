@@ -161,41 +161,41 @@ architecture arc of char_rom_display is
 							
 
 					elsif(text_mode = "010")then
-						if(row >= "100100000" and row < "100110000" and col >= "100000000" and col < "110100000") then 
-							if(col >= "100000000" and col < "100010000") then
+						if(row >= "100100000" and row < "100110000" and col >= "100100000" and col < "111000000") then
+						
+							if(col >= "100100000" and col < "100110000") then
 								address <= "010011"; --S
 							end if;
-							if(col >= "100010000" and col < "100100000") then
+							if(col >= "100110000" and col < "101000000") then
 								address <= "000011"; --C
 							end if;
 							
-							if(col >= "100100000" and col < "100110000") then
+							if(col >= "101000000" and col < "101010000") then
 								address <= "001111"; --O
 							end if;
 							
-							if(col >= "100110000" and col < "101000000") then
+							if(col >= "101010000" and col < "101100000") then
 								address <= "010010"; --R
 							end if;
 							
-							if(col >= "101000000" and col < "101010000") then
+							if(col >= "101100000" and col < "101110000") then
 								address <= "000101"; --E
 							end if;
-							if(col >= "101010000" and col < "101100000") then
+							if(col >= "101110000" and col < "110000000") then
 								address <= "100000"; -- space 
 							end if;
 							
-							if(col >= "101100000" and col < "101110000") then
+							if(col >= "110000000" and col < "110010000") then
 								address <= score_hundreds; -- thrid digit 
 							end if;
-							if(col >= "101110000" and col < "110000000") then
+							if(col >= "110010000" and col < "110100000") then
 								address <= score_tens; -- second digit 
 							end if;
-							if(col >= "110000000" and col < "110010000") then
+							if(col >= "110100000" and col < "110110000") then
 								address <= score_ones; -- first digit  
 							end if;
-							
-							if(col >= "110010000" and col < "110100000") then
-								address <= "100000"; -- space 
+							if(col >= "110110000" and col < "111000000") then
+								address <= "100000"; -- space
 							end if;
 
 							font_row <= row(3 downto 1);
@@ -302,7 +302,12 @@ architecture arc of char_rom_display is
 					font_col <= col(3 downto 1);
 					end if; 
 					
-					if(row >= "101010000" and row < "101100000" and col >= "11010000" and col < "110100000") then 
+					if(row >= "111000000" and row < "111010000" and col >= "11000000" and col < "110110000") then 
+							
+							if(col >= "11000000" and col < "11010000") then
+								address <= "011011"; -- [
+							end if;
+							
 							if(col >= "11010000" and col < "11100000") then
 								address <= "010010"; --R
 							end if;
@@ -348,6 +353,11 @@ architecture arc of char_rom_display is
 							if(col >= "110010000" and col < "110100000") then
 								address <= "110000"; -- 0
 							end if;
+							
+							if(col >= "110100000" and col < "110110000") then
+								address <= "011101"; -- ]
+							end if;
+
 							font_row <= row(3 downto 1);
 							font_col <= col(3 downto 1);
 						end if; 
