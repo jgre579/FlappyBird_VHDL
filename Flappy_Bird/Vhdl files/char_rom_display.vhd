@@ -355,7 +355,7 @@ architecture arc of char_rom_display is
 					
 				elsif(text_mode = "111")then
 
-						if(row >= "11110000" and row < "100000000" and col >= "11110000" and col < "110010000") then
+						if(row >= "11000000" and row < "11010000" and col >= "11110000" and col < "110010000") then
 							
 							if(col >= "11110000" and col < "100000000") then
 								address <= "000110"; -- F 
@@ -400,8 +400,12 @@ architecture arc of char_rom_display is
 					font_col <= col(3 downto 1);
 					end if; 
 					
-					if(row >= "101110000" and row < "110000000" and col >= "10100000" and col < "111000000") then
+					if(row >= "111000000" and row < "111010000" and col >= "10010000" and col < "111010000") then
 							
+							if(col >= "10010000" and col < "10100000") then
+								address <= "011011"; -- [
+							end if;
+
 							if(col >= "10100000" and col < "10110000") then
 								address <= "010011"; -- S
 							end if;
@@ -467,6 +471,10 @@ architecture arc of char_rom_display is
 							end if;
 							if(col >= "110110000" and col < "111000000") then
 								address <= "110010"; -- 2
+							end if;
+							
+							if(col >= "111000000" and col < "111010000") then
+								address <= "011101"; -- ]
 							end if;
 
 

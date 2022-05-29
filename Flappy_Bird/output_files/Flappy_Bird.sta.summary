@@ -3,60 +3,60 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'inst8|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -7.098
-TNS   : -103.619
+Slack : -7.713
+TNS   : -109.794
 
 Type  : Slow 1200mV 85C Model Setup 'box:inst3|touched_bot'
-Slack : -3.889
-TNS   : -65.164
+Slack : -3.458
+TNS   : -58.457
 
 Type  : Slow 1200mV 85C Model Setup 'VGA_SYNC:inst2|vert_sync_out'
-Slack : -3.175
-TNS   : -431.745
+Slack : -2.955
+TNS   : -435.723
 
 Type  : Slow 1200mV 85C Model Setup 'MOUSE:inst4|MOUSE_CLK_FILTER'
-Slack : -1.387
-TNS   : -38.388
+Slack : -1.302
+TNS   : -38.600
 
 Type  : Slow 1200mV 85C Model Setup 'lives:inst|loose_life'
-Slack : 0.213
+Slack : 0.211
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'VGA_SYNC:inst2|vert_sync_out'
-Slack : -0.286
-TNS   : -6.757
+Slack : -0.424
+TNS   : -12.032
 
 Type  : Slow 1200mV 85C Model Hold 'inst8|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -0.182
-TNS   : -0.182
+Slack : -0.193
+TNS   : -0.193
 
 Type  : Slow 1200mV 85C Model Hold 'MOUSE:inst4|MOUSE_CLK_FILTER'
-Slack : -0.005
-TNS   : -0.005
+Slack : -0.118
+TNS   : -0.136
 
 Type  : Slow 1200mV 85C Model Hold 'box:inst3|touched_bot'
-Slack : 0.119
+Slack : 0.267
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'lives:inst|loose_life'
-Slack : 0.358
+Slack : 0.360
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'lives:inst|loose_life'
-Slack : -0.087
-TNS   : -0.261
+Slack : -0.384
+TNS   : -1.152
 
 Type  : Slow 1200mV 85C Model Recovery 'MOUSE:inst4|MOUSE_CLK_FILTER'
-Slack : 0.064
-TNS   : 0.000
+Slack : -0.007
+TNS   : -0.105
 
 Type  : Slow 1200mV 85C Model Removal 'MOUSE:inst4|MOUSE_CLK_FILTER'
-Slack : -0.047
-TNS   : -0.722
+Slack : -0.002
+TNS   : -0.002
 
 Type  : Slow 1200mV 85C Model Removal 'lives:inst|loose_life'
-Slack : -0.017
-TNS   : -0.051
+Slack : 0.328
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'VGA_SYNC:inst2|vert_sync_out'
 Slack : -1.000
@@ -83,39 +83,39 @@ Slack : 19.736
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'inst8|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -6.144
-TNS   : -88.390
+Slack : -6.735
+TNS   : -94.171
 
 Type  : Slow 1200mV 0C Model Setup 'box:inst3|touched_bot'
-Slack : -3.430
-TNS   : -57.430
+Slack : -3.033
+TNS   : -50.967
 
 Type  : Slow 1200mV 0C Model Setup 'VGA_SYNC:inst2|vert_sync_out'
-Slack : -2.718
-TNS   : -370.147
+Slack : -2.517
+TNS   : -372.257
 
 Type  : Slow 1200mV 0C Model Setup 'MOUSE:inst4|MOUSE_CLK_FILTER'
-Slack : -1.168
-TNS   : -31.351
+Slack : -1.080
+TNS   : -31.355
 
 Type  : Slow 1200mV 0C Model Setup 'lives:inst|loose_life'
-Slack : 0.295
+Slack : 0.289
 TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'inst8|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -0.287
-TNS   : -0.287
 
 Type  : Slow 1200mV 0C Model Hold 'VGA_SYNC:inst2|vert_sync_out'
-Slack : -0.114
-TNS   : -0.444
+Slack : -0.341
+TNS   : -1.778
 
-Type  : Slow 1200mV 0C Model Hold 'box:inst3|touched_bot'
-Slack : 0.101
-TNS   : 0.000
+Type  : Slow 1200mV 0C Model Hold 'inst8|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -0.301
+TNS   : -0.301
 
 Type  : Slow 1200mV 0C Model Hold 'MOUSE:inst4|MOUSE_CLK_FILTER'
-Slack : 0.201
+Slack : 0.093
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'box:inst3|touched_bot'
+Slack : 0.243
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'lives:inst|loose_life'
@@ -123,19 +123,19 @@ Slack : 0.312
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'lives:inst|loose_life'
-Slack : -0.101
-TNS   : -0.303
+Slack : -0.399
+TNS   : -1.197
 
 Type  : Slow 1200mV 0C Model Recovery 'MOUSE:inst4|MOUSE_CLK_FILTER'
-Slack : -0.013
-TNS   : -0.130
-
-Type  : Slow 1200mV 0C Model Removal 'lives:inst|loose_life'
-Slack : 0.130
-TNS   : 0.000
+Slack : -0.097
+TNS   : -1.493
 
 Type  : Slow 1200mV 0C Model Removal 'MOUSE:inst4|MOUSE_CLK_FILTER'
-Slack : 0.153
+Slack : 0.201
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'lives:inst|loose_life'
+Slack : 0.446
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'VGA_SYNC:inst2|vert_sync_out'
@@ -163,39 +163,39 @@ Slack : 19.742
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'inst8|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -3.680
-TNS   : -51.788
+Slack : -4.035
+TNS   : -55.228
 
 Type  : Fast 1200mV 0C Model Setup 'box:inst3|touched_bot'
-Slack : -1.718
-TNS   : -28.338
+Slack : -1.547
+TNS   : -25.283
 
 Type  : Fast 1200mV 0C Model Setup 'VGA_SYNC:inst2|vert_sync_out'
-Slack : -1.369
-TNS   : -160.223
+Slack : -1.292
+TNS   : -165.263
 
 Type  : Fast 1200mV 0C Model Setup 'MOUSE:inst4|MOUSE_CLK_FILTER'
-Slack : -0.318
-TNS   : -6.042
+Slack : -0.261
+TNS   : -5.833
 
 Type  : Fast 1200mV 0C Model Setup 'lives:inst|loose_life'
-Slack : 0.560
+Slack : 0.558
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'VGA_SYNC:inst2|vert_sync_out'
-Slack : -0.331
-TNS   : -22.671
+Slack : -0.432
+TNS   : -25.782
 
 Type  : Fast 1200mV 0C Model Hold 'inst8|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -0.133
-TNS   : -0.133
-
-Type  : Fast 1200mV 0C Model Hold 'box:inst3|touched_bot'
-Slack : 0.059
-TNS   : 0.000
+Slack : -0.141
+TNS   : -0.141
 
 Type  : Fast 1200mV 0C Model Hold 'MOUSE:inst4|MOUSE_CLK_FILTER'
-Slack : 0.067
+Slack : -0.005
+TNS   : -0.005
+
+Type  : Fast 1200mV 0C Model Hold 'box:inst3|touched_bot'
+Slack : 0.157
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'lives:inst|loose_life'
@@ -203,19 +203,19 @@ Slack : 0.188
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'MOUSE:inst4|MOUSE_CLK_FILTER'
-Slack : 0.245
+Slack : 0.189
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'lives:inst|loose_life'
-Slack : 0.325
+Slack : 0.197
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'lives:inst|loose_life'
-Slack : -0.115
-TNS   : -0.345
+Slack : 0.028
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'MOUSE:inst4|MOUSE_CLK_FILTER'
-Slack : 0.026
+Slack : 0.065
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'VGA_SYNC:inst2|vert_sync_out'
