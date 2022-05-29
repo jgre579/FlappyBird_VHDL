@@ -14,7 +14,7 @@ entity lfsr is
 end lfsr;
 
 architecture behaviour of lfsr is
-	signal rand_num: std_logic_vector (7 downto 0):= "01000111";
+	signal rand_num: std_logic_vector (7 downto 0) := seed;
 
 	begin
 		process (clk) 

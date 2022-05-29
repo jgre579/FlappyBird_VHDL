@@ -4,8 +4,8 @@ USE  IEEE.STD_LOGIC_ARITH.all;
 USE  IEEE.STD_LOGIC_UNSIGNED.all;
 
 entity delay_counter is
-	port (clk, enable, reset: in std_logic;
-			number : in integer;
+	generic (number : unsigned(26 downto 0) := conv_unsigned(40000000, 27));
+	port (clk, enable: in std_logic;
 			q : out std_logic);
 end delay_counter;
 

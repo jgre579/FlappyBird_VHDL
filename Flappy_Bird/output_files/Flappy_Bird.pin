@@ -266,7 +266,7 @@ VCCIO6                       : G19       : power  :                   : 2.5V    
 GND                          : G20       : gnd    :                   :         :           :                
 clk                          : G21       : input  : 2.5 V             :         : 6         : Y              
 GND+                         : G22       :        :                   :         : 6         :                
-led3                         : H1        : output : 2.5 V             :         : 1         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H1        :        :                   :         : 1         :                
 pb0                          : H2        : input  : 2.5 V             :         : 1         : Y              
 GND                          : H3        : gnd    :                   :         :           :                
 VCCIO1                       : H4        : power  :                   : 2.5V    : 1         :                
