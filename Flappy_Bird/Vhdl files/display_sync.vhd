@@ -5,8 +5,7 @@ USE  IEEE.STD_LOGIC_UNSIGNED.all;
 
 entity display_sync is
 	port (ball_on, text_on, pipe_on, vert_sync, clk, lives_on, enable, powerup_on, timer_out: in std_logic;
-			red,green,blue, is_pipe_collided, timer_enable, is_powerup_collided: out std_logic;
-			timer_number : out integer
+			red,green,blue, is_pipe_collided, timer_enable, is_powerup_collided: out std_logic
 			);
 end display_sync;
 
@@ -17,7 +16,7 @@ Architecture arc of display_sync is
 signal powerup_collision : std_logic := '0';
 begin	
 
-	timer_number <= 75000000;
+	-- Assign colors based on the hieracy of on signals
 
 	red <=	'1' when lives_on = '1' and enable = '1' 	else
 				'0' when text_on = '1' else
@@ -63,6 +62,7 @@ begin
 				if(powerup_on = '1' and ball_on = '1') then 
 					
 					powerup_collision <= '1';
+					-- Start powerup timer
 					timer_enable <= '1';
 				end if;
 				
@@ -85,10 +85,6 @@ begin
 				end if;
 			end if;
 			
---			if(reset = '1') then 
---				v_pipe_collision := '0';
---				powerup_collision <= '0';
---			end if;
 							
 				
 			is_pipe_collided <= v_pipe_collision and not powerup_collision;

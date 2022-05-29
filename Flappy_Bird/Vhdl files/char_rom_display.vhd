@@ -123,39 +123,43 @@ architecture arc of char_rom_display is
 							
 							-- levels
 					if(row >= "0000010000" and row < "0000100000" and col >= "111100000" and col < "1001100000") then 
+					
+							if(game_mode = '1') then 
+								if(col >= "111100000" and col < "111110000") then
+									address <= "001100"; --L
+								end if;
+								if(col >= "111110000" and col < "1000000000") then
+									address <= "000101"; --E
+								end if;
 
-							if(col >= "111100000" and col < "111110000") then
-								address <= "001100"; --L
-							end if;
-							if(col >= "111110000" and col < "1000000000") then
-								address <= "000101"; --E
-							end if;
+								if(col >= "1000000000" and col < "1000010000") then
+									address <= "010110"; --V
+								end if;
 
-							if(col >= "1000000000" and col < "1000010000") then
-								address <= "010110"; --V
-							end if;
+								if(col >= "1000010000" and col < "1000100000") then
+									address <= "000101"; --E
+								end if;
 
-							if(col >= "1000010000" and col < "1000100000") then
-								address <= "000101"; --E
-							end if;
-
-							if(col >= "1000100000" and col < "1000110000") then
-								address <= "001100"; --L
-							end if;
-							
-							if(col >= "1000110000" and col < "1001000000") then
-								address <= "100000"; -- space 
-							end if;
-							if(col >= "1001000000" and col < "1001010000") then
-								address <= level_tens; -- level tens 
-							end if;
-							if(col >= "1001010000" and col < "1001100000") then
-								address <= level_ones; -- level ones 
-							end if;
+								if(col >= "1000100000" and col < "1000110000") then
+									address <= "001100"; --L
+								end if;
+								
+								if(col >= "1000110000" and col < "1001000000") then
+									address <= "100000"; -- space 
+								end if;
+								if(col >= "1001000000" and col < "1001010000") then
+									address <= level_tens; -- level tens 
+								end if;
+								if(col >= "1001010000" and col < "1001100000") then
+									address <= level_ones; -- level ones 
+								end if;
 
 							font_row <= row(3 downto 1);
 							font_col <= col(3 downto 1);
 							end if; 
+						end if;
+
+							
 
 					elsif(text_mode = "010")then
 						if(row >= "100100000" and row < "100110000" and col >= "100000000" and col < "110100000") then 
