@@ -20,12 +20,13 @@ architecture behavior of pipe_gen is
 SIGNAL pipe_width 			: std_logic_vector(9 DOWNTO 0);  
 SIGNAL pipe_top_height 		: std_logic_vector(9 DOWNTO 0);
 SIGNAL pipe_bot_height 		: std_logic_vector(9 DOWNTO 0);  
-SIGNAL pipe_top_y_pos		: std_logic_vector(9 DOWNTO 0);
-SIGNAL pipe_bot_y_pos		: std_logic_vector(9 DOWNTO 0);
+SIGNAL pipe_top_y_pos		: std_logic_vector(9 DOWNTO 0) := "0000000000";
+SIGNAL pipe_bot_y_pos		: std_logic_vector(9 DOWNTO 0) := "0000000000";
 SIGNAL pipe_x_pos				: std_logic_vector(10 DOWNTO 0);
 SIGNAL pipe_x_motion			: std_logic_vector(9 DOWNTO 0);
 SIGNAL pipe_top_on, pipe_bot_on : std_logic;
 SIGNAL pipe_fade_x			: std_logic_vector(9 DOWNTO 0);
+SIGNAL gap_size			: std_logic_vector(9 DOWNTO 0);
 
 BEGIN           
 
@@ -45,6 +46,7 @@ pipe_bot_on <= '1' when ( ('0' & pixel_column >= '0' & pipe_x_pos) and ('0' & pi
 
 pipe_on <= (pipe_bot_on or pipe_top_on);
 
+gap_size <= CONV_STD_LOGIC_VECTOR(100, 10);
 
 Move_Pipes: process (clk) 
 
@@ -57,10 +59,10 @@ begin
 	if (rising_edge(vert_sync)) then 
 					
 		if(enable = '1') then 
-			-- On startup or when pipes are fully off the screen, get another random number for pos'
+			-- On startup or when pipes are fully off the screen, get another random number for pos
 			if(pipe_width <= CONV_STD_LOGIC_VECTOR(0, 11) or pipe_bot_y_pos = "0000000000") then 
 			
-				pipe_bot_y_pos <=("00" & rand_num_out) - "110010000";
+				pipe_bot_y_pos <=("00" & rand_num_out) + gap_size ;
 				pipe_top_y_pos <=("00" & rand_num_out);
 			
 			end if;
