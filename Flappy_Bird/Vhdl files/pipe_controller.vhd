@@ -7,8 +7,8 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 ENTITY pipe_controller
  IS
 	PORT(
-		enable, clk, next_pipe, reset, timer_q, vert_sync 	: in std_logic;
-		enable1, enable2, enable3, pipe_timer_enable 		: out std_logic
+		enable, clk, next_pipe, reset, vert_sync 	: in std_logic;
+		enable1, enable2, enable3 		: out std_logic
 
 		);		
 END pipe_controller;
@@ -72,7 +72,6 @@ begin
 						t_enable2 := '0';
 						t_enable3 := '0';
 						current_highest_pipe := 0;
-						pipe_timer_enable <= '0';
 				end if;
 				
 				-- Pipes cant be on unless game enable is also high

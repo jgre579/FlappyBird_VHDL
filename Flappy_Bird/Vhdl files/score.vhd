@@ -55,7 +55,7 @@ begin
 				s_pipe_passed <= '0';
 				
 			elsif (reset = '0') then 
-		
+				-- Reset scores to zero ("110000" is zero is char rom language)
 				v_current_score_ones := "110000";
 				v_current_score_tens := "110000";
 				v_current_score_hundreds := "110000"; 

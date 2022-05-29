@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Flappy_Bird
-Sun May 29 23:34:37 2022
+Mon May 30 00:45:28 2022
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -27,12 +27,11 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
  19. Parameter Settings for User Entity Instance: delay_counter:inst13
  20. Parameter Settings for User Entity Instance: char_rom:inst6|altsyncram:altsyncram_component
  21. Parameter Settings for User Entity Instance: lfsr:inst24
- 22. Parameter Settings for User Entity Instance: delay_counter:inst16
- 23. Parameter Settings for User Entity Instance: delay_counter:inst27
- 24. altpll Parameter Settings by Entity Instance
- 25. altsyncram Parameter Settings by Entity Instance
- 26. Elapsed Time Per Partition
- 27. Analysis & Synthesis Messages
+ 22. Parameter Settings for User Entity Instance: delay_counter:inst27
+ 23. altpll Parameter Settings by Entity Instance
+ 24. altsyncram Parameter Settings by Entity Instance
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
 
 
 
@@ -58,16 +57,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun May 29 23:34:37 2022      ;
+; Analysis & Synthesis Status        ; Successful - Mon May 30 00:45:28 2022      ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; Flappy_Bird                                ;
 ; Top-level Entity Name              ; Flappy_Bird                                ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 1,344                                      ;
-;     Total combinational functions  ; 1,236                                      ;
-;     Dedicated logic registers      ; 426                                        ;
-; Total registers                    ; 426                                        ;
-; Total pins                         ; 14                                         ;
+; Total logic elements               ; 1,325                                      ;
+;     Total combinational functions  ; 1,219                                      ;
+;     Dedicated logic registers      ; 418                                        ;
+; Total registers                    ; 418                                        ;
+; Total pins                         ; 12                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 4,096                                      ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -219,23 +218,23 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+------------------------------+
 ; Resource                                    ; Usage                        ;
 +---------------------------------------------+------------------------------+
-; Estimated Total logic elements              ; 1,344                        ;
+; Estimated Total logic elements              ; 1,325                        ;
 ;                                             ;                              ;
-; Total combinational functions               ; 1236                         ;
+; Total combinational functions               ; 1219                         ;
 ; Logic element usage by number of LUT inputs ;                              ;
-;     -- 4 input functions                    ; 525                          ;
-;     -- 3 input functions                    ; 362                          ;
-;     -- <=2 input functions                  ; 349                          ;
+;     -- 4 input functions                    ; 526                          ;
+;     -- 3 input functions                    ; 360                          ;
+;     -- <=2 input functions                  ; 333                          ;
 ;                                             ;                              ;
 ; Logic elements by mode                      ;                              ;
-;     -- normal mode                          ; 815                          ;
-;     -- arithmetic mode                      ; 421                          ;
+;     -- normal mode                          ; 807                          ;
+;     -- arithmetic mode                      ; 412                          ;
 ;                                             ;                              ;
-; Total registers                             ; 426                          ;
-;     -- Dedicated logic registers            ; 426                          ;
+; Total registers                             ; 418                          ;
+;     -- Dedicated logic registers            ; 418                          ;
 ;     -- I/O registers                        ; 0                            ;
 ;                                             ;                              ;
-; I/O pins                                    ; 14                           ;
+; I/O pins                                    ; 12                           ;
 ; Total memory bits                           ; 4096                         ;
 ; Embedded Multiplier 9-bit elements          ; 0                            ;
 ; Total PLLs                                  ; 1                            ;
@@ -243,8 +242,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                                             ;                              ;
 ; Maximum fan-out node                        ; VGA_SYNC:inst2|vert_sync_out ;
 ; Maximum fan-out                             ; 201                          ;
-; Total fan-out                               ; 5242                         ;
-; Average fan-out                             ; 3.08                         ;
+; Total fan-out                               ; 5188                         ;
+; Average fan-out                             ; 3.10                         ;
 +---------------------------------------------+------------------------------+
 
 
@@ -253,14 +252,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                       ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                              ; Library Name ;
 +--------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------+--------------+
-; |Flappy_Bird                                     ; 1236 (11)         ; 426 (0)      ; 4096        ; 0            ; 0       ; 0         ; 14   ; 0            ; |Flappy_Bird                                                                                     ;              ;
-;    |MOUSE:inst4|                                 ; 51 (51)           ; 63 (63)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|MOUSE:inst4                                                                         ;              ;
+; |Flappy_Bird                                     ; 1219 (12)         ; 418 (0)      ; 4096        ; 0            ; 0       ; 0         ; 12   ; 0            ; |Flappy_Bird                                                                                     ;              ;
+;    |MOUSE:inst4|                                 ; 52 (52)           ; 63 (63)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|MOUSE:inst4                                                                         ;              ;
 ;    |VGA_SYNC:inst2|                              ; 60 (60)           ; 48 (48)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|VGA_SYNC:inst2                                                                      ;              ;
 ;    |box:inst3|                                   ; 68 (68)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|box:inst3                                                                           ;              ;
 ;    |char_rom:inst6|                              ; 5 (5)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|char_rom:inst6                                                                      ;              ;
 ;       |altsyncram:altsyncram_component|          ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|char_rom:inst6|altsyncram:altsyncram_component                                      ;              ;
 ;          |altsyncram_kt91:auto_generated|        ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|char_rom:inst6|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated       ;              ;
-;    |char_rom_display:inst5|                      ; 364 (364)         ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|char_rom_display:inst5                                                              ;              ;
+;    |char_rom_display:inst5|                      ; 362 (362)         ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|char_rom_display:inst5                                                              ;              ;
 ;    |clock_div_25MHz:inst8|                       ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|clock_div_25MHz:inst8                                                               ;              ;
 ;       |altpll:altpll_component|                  ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|clock_div_25MHz:inst8|altpll:altpll_component                                       ;              ;
 ;          |clock_div_25MHz_altpll:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|clock_div_25MHz:inst8|altpll:altpll_component|clock_div_25MHz_altpll:auto_generated ;              ;
@@ -269,13 +268,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;    |display_sync:inst1|                          ; 10 (10)           ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|display_sync:inst1                                                                  ;              ;
 ;    |fsm:inst22|                                  ; 9 (9)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|fsm:inst22                                                                          ;              ;
 ;    |high_score:inst20|                           ; 32 (32)           ; 18 (18)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|high_score:inst20                                                                   ;              ;
-;    |level_control:inst23|                        ; 25 (25)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|level_control:inst23                                                                ;              ;
+;    |level_control:inst23|                        ; 9 (9)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|level_control:inst23                                                                ;              ;
 ;    |lfsr:inst24|                                 ; 5 (5)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|lfsr:inst24                                                                         ;              ;
 ;    |lives:inst|                                  ; 28 (28)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|lives:inst                                                                          ;              ;
 ;    |pipe_controller:inst19|                      ; 10 (10)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|pipe_controller:inst19                                                              ;              ;
 ;    |pipe_gen:inst10|                             ; 109 (109)         ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|pipe_gen:inst10                                                                     ;              ;
 ;    |pipe_gen:inst11|                             ; 101 (101)         ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|pipe_gen:inst11                                                                     ;              ;
-;    |pipe_gen:inst12|                             ; 101 (101)         ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|pipe_gen:inst12                                                                     ;              ;
+;    |pipe_gen:inst12|                             ; 100 (100)         ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|pipe_gen:inst12                                                                     ;              ;
 ;    |powerup_gen:inst25|                          ; 118 (118)         ; 31 (31)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|powerup_gen:inst25                                                                  ;              ;
 ;    |score:inst21|                                ; 56 (56)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Flappy_Bird|score:inst21                                                                        ;              ;
 +--------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------+--------------+
@@ -338,6 +337,8 @@ Encoding Type:  One-Hot
 ; powerup_gen:inst25|powerup_x_motion[3..9]          ; Stuck at GND due to stuck port data_in                 ;
 ; powerup_gen:inst25|powerup_y_pos[8..10]            ; Stuck at GND due to stuck port data_in                 ;
 ; pipe_gen:inst10|pipe_x_motion[3..9]                ; Stuck at GND due to stuck port data_in                 ;
+; level_control:inst23|current_level_ones[2,3]       ; Stuck at GND due to stuck port data_in                 ;
+; level_control:inst23|current_level_ones[4,5]       ; Stuck at VCC due to stuck port data_in                 ;
 ; level_control:inst23|speed[0]                      ; Stuck at GND due to stuck port data_in                 ;
 ; pipe_gen:inst12|pipe_x_motion[0,3..9]              ; Stuck at GND due to stuck port data_in                 ;
 ; pipe_gen:inst11|pipe_x_motion[0,3..9]              ; Stuck at GND due to stuck port data_in                 ;
@@ -345,6 +346,8 @@ Encoding Type:  One-Hot
 ; box:inst3|box_y_motion[1]                          ; Stuck at VCC due to stuck port data_in                 ;
 ; powerup_gen:inst25|powerup_x_motion[0]             ; Stuck at GND due to stuck port data_in                 ;
 ; pipe_gen:inst10|pipe_x_motion[0]                   ; Stuck at GND due to stuck port data_in                 ;
+; level_control:inst23|level_ones[2,3]               ; Stuck at GND due to stuck port data_in                 ;
+; level_control:inst23|level_ones[4,5]               ; Stuck at VCC due to stuck port data_in                 ;
 ; MOUSE:inst4|CHAROUT[4..7]                          ; Stuck at VCC due to stuck port data_in                 ;
 ; MOUSE:inst4|CHAROUT[3]                             ; Stuck at GND due to stuck port data_in                 ;
 ; MOUSE:inst4|CHAROUT[2]                             ; Stuck at VCC due to stuck port data_in                 ;
@@ -452,18 +455,26 @@ Encoding Type:  One-Hot
 ; VGA_SYNC:inst2|pixel_row[9]                        ; Stuck at GND due to stuck port data_in                 ;
 ; delay_counter:inst27|counter[28..31]               ; Lost fanout                                            ;
 ; delay_counter:inst13|counter[28..31]               ; Lost fanout                                            ;
-; Total Number of Removed Registers = 167            ;                                                        ;
+; Total Number of Removed Registers = 175            ;                                                        ;
 +----------------------------------------------------+--------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                          ;
-+-------------------------------+---------------------------+--------------------------------------------------------------------------+
-; Register name                 ; Reason for Removal        ; Registers Removed due to This Register                                   ;
-+-------------------------------+---------------------------+--------------------------------------------------------------------------+
-; level_control:inst23|speed[0] ; Stuck at GND              ; pipe_gen:inst12|pipe_x_motion[0], pipe_gen:inst11|pipe_x_motion[0],      ;
-;                               ; due to stuck port data_in ; powerup_gen:inst25|powerup_x_motion[0], pipe_gen:inst10|pipe_x_motion[0] ;
-+-------------------------------+---------------------------+--------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                       ;
++--------------------------------------------+---------------------------+--------------------------------------------------------------------------+
+; Register name                              ; Reason for Removal        ; Registers Removed due to This Register                                   ;
++--------------------------------------------+---------------------------+--------------------------------------------------------------------------+
+; level_control:inst23|speed[0]              ; Stuck at GND              ; pipe_gen:inst12|pipe_x_motion[0], pipe_gen:inst11|pipe_x_motion[0],      ;
+;                                            ; due to stuck port data_in ; powerup_gen:inst25|powerup_x_motion[0], pipe_gen:inst10|pipe_x_motion[0] ;
+; level_control:inst23|current_level_ones[2] ; Stuck at GND              ; level_control:inst23|level_ones[2]                                       ;
+;                                            ; due to stuck port data_in ;                                                                          ;
+; level_control:inst23|current_level_ones[3] ; Stuck at GND              ; level_control:inst23|level_ones[3]                                       ;
+;                                            ; due to stuck port data_in ;                                                                          ;
+; level_control:inst23|current_level_ones[4] ; Stuck at VCC              ; level_control:inst23|level_ones[4]                                       ;
+;                                            ; due to stuck port data_in ;                                                                          ;
+; level_control:inst23|current_level_ones[5] ; Stuck at VCC              ; level_control:inst23|level_ones[5]                                       ;
+;                                            ; due to stuck port data_in ;                                                                          ;
++--------------------------------------------+---------------------------+--------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -471,12 +482,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 426   ;
+; Total registers                              ; 418   ;
 ; Number of registers using Synchronous Clear  ; 56    ;
 ; Number of registers using Synchronous Load   ; 37    ;
 ; Number of registers using Asynchronous Clear ; 19    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 327   ;
+; Number of registers using Clock Enable       ; 322   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -496,8 +507,8 @@ Encoding Type:  One-Hot
 ; score:inst21|v_current_score_ones[4]                ; 11      ;
 ; score:inst21|v_current_score_ones[5]                ; 10      ;
 ; powerup_gen:inst25|\Move_Powerup:powerup_off_screen ; 2       ;
-; score:inst21|v_current_score_tens[5]                ; 11      ;
-; score:inst21|v_current_score_tens[4]                ; 9       ;
+; score:inst21|v_current_score_tens[5]                ; 12      ;
+; score:inst21|v_current_score_tens[4]                ; 8       ;
 ; score:inst21|v_current_score_hundreds[4]            ; 7       ;
 ; high_score:inst20|high_score_ones[4]                ; 2       ;
 ; high_score:inst20|high_score_hundreds[4]            ; 3       ;
@@ -507,15 +518,13 @@ Encoding Type:  One-Hot
 ; high_score:inst20|high_score_ones[5]                ; 2       ;
 ; high_score:inst20|high_score_tens[5]                ; 3       ;
 ; MOUSE:inst4|send_char                               ; 3       ;
-; level_control:inst23|current_level_ones[0]          ; 5       ;
-; level_control:inst23|current_level_ones[4]          ; 4       ;
-; level_control:inst23|current_level_ones[5]          ; 4       ;
+; level_control:inst23|current_level_ones[0]          ; 1       ;
 ; MOUSE:inst4|SHIFTOUT[3]                             ; 1       ;
 ; MOUSE:inst4|SHIFTOUT[5]                             ; 1       ;
 ; MOUSE:inst4|SHIFTOUT[6]                             ; 1       ;
 ; MOUSE:inst4|SHIFTOUT[7]                             ; 1       ;
 ; MOUSE:inst4|SHIFTOUT[8]                             ; 1       ;
-; Total number of inverted registers = 29             ;         ;
+; Total number of inverted registers = 27             ;         ;
 +-----------------------------------------------------+---------+
 
 
@@ -540,19 +549,20 @@ Encoding Type:  One-Hot
 ; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |Flappy_Bird|score:inst21|v_current_score_ones[3]       ;
 ; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |Flappy_Bird|pipe_gen:inst10|pipe_x_pos[6]              ;
 ; 5:1                ; 9 bits    ; 27 LEs        ; 9 LEs                ; 18 LEs                 ; Yes        ; |Flappy_Bird|pipe_gen:inst10|pipe_width[9]              ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |Flappy_Bird|pipe_gen:inst12|pipe_x_pos[8]              ;
-; 5:1                ; 9 bits    ; 27 LEs        ; 9 LEs                ; 18 LEs                 ; Yes        ; |Flappy_Bird|pipe_gen:inst12|pipe_width[6]              ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |Flappy_Bird|pipe_gen:inst11|pipe_x_pos[1]              ;
-; 5:1                ; 9 bits    ; 27 LEs        ; 9 LEs                ; 18 LEs                 ; Yes        ; |Flappy_Bird|pipe_gen:inst11|pipe_width[1]              ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Flappy_Bird|score:inst21|v_current_score_tens[0]       ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Flappy_Bird|score:inst21|v_current_score_hundreds[1]   ;
-; 5:1                ; 12 bits   ; 36 LEs        ; 0 LEs                ; 36 LEs                 ; Yes        ; |Flappy_Bird|high_score:inst20|high_score_hundreds[3]   ;
-; 19:1               ; 6 bits    ; 72 LEs        ; 0 LEs                ; 72 LEs                 ; Yes        ; |Flappy_Bird|char_rom_display:inst5|font_row[2]         ;
-; 123:1              ; 6 bits    ; 492 LEs       ; 456 LEs              ; 36 LEs                 ; Yes        ; |Flappy_Bird|char_rom_display:inst5|address[4]          ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |Flappy_Bird|score:inst21|v_current_score_ones[5]       ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |Flappy_Bird|pipe_gen:inst12|pipe_x_pos[4]              ;
+; 5:1                ; 9 bits    ; 27 LEs        ; 9 LEs                ; 18 LEs                 ; Yes        ; |Flappy_Bird|pipe_gen:inst12|pipe_width[8]              ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |Flappy_Bird|pipe_gen:inst11|pipe_x_pos[8]              ;
+; 5:1                ; 9 bits    ; 27 LEs        ; 9 LEs                ; 18 LEs                 ; Yes        ; |Flappy_Bird|pipe_gen:inst11|pipe_width[3]              ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Flappy_Bird|score:inst21|v_current_score_tens[3]       ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Flappy_Bird|score:inst21|v_current_score_hundreds[2]   ;
+; 5:1                ; 12 bits   ; 36 LEs        ; 0 LEs                ; 36 LEs                 ; Yes        ; |Flappy_Bird|high_score:inst20|high_score_ones[1]       ;
+; 19:1               ; 6 bits    ; 72 LEs        ; 0 LEs                ; 72 LEs                 ; Yes        ; |Flappy_Bird|char_rom_display:inst5|font_col[0]         ;
+; 123:1              ; 4 bits    ; 328 LEs       ; 300 LEs              ; 28 LEs                 ; Yes        ; |Flappy_Bird|char_rom_display:inst5|address[3]          ;
+; 123:1              ; 2 bits    ; 164 LEs       ; 148 LEs              ; 16 LEs                 ; Yes        ; |Flappy_Bird|char_rom_display:inst5|address[0]          ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |Flappy_Bird|score:inst21|v_current_score_ones[4]       ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |Flappy_Bird|score:inst21|v_current_score_tens[4]       ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |Flappy_Bird|score:inst21|v_current_score_hundreds[5]   ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |Flappy_Bird|high_score:inst20|high_score_hundreds[4]   ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |Flappy_Bird|high_score:inst20|high_score_tens[4]       ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Flappy_Bird|pipe_controller:inst19|t_enable3           ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |Flappy_Bird|display_sync:inst1|blue                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
@@ -1023,16 +1033,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: delay_counter:inst16 ;
-+----------------+-----------------------------+--------------------+
-; Parameter Name ; Value                       ; Type               ;
-+----------------+-----------------------------+--------------------+
-; number         ; 010011000100101101000000000 ; Unsigned Binary    ;
-+----------------+-----------------------------+--------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: delay_counter:inst27 ;
 +----------------+-----------------------------+--------------------+
 ; Parameter Name ; Value                       ; Type               ;
@@ -1094,7 +1094,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Sun May 29 23:34:31 2022
+    Info: Processing started: Mon May 30 00:45:21 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Flappy_Bird -c Flappy_Bird
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file vhdl files/box.vhd
@@ -1230,14 +1230,13 @@ Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHARO
 Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "fsm" for hierarchy "fsm:inst22"
 Info (12128): Elaborating entity "lives" for hierarchy "lives:inst"
-Warning (10036): Verilog HDL or VHDL warning at lives.vhd(24): object "current_lives" assigned a value but never read
-Warning (10492): VHDL Process Statement warning at lives.vhd(86): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at lives.vhd(97): signal "life3_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at lives.vhd(97): signal "life2_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at lives.vhd(97): signal "life1_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at lives.vhd(99): signal "life2_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at lives.vhd(99): signal "life1_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at lives.vhd(101): signal "life1_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at lives.vhd(85): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at lives.vhd(96): signal "life3_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at lives.vhd(96): signal "life2_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at lives.vhd(96): signal "life1_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at lives.vhd(98): signal "life2_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at lives.vhd(98): signal "life1_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at lives.vhd(100): signal "life1_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "delay_counter" for hierarchy "delay_counter:inst13"
 Info (12128): Elaborating entity "char_rom" for hierarchy "char_rom:inst6"
 Info (12128): Elaborating entity "altsyncram" for hierarchy "char_rom:inst6|altsyncram:altsyncram_component"
@@ -1264,14 +1263,12 @@ Info (12128): Elaborating entity "char_rom_display" for hierarchy "char_rom_disp
 Info (12128): Elaborating entity "high_score" for hierarchy "high_score:inst20"
 Info (12128): Elaborating entity "score" for hierarchy "score:inst21"
 Info (12128): Elaborating entity "pipe_gen" for hierarchy "pipe_gen:inst11"
-Warning (10492): VHDL Process Statement warning at pipe_gen.vhd(62): signal "vert_sync" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pipe_gen.vhd(61): signal "vert_sync" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "pipe_controller" for hierarchy "pipe_controller:inst19"
 Warning (10492): VHDL Process Statement warning at pipe_controller.vhd(32): signal "vert_sync" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "lfsr" for hierarchy "lfsr:inst24"
 Info (12128): Elaborating entity "level_control" for hierarchy "level_control:inst23"
-Info (12128): Elaborating entity "delay_counter" for hierarchy "delay_counter:inst16"
 Info (12128): Elaborating entity "powerup_gen" for hierarchy "powerup_gen:inst25"
-Warning (10540): VHDL Signal Declaration warning at powerup_gen.vhd(27): used explicit default value for signal "size_y" because signal was never assigned a value
 Warning (10492): VHDL Process Statement warning at powerup_gen.vhd(44): signal "vert_sync" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "delay_counter" for hierarchy "delay_counter:inst27"
 Info (13000): Registers with preset signals will power-up high
@@ -1280,17 +1277,17 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 8 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1378 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1357 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
-    Info (21059): Implemented 7 output pins
+    Info (21059): Implemented 5 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 1355 logic cells
+    Info (21061): Implemented 1336 logic cells
     Info (21064): Implemented 8 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 21 warnings
-    Info: Peak virtual memory: 4652 megabytes
-    Info: Processing ended: Sun May 29 23:34:37 2022
-    Info: Elapsed time: 00:00:06
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 19 warnings
+    Info: Peak virtual memory: 4649 megabytes
+    Info: Processing ended: Mon May 30 00:45:28 2022
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:06
 
 

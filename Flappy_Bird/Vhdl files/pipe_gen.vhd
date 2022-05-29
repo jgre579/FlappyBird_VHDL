@@ -26,7 +26,6 @@ SIGNAL pipe_x_pos				: std_logic_vector(10 DOWNTO 0);
 SIGNAL pipe_x_motion			: std_logic_vector(9 DOWNTO 0);
 SIGNAL pipe_top_on, pipe_bot_on : std_logic;
 SIGNAL pipe_fade_x			: std_logic_vector(9 DOWNTO 0);
-SIGNAL gap_size			: std_logic_vector(9 DOWNTO 0);
 
 
 BEGIN           
@@ -67,6 +66,7 @@ begin
 			if(pipe_width <= CONV_STD_LOGIC_VECTOR(0, 11) or v_top = "0000000000") then 
 				v_rand := rand_num_out;
 				v_top := ("00" & v_rand);
+				-- Add gap size to v_top to get the bottom pipe position v_bot
 				v_bot := v_top + CONV_STD_LOGIC_VECTOR(150, 10);
 				 
 			
@@ -111,7 +111,7 @@ begin
 			
 
 			-- Use pipe postion for the emmision of game signals.
-			if(pipe_x_pos = CONV_STD_LOGIC_VECTOR(432, 11))then
+			if(pipe_x_pos = CONV_STD_LOGIC_VECTOR(408, 11))then
 				v_next_pipe_on := '1';
 			else 
 				v_next_pipe_on := '0';

@@ -21,7 +21,6 @@ signal life3_x_pos : std_logic_vector(9 downto 0);
 signal lives_y_pos : std_logic_vector(9 downto 0);
 signal life1_on, life2_on, life3_on : std_logic;
 signal loose_life : std_logic;
-signal current_lives : integer range 0 to 3 := 3;
 begin	
 
 size <= CONV_STD_LOGIC_VECTOR(8,10);
@@ -103,7 +102,6 @@ begin
 				lives_on <= '0';
 	end case;
 	
-	current_lives <= v_current_lives;
 	game_over <= v_game_over;
 	
 end process;	

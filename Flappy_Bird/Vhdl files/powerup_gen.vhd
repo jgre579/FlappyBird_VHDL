@@ -24,11 +24,11 @@ SIGNAL powerup_x_pos	: std_logic_vector(10 DOWNTO 0);
 SiGNAL powerup_y_pos	: std_logic_vector(10 DOWNTO 0);
 SiGNAL powerup_x_motion	: std_logic_vector(9 DOWNTO 0);
 SIGNAL size_x : std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(8, 10);  
-SIGNAL size_y : std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(8, 10); 
+SIGNAL size_y : std_logic_vector(9 DOWNTO 0);
 signal powerup_enable : std_logic;
 BEGIN     
 
-
+size_y <= CONV_STD_LOGIC_VECTOR(8, 10);
 powerup_on <= '1' when (('0' & powerup_x_pos <= '0' & pixel_column) and ('0' & pixel_column <= '0' & powerup_x_pos + size_x) 	-- x_pos - size <= pixel_column <= x_pos + size
 					and ('0' & powerup_y_pos <= pixel_row) and ('0' & pixel_row <= powerup_y_pos + size_y)) else	-- y_pos - size <= pixel_row <= y_pos + size
 			'0' ;  

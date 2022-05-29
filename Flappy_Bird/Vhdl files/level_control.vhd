@@ -47,14 +47,27 @@ begin
 		end if;
 		
 	end if;
-	
-
+	 
 	--CALCULATE LEVEL 
-	if (score_tens > current_level_ones)then 
-		if(current_level_ones /= "110011") then 
-			current_level_ones <= current_level_ones + CONV_STD_LOGIC_VECTOR(1, 6);
-		end if;
-	end if; 
+	
+	case score_tens is 
+		when "110000" => current_level_ones <= "110001";
+		when "110001" => current_level_ones <= "110010";
+		when "110010" => current_level_ones <= "110011";
+		when others => current_level_ones <= "110011";
+	end case;
+	
+--	if (score_tens > current_level_ones)then 
+--		current_level_ones <= current_level_ones + CONV_STD_LOGIC_VECTOR(1, 6);
+--	elsif(score_tens = "110000")then
+--		current_level_ones <= "110000";
+--	end if; 
+--	
+--	if (score_hundreds > current_level_tens)then 
+--		current_level_tens <= current_level_tens + CONV_STD_LOGIC_VECTOR(1, 6);
+--		elsif(score_hundreds = "110000") then 
+--		current_level_tens <= "110000";
+--	end if; 
 	
 level_ones <= current_level_ones;
 
