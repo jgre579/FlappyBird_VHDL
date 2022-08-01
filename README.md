@@ -1,5 +1,3 @@
-# 305_MiniProject
+# Flappy Box
 
-Example Project: 
-
-https://github.com/SzymonDawi/Compsys305-VHDL-Flappy-Bird/wiki/4.-Implementation
+The goal of this COMPSYS 305 mini project is to design a simple game using only digital logic and digital design on a DE0 board. The game is called Flappy Box based the popular mobile game Flappy Bird. Our game is controlled by a PS/2 mouse, DIP switches, and push buttons on the DE0 board. Instead of a bird the player is responsible for navigating a box between pipes which will speed up as the game level increases. The system design of the game is represented with a simplified block diagram showing all the components of the game and their interfaces. We also have a high-level finite state machine (FSM) which control overall operations of our game. Our program uses 8% of all total logic elements with our Char_Rom_Display component using the most LE’s (380). The maximum operating clock frequency is 82.99 MHz. Future changes would include implementing graphics to make the game more aesthetically pleasing, and to help with the user experience (making life bars look like hearts instead of boxes). 
